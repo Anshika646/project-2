@@ -1,0 +1,6 @@
+{
+  "name": "STICKZY - Premium Sticker Studio & Custom Sheet Maker",
+  "description": "Luxury sticker boutique and custom sticker sheet designer with Boys & Girls collections, interactive live studio, WhatsApp ordering, and complete e-commerce experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
