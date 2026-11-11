@@ -8674,13 +8674,24 @@
       document.getElementById('checkoutStep2').style.display = 'none';
       document.getElementById('checkoutStep3').style.display = 'none';
 
+      // Reset Step 3 sub-views
+      const step3Content = document.getElementById('checkoutStep3Content');
+      const successScreen = document.getElementById('upiSuccessScreenSection');
+      if (step3Content) step3Content.style.display = 'block';
+      if (successScreen) successScreen.style.display = 'none';
+
       document.getElementById('pillStep1').className = 'step-pill active';
       document.getElementById('pillStep2').className = 'step-pill';
       document.getElementById('pillStep3').className = 'step-pill';
 
       const subtotal = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
       const shipping = subtotal >= 499 ? 0 : 50;
-      document.getElementById('checkoutTotalPayable').innerText = `₹${subtotal + shipping}`;
+      const total = subtotal + shipping;
+      document.getElementById('checkoutTotalPayable').innerText = `₹${total}`;
+      const upiAmt = document.getElementById('upiQrPayableAmount');
+      if (upiAmt) upiAmt.innerText = `₹${total}`;
+
+      selectPaymentMethod('upi');
 
       document.getElementById('checkoutModalBackdrop').classList.add('open');
       document.body.style.overflow = 'hidden';
@@ -8772,6 +8783,13 @@
       if (entered === simulatedOtpCode || entered.length === 4) {
         document.getElementById('checkoutStep2').style.display = 'none';
         document.getElementById('checkoutStep3').style.display = 'block';
+
+        const step3Content = document.getElementById('checkoutStep3Content');
+        const successScreen = document.getElementById('upiSuccessScreenSection');
+        if (step3Content) step3Content.style.display = 'block';
+        if (successScreen) successScreen.style.display = 'none';
+
+        selectPaymentMethod('upi');
 
         document.getElementById('pillStep2').className = 'step-pill';
         document.getElementById('pillStep3').className = 'step-pill active';
