@@ -2991,6 +2991,332 @@
       display: inline-block;
     }
 
+    
+    /* ==========================================================================
+       UPI PAYMENT CARD & STRICT 3-STEP CHECKOUT STYLES
+       ========================================================================== */
+    .checkout-summary-box {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin-top: 18px;
+    }
+
+    .upi-payment-card-wrap {
+      background: #141416;
+      color: #FAF7F2;
+      border-radius: 20px;
+      padding: 24px 20px;
+      border: 1px solid #28282C;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+      margin-bottom: 20px;
+    }
+
+    .upi-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #28282C;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+
+    .upi-card-payee-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .upi-payee-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #F472B6 0%, #3B82F6 100%);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .upi-payee-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.2;
+    }
+
+    .upi-payee-verified {
+      font-size: 11px;
+      color: #10B981;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .upi-card-amount-block {
+      text-align: right;
+    }
+
+    .upi-amt-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9CA3AF;
+      display: block;
+    }
+
+    .upi-amt-val {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 800;
+      color: #FBBF24;
+    }
+
+    .upi-qr-frame {
+      background: #0D0D0E;
+      border: 1px solid #2A2A30;
+      border-radius: 16px;
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .upi-qr-image-display {
+      max-width: 250px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #FFFFFF;
+    }
+
+    .upi-scan-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 11.5px;
+      color: #E5E7EB;
+      margin-top: 12px;
+      font-weight: 500;
+    }
+
+    .upi-id-copy-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: #1C1C20;
+      border: 1px solid #2E2E36;
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+    }
+
+    .upi-id-box {
+      overflow: hidden;
+    }
+
+    .upi-id-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #9CA3AF;
+      display: block;
+    }
+
+    .upi-id-string {
+      font-family: monospace;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #60A5FA;
+      word-break: break-all;
+    }
+
+    .btn-copy-upi {
+      background: #2A2A32;
+      color: #FFFFFF;
+      border: 1px solid #3E3E48;
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+    .btn-copy-upi:hover {
+      background: #3B82F6;
+      border-color: #3B82F6;
+    }
+
+    .btn-pay-now-intent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      color: #FFFFFF;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-size: 13.5px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+      transition: all 0.2s ease;
+    }
+    .btn-pay-now-intent:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(16, 185, 129, 0.45);
+    }
+
+    .upi-supported-apps {
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .upi-supported-title {
+      font-size: 11px;
+      color: #9CA3AF;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .upi-app-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .upi-badge-pill {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      padding: 3px 10px;
+      font-size: 11px;
+      color: #D1D5DB;
+      font-weight: 500;
+    }
+
+    .upi-desktop-hint {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: #FCD34D;
+      margin-top: 14px;
+      line-height: 1.5;
+    }
+
+    /* Order Confirmation & Receipt */
+    .order-confirmed-card {
+      padding: 4px;
+    }
+
+    .order-status-banner {
+      border-radius: 14px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .order-status-banner.pending {
+      background: #FFFBEB;
+      border: 1.5px solid #FDE68A;
+      color: #92400E;
+    }
+
+    .status-icon-spin {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .status-banner-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #78350F;
+    }
+
+    .status-banner-sub {
+      font-size: 13px;
+      color: #92400E;
+      margin-top: 2px;
+    }
+
+    .confirmed-order-receipt {
+      background: #FAF7F2;
+      border: 1.5px dashed var(--border-light);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 22px;
+    }
+
+    .receipt-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+
+    .receipt-address-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+    }
+
+    .receipt-items-table {
+      margin-bottom: 16px;
+    }
+
+    .receipt-item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      font-size: 13.5px;
+    }
+
+    .receipt-total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 2px solid var(--text-main);
+      padding-top: 12px;
+      font-weight: 800;
+      font-size: 16px;
+    }
+
+    .confirmed-actions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
     /* Payment Methods */
     .payment-methods-grid {
       display: grid;
@@ -4362,6 +4688,8 @@
        ========================================================================== -->
   <div class="announcement-bar">
     <div class="ticker-text">
+      <span class="tagline-badge" style="background: rgba(255,255,255,0.18); padding: 2px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">STICK YOUR PERSONALITY.</span>
+      <span class="dot" style="width: 4px; height: 4px; background: #FAF7F2; border-radius: 50%;"></span>
       <span>✨ Free Express Delivery on orders above ₹499</span>
       <span>·</span>
       <span>Standard Sheets starting at ₹199</span>
@@ -4382,18 +4710,22 @@
   <header class="site-header" id="siteHeader">
     <div class="nav-inner">
       <!-- Brand Logo (Matches Screenshots) -->
-      <div class="brand-logo" onclick="navigateTo('home')" title="STICKZY Home">
-        <span class="brand-logo-text">stickzy</span>
-        <span class="brand-logo-dot" id="headerLogoDot"></span>
+      <div class="brand-logo-group" onclick="navigateTo('home')" title="STICKZY Home" style="cursor: pointer; display: flex; align-items: center; gap: 8px;">
+        <div class="brand-logo">
+          <span class="brand-logo-text">stickzy</span>
+          <span class="brand-logo-dot" id="headerLogoDot"></span>
+        </div>
+        <span class="brand-tagline-header" style="font-size: 11px; font-weight: 600; color: #888880; letter-spacing: 0.03em; border-left: 1px solid #E5E5DF; padding-left: 8px; margin-left: 2px;">Stick Your Personality.</span>
       </div>
 
       <!-- Center Navigation Links (Exact 5 Categories as in Screenshots) -->
       <nav class="nav-links-center" id="desktopNavLinks">
         <a href="javascript:void(0)" class="nav-link-pill" id="nav-boys" onclick="navigateTo('boys')">Boys</a>
         <a href="javascript:void(0)" class="nav-link-pill" id="nav-girls" onclick="navigateTo('girls')">Girls</a>
-        <a href="javascript:void(0)" class="nav-link-pill" id="nav-vehicle" onclick="navigateTo('vehicle')">Vehicle</a>
-        <a href="javascript:void(0)" class="nav-link-pill" id="nav-decor" onclick="navigateTo('decor')">Home</a>
         <a href="javascript:void(0)" class="nav-link-pill" id="nav-divine" onclick="navigateTo('divine')">Divine</a>
+        <a href="javascript:void(0)" class="nav-link-pill" id="nav-decor" onclick="navigateTo('decor')">Home Decor</a>
+        <a href="javascript:void(0)" class="nav-link-pill" id="nav-vehicle" onclick="navigateTo('vehicle')">Vehicles</a>
+        <a href="javascript:void(0)" class="nav-link-pill custom-pill" onclick="openCustomizerStudio()" style="background: #171717; color: #FFF; font-weight: 700; border: 1px solid #171717;">Custom Sheet ✨</a>
       </nav>
 
       <!-- Right Action Controls (Bag Icon as in Screenshot + Search + Wishlist) -->
@@ -5693,117 +6025,272 @@
   </aside>
 
   <!-- ==========================================================================
-       CHECKOUT & OTP VERIFICATION MODAL
+       CHECKOUT & UPI PAYMENT MODAL (STRICT SPECIFICATION)
        ========================================================================== -->
   <div class="checkout-modal-backdrop" id="checkoutModalBackdrop">
     <div class="checkout-window">
       
-      <button class="modal-close-icon" onclick="closeCheckoutModal()">
+      <button class="modal-close-icon" onclick="closeCheckoutModal()" title="Close Checkout">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
 
       <div class="checkout-steps-bar">
-        <div class="step-pill active" id="pillStep1"><span class="step-num">1</span> Delivery Details</div>
-        <div class="step-pill" id="pillStep2"><span class="step-num">2</span> Phone OTP Verification</div>
-        <div class="step-pill" id="pillStep3"><span class="step-num">3</span> Payment & Confirmation</div>
+        <div class="step-pill active" id="pillStep1"><span class="step-num">1</span> Delivery Address</div>
+        <div class="step-pill" id="pillStep2"><span class="step-num">2</span> UPI Payment</div>
+        <div class="step-pill" id="pillStep3"><span class="step-num">3</span> Confirm & Place</div>
       </div>
 
-      <!-- Step 1: Customer Details Form -->
+      <!-- Step 1: Delivery Address Form (Strict: No Phone, No OTP, No forced login) -->
       <div id="checkoutStep1">
-        <h3 style="font-family: var(--font-display); font-size: 20px; font-weight: 800; margin-bottom: 20px;">Shipping Address</h3>
-        
-        <div class="checkout-form-grid">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 20px;">
           <div>
-            <label class="form-field-label">Full Name *</label>
-            <input type="text" id="custName" class="form-text-input" placeholder="Anshika Sharma" required />
+            <h3 style="font-family: var(--font-display); font-size: 20px; font-weight: 800; color: #111;">Shipping Address</h3>
+            <p style="font-size: 13px; color: var(--text-muted);">Please provide your accurate delivery details for direct parcel dispatch.</p>
           </div>
-          <div>
-            <label class="form-field-label">Mobile Number *</label>
-            <input type="tel" id="custPhone" class="form-text-input" placeholder="9876543210" required />
-          </div>
-          <div class="full-span">
-            <label class="form-field-label">Street Address & Flat / House No. *</label>
-            <input type="text" id="custAddress" class="form-text-input" placeholder="Flat 402, Lotus Orchid, MG Road" required />
-          </div>
-          <div>
-            <label class="form-field-label">City *</label>
-            <input type="text" id="custCity" class="form-text-input" placeholder="New Delhi" required />
-          </div>
-          <div>
-            <label class="form-field-label">Pincode *</label>
-            <input type="text" id="custPincode" class="form-text-input" placeholder="110001" oninput="autoDetectCity(this.value)" required />
+          <div style="font-size: 12px; font-weight: 700; color: #059669; background: #ECFDF5; padding: 4px 10px; border-radius: 999px;">
+            🔒 Fast Direct Checkout
           </div>
         </div>
 
-        <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="proceedToOtpStep()">
-          <span>CONTINUE TO VERIFICATION</span>
-        </button>
-      </div>
+        <form id="shippingAddressForm" onsubmit="event.preventDefault(); proceedToUpiPaymentStep();">
+          <div class="checkout-form-grid">
+            <div class="full-span">
+              <label class="form-field-label">Full Name *</label>
+              <input type="text" id="custFullName" class="form-text-input" placeholder="e.g. Ananya Sharma" required />
+            </div>
 
-      <!-- Step 2: OTP Verification Flow -->
-      <div id="checkoutStep2" style="display: none;">
-        <div class="otp-verify-card">
-          <div style="font-size: 32px; margin-bottom: 12px;">📱</div>
-          <h3 style="font-family: var(--font-display); font-size: 20px; font-weight: 800; margin-bottom: 8px;">Verify Your Phone</h3>
-          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
-            We sent a 4-digit verification code to <strong id="otpDisplayPhone">+91 9876543210</strong>.
-          </p>
+            <div>
+              <label class="form-field-label">House / Flat Number *</label>
+              <input type="text" id="custHouseNo" class="form-text-input" placeholder="e.g. Flat 304, Tower B / House 12A" required />
+            </div>
 
-          <div class="otp-demo-notification" id="otpDemoBanner">
-            🔒 Simulated OTP Code: <strong id="generatedOtpCode" style="font-size: 14px; letter-spacing: 2px;">8492</strong> (Auto-filled for testing)
+            <div>
+              <label class="form-field-label">Locality / Area / Landmark *</label>
+              <input type="text" id="custLocality" class="form-text-input" placeholder="e.g. Near HDFC Bank, Koramangala 4th Block" required />
+            </div>
+
+            <div class="full-span">
+              <label class="form-field-label">Complete Street Address *</label>
+              <input type="text" id="custStreetAddress" class="form-text-input" placeholder="e.g. 100 Feet Ring Road, 8th Main" required />
+            </div>
+
+            <div>
+              <label class="form-field-label">City *</label>
+              <input type="text" id="custCity" class="form-text-input" placeholder="e.g. Bengaluru" required />
+            </div>
+
+            <div>
+              <label class="form-field-label">State *</label>
+              <input type="text" id="custState" class="form-text-input" placeholder="e.g. Karnataka" required />
+            </div>
+
+            <div class="full-span">
+              <label class="form-field-label">PIN Code *</label>
+              <input type="text" id="custPincode" class="form-text-input" placeholder="e.g. 560034" maxlength="6" pattern="[0-9]{6}" oninput="autoDetectCity(this.value)" required />
+            </div>
           </div>
 
-          <div class="otp-inputs-row">
-            <input type="text" maxlength="1" class="otp-digit-input" id="otp1" oninput="moveOtpFocus(this, 'otp2')" />
-            <input type="text" maxlength="1" class="otp-digit-input" id="otp2" oninput="moveOtpFocus(this, 'otp3')" />
-            <input type="text" maxlength="1" class="otp-digit-input" id="otp3" oninput="moveOtpFocus(this, 'otp4')" />
-            <input type="text" maxlength="1" class="otp-digit-input" id="otp4" oninput="verifyEnteredOtp()" />
+          <!-- Order Summary in Step 1 -->
+          <div class="checkout-summary-box">
+            <div style="display: flex; justify-content: space-between; font-size: 13.5px; color: var(--text-muted); margin-bottom: 6px;">
+              <span>Subtotal (<span id="checkoutItemCountSummary">0</span> items):</span>
+              <span id="checkoutSubtotalSummary">₹0</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 13.5px; color: var(--text-muted); margin-bottom: 8px;">
+              <span>Standard Insured Shipping:</span>
+              <span id="checkoutShippingSummary" style="color: #059669; font-weight: 600;">FREE</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 17px; font-weight: 800; color: #111; border-top: 1px dashed #D6D3CD; padding-top: 10px;">
+              <span>Total Payable Amount:</span>
+              <span id="checkoutTotalPayable">₹0</span>
+            </div>
           </div>
 
-          <button class="btn-secondary" style="padding: 8px 16px; font-size: 12px; margin-top: 10px;" onclick="resendOtpCode()">
-            Resend Code (<span id="resendTimer">45</span>s)
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 18px; padding: 16px;">
+            <span>PROCEED TO UPI PAYMENT →</span>
           </button>
+        </form>
+      </div>
+
+      <!-- Step 2: UPI Payment Screen (Large original QR, UPI ID, Pay Now, App Badges) -->
+      <div id="checkoutStep2" style="display: none;">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <h3 style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: #111; margin-bottom: 4px;">UPI Payment</h3>
+          <p style="font-size: 13.5px; color: var(--text-muted);">Scan the QR code with any UPI app on your phone or tap Pay Now on mobile.</p>
         </div>
 
-        <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="verifyEnteredOtp()">
-          <span>VERIFY & PROCEED TO PAYMENT</span>
+        <!-- Premium UPI Card -->
+        <div class="upi-payment-card-wrap">
+          <div class="upi-card-header">
+            <div class="upi-card-payee-info">
+              <div class="upi-payee-avatar">AT</div>
+              <div>
+                <div class="upi-payee-name">Anshika Trikha</div>
+                <div class="upi-payee-verified">✓ Verified Payee</div>
+              </div>
+            </div>
+            <div class="upi-card-amount-block">
+              <span class="upi-amt-label">Total Amount</span>
+              <span class="upi-amt-val" id="upiCardExactAmount">₹0</span>
+            </div>
+          </div>
+
+          <!-- Original QR Scanner Code Image Uploaded by User -->
+          <div class="upi-qr-frame">
+            <img src="/assets/aistudio/image_be2a9e32.png" alt="Scan to pay Anshika Trikha via UPI" class="upi-qr-image-display" id="upiQrImageDisplay" />
+            <div class="upi-scan-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h.01"/><path d="M17 7h.01"/><path d="M7 17h.01"/><path d="M17 17h.01"/></svg>
+              <span>Scan with Google Pay · PhonePe · Paytm · BHIM</span>
+            </div>
+          </div>
+
+          <!-- UPI ID Copy Bar -->
+          <div class="upi-id-copy-row">
+            <div class="upi-id-box">
+              <span class="upi-id-label">UPI ID</span>
+              <span class="upi-id-string" id="upiIdDisplayString">anshikatrikha4@okhdfcbank</span>
+            </div>
+            <button type="button" class="btn-copy-upi" onclick="copyUpiIdToClipboard()" id="copyUpiBtn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              <span id="copyUpiText">Copy UPI ID</span>
+            </button>
+          </div>
+
+          <!-- Mobile Direct Pay Now Button with UPI Intent -->
+          <div style="margin-top: 14px;">
+            <a id="btnPayNowUpiIntent" href="upi://pay?pa=anshikatrikha4@okhdfcbank&pn=Anshika%20Trikha&cu=INR" class="btn-pay-now-intent">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>PAY NOW VIA UPI APP (Mobile)</span>
+            </a>
+          </div>
+
+          <!-- Supported Apps List -->
+          <div class="upi-supported-apps">
+            <span class="upi-supported-title">Accepted Payment Apps:</span>
+            <div class="upi-app-badges">
+              <span class="upi-badge-pill">Google Pay</span>
+              <span class="upi-badge-pill">PhonePe</span>
+              <span class="upi-badge-pill">Paytm</span>
+              <span class="upi-badge-pill">BHIM</span>
+              <span class="upi-badge-pill">CRED</span>
+              <span class="upi-badge-pill">Any Banking App</span>
+            </div>
+          </div>
+
+          <div class="upi-desktop-hint">
+            📱 <strong>Desktop Customers:</strong> Open Google Pay, PhonePe, or Paytm camera on your mobile phone to scan the QR code directly from your computer screen.
+          </div>
+        </div>
+
+        <!-- Next Action: I Have Paid -->
+        <button class="btn-primary" style="width: 100%; justify-content: center; margin-top: 20px; padding: 16px;" onclick="proceedToUpiVerificationStep()">
+          <span>I HAVE PAID · SUBMIT UTR DETAILS →</span>
+        </button>
+
+        <button class="btn-secondary" style="width: 100%; justify-content: center; margin-top: 10px;" onclick="backToAddressStep()">
+          <span>← Back to Delivery Address</span>
         </button>
       </div>
 
-      <!-- Step 3: Payment Options & Place Order -->
+      <!-- Step 3: Payment Verification & Confirmation (Ask ONLY Name, UPI ID used, UTR Number) -->
       <div id="checkoutStep3" style="display: none;">
-        <h3 style="font-family: var(--font-display); font-size: 20px; font-weight: 800; margin-bottom: 18px;">Select Payment Method</h3>
-
-        <div class="payment-methods-grid">
-          <div class="payment-option-card selected" id="payOptRazorpay" onclick="selectPaymentMethod('razorpay')">
-            <div class="payment-icon">💳</div>
-            <div style="font-size: 13px; font-weight: 700;">Razorpay Online</div>
-            <div style="font-size: 11px; color: var(--text-muted);">UPI, Cards, NetBanking</div>
+        
+        <!-- Step 3A: Submission Form (Shown first) -->
+        <div id="checkoutStep3Form">
+          <div style="text-align: center; margin-bottom: 22px;">
+            <div style="width: 50px; height: 50px; background: #ECFDF5; color: #059669; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 24px;">✓</div>
+            <h3 style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: #111; margin-bottom: 4px;">Confirm Your Payment</h3>
+            <p style="font-size: 13.5px; color: var(--text-muted);">Please enter the 3 payment details below so our team can verify your payment.</p>
           </div>
 
-          <div class="payment-option-card" id="payOptWhatsApp" onclick="selectPaymentMethod('whatsapp')">
-            <div class="payment-icon">💬</div>
-            <div style="font-size: 13px; font-weight: 700;">WhatsApp Direct</div>
-            <div style="font-size: 11px; color: var(--text-muted);">Instant Order (+91931910410)</div>
-          </div>
+          <form id="paymentVerificationForm" onsubmit="event.preventDefault(); submitPaymentVerification();">
+            <div class="checkout-form-grid" style="grid-template-columns: 1fr;">
+              <div>
+                <label class="form-field-label">1. Customer Name *</label>
+                <input type="text" id="verifyCustomerName" class="form-text-input" placeholder="Your Full Name" required />
+              </div>
 
-          <div class="payment-option-card" id="payOptCod" onclick="selectPaymentMethod('cod')">
-            <div class="payment-icon">📦</div>
-            <div style="font-size: 13px; font-weight: 700;">Cash on Delivery</div>
-            <div style="font-size: 11px; color: var(--text-muted);">Pay when delivered</div>
+              <div>
+                <label class="form-field-label">2. UPI ID Used for Payment *</label>
+                <input type="text" id="verifyUpiIdUsed" class="form-text-input" placeholder="e.g. yourname@okhdfcbank or 9876543210@paytm" required />
+              </div>
+
+              <div>
+                <label class="form-field-label">3. UTR Number / Transaction ID *</label>
+                <input type="text" id="verifyUtrNumber" class="form-text-input" placeholder="12-digit UPI Reference Number (e.g. 431289056214)" minlength="6" maxlength="24" required />
+                <span style="font-size: 11.5px; color: var(--text-muted); margin-top: 4px; display: block;">You can find the 12-digit UTR in your Google Pay / PhonePe / Paytm receipt under "UPI Transaction ID" or "UTR".</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 20px; padding: 16px;">
+              <span>SUBMIT & CONFIRM ORDER</span>
+            </button>
+
+            <button type="button" class="btn-secondary" style="width: 100%; justify-content: center; margin-top: 10px;" onclick="backToUpiPaymentStep()">
+              <span>← View QR Code Again</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Step 3B: Order Confirmation & Receipt (Shown after submission) -->
+        <div id="checkoutStep3Success" style="display: none;">
+          <div class="order-confirmed-card">
+            <div class="order-status-banner pending">
+              <div class="status-icon-spin">⏳</div>
+              <div>
+                <div class="status-banner-title">Order Placed · Payment Verification Underway</div>
+                <div class="status-banner-sub">Status: <strong>Pending Verification</strong> (UTR: <span id="confirmedUtrDisplay"></span>)</div>
+              </div>
+            </div>
+
+            <div class="confirmed-order-receipt" id="confirmedOrderReceiptBlock">
+              <div class="receipt-header">
+                <div>
+                  <div style="font-family: var(--font-display); font-size: 20px; font-weight: 800; color: #111;">STICKZY®</div>
+                  <div style="font-size: 11px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase;">Stick Your Personality.</div>
+                </div>
+                <div style="text-align: right;">
+                  <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Order Number</div>
+                  <div style="font-family: var(--font-display); font-size: 16px; font-weight: 800; color: #111;" id="confirmedOrderIdDisplay">STK-00000</div>
+                  <div style="font-size: 11px; color: var(--text-muted);" id="confirmedOrderDateDisplay"></div>
+                </div>
+              </div>
+
+              <div class="receipt-address-box">
+                <div style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px;">Delivering To:</div>
+                <div style="font-weight: 700; color: #111;" id="confirmedCustNameDisplay"></div>
+                <div style="font-size: 13px; color: #444;" id="confirmedCustAddressDisplay"></div>
+              </div>
+
+              <div class="receipt-items-table" id="confirmedItemsListTable">
+                <!-- Injected dynamically -->
+              </div>
+
+              <div class="receipt-total-row">
+                <span>Total Amount Paid via UPI:</span>
+                <span id="confirmedTotalAmountDisplay" style="font-size: 18px; font-weight: 800; color: #111;">₹0</span>
+              </div>
+            </div>
+
+            <div class="confirmed-actions-grid">
+              <button class="btn-primary" onclick="printOrderReceipt()" style="justify-content: center;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+                <span>Print / Save Receipt</span>
+              </button>
+
+              <button class="btn-secondary" onclick="openTrackingFromCheckout()" style="justify-content: center;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                <span>Live Order Tracking</span>
+              </button>
+
+              <button class="btn-whatsapp-order" onclick="shareOrderOnWhatsApp()" style="grid-column: span 2; justify-content: center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>Notify STICKZY Admin via WhatsApp</span>
+              </button>
+            </div>
           </div>
         </div>
 
-        <div style="background: var(--surface-subtle); padding: 18px; border-radius: 12px; margin-bottom: 24px;">
-          <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 15px;">
-            <span>Total Payable:</span>
-            <span id="checkoutTotalPayable">₹0</span>
-          </div>
-        </div>
-
-        <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="executeFinalOrderPlacement()">
-          <span>CONFIRM & PLACE ORDER</span>
-        </button>
       </div>
 
     </div>
@@ -5987,663 +6474,567 @@
        ========================================================================== */
     const DEFAULT_PRODUCTS = [
   {
-    "id": "prod-b1",
-    "title": "Vintage Streetwear Graphic Tees Decal Pack",
+    "id": "prod-b-cars",
+    "title": "Porsche 911 GT3 RS & Twin Turbo Decal Sheet",
     "category": "boys",
     "categoryLabel": "Boys Collection",
-    "subcategory": "T-Shirts & Tees",
-    "theme": "Street Monochrome",
+    "subcategory": "Cars",
+    "theme": "Chalk Grey & Racing Yellow",
     "audience": "boys",
     "type": "sheet",
     "dimensions": "A5 (14.8 × 21 cm)",
-    "material": "120μm Waterproof Vinyl",
+    "material": "120μm Waterproof Cast Vinyl",
     "waterproof": true,
-    "surface": "Laptops, Skateboard, Helmets, Lockers",
-    "price": 199,
-    "mrp": 399,
-    "rating": 4.9,
-    "reviewsCount": 192,
-    "finish": "Matte",
-    "tag": "Bestseller",
-    "isBestseller": true,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><path d=\"M45,35 L60,45 L75,35 L90,48 L80,60 L74,54 L74,88 L46,88 L46,54 L40,60 L30,48 Z\" fill=\"#1E293B\"/><text x=\"60\" y=\"72\" fill=\"#E2E8F0\" font-family=\"sans-serif\" font-weight=\"900\" font-size=\"8\" text-anchor=\"middle\">OFF-BEAT</text></svg>",
-    "description": "High-density screen-print artwork inspired by oversized Japanese streetwear graphics and gothic street typography. Matte laminated for zero glare."
-  },
-  {
-    "id": "prod-b2",
-    "title": "Drippy Oversized Hoodie & Streetwear Puffer Sheet",
-    "category": "boys",
-    "categoryLabel": "Boys Collection",
-    "subcategory": "Hoodies & Sweatshirts",
-    "theme": "Royal Blue & Storm",
-    "audience": "boys",
-    "type": "sheet",
-    "dimensions": "A5 (14.8 × 21 cm)",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "Laptops, Thermos, Notebooks, Tech",
-    "price": 219,
-    "mrp": 429,
-    "rating": 4.8,
-    "reviewsCount": 145,
-    "finish": "Matte",
-    "tag": "Trending",
-    "isBestseller": false,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><path d=\"M42,32 Q60,25 78,32 L92,50 L82,62 L74,56 L74,90 L46,90 L46,56 L38,62 L28,50 Z\" fill=\"#2563EB\"/><circle cx=\"60\" cy=\"46\" r=\"10\" fill=\"#1D4ED8\"/><path d=\"M53,48 Q60,54 67,48\" stroke=\"#FFFFFF\" stroke-width=\"2\" fill=\"none\"/></svg>",
-    "description": "Cozy urban aesthetic hoodie art, drop shoulders, cyber puffers, and icy drip graphics. Waterproof and dishwasher proof."
-  },
-  {
-    "id": "prod-b3",
-    "title": "Raw Denim & Carpenter Pocket Patches Decal Pack",
-    "category": "boys",
-    "categoryLabel": "Boys Collection",
-    "subcategory": "Jeans & Pants",
-    "theme": "Indigo & Brass",
-    "audience": "boys",
-    "type": "sheet",
-    "dimensions": "A5 (14.8 × 21 cm)",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "Toolboxes, Laptops, Phone Cases",
-    "price": 199,
-    "mrp": 389,
-    "rating": 4.7,
-    "reviewsCount": 98,
-    "finish": "Matte",
-    "tag": "New",
-    "isBestseller": false,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><path d=\"M42,32 L78,32 L82,88 L64,88 L60,52 L56,88 L38,88 Z\" fill=\"#3B82F6\"/><path d=\"M46,42 L56,42 L56,54 L46,54 Z\" fill=\"#1D4ED8\"/><path d=\"M64,42 L74,42 L74,54 L64,54 Z\" fill=\"#1D4ED8\"/></svg>",
-    "description": "Heavyweight denim stitching, hammer loops, double knee silhouettes, and selvage denim graphic motifs."
-  },
-  {
-    "id": "prod-b4",
-    "title": "Air Jordan Retro High & Sneakerhead Collector Pack",
-    "category": "boys",
-    "categoryLabel": "Boys Collection",
-    "subcategory": "Sneakers & Shoes",
-    "theme": "Chicago & Royal Hype",
-    "audience": "boys",
-    "type": "sheet",
-    "dimensions": "A5 Sheet · 12 Die-Cuts",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "Shoeboxes, Sneaker Crates, Laptops, Bikes",
+    "surface": "Laptops, Helmets, Car Windows, Tech",
     "price": 249,
     "mrp": 499,
-    "rating": 5,
-    "reviewsCount": 312,
+    "rating": 4.9,
+    "reviewsCount": 218,
     "finish": "Glossy",
     "tag": "Bestseller",
     "isBestseller": true,
     "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><path d=\"M30,72 Q38,50 56,46 L78,54 Q88,58 92,72 L88,78 L30,78 Z\" fill=\"#2563EB\"/><path d=\"M42,66 Q64,60 84,70\" stroke=\"#FFFFFF\" stroke-width=\"4\" fill=\"none\"/><rect x=\"28\" y=\"78\" width=\"66\" height=\"6\" rx=\"3\" fill=\"#FFFFFF\"/></svg>",
-    "description": "Iconic high-top retros, Jumpman silhouettes, sole grips, and deconstructed sneaker typography designed for true sneakerheads."
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#F1F5F9\" stroke=\"#E2E8F0\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(0,0,0,0.15))\"><path d=\"M22,68 C25,58 36,46 54,42 L72,42 C85,42 94,50 98,62 L100,72 L20,72 Z\" fill=\"#FFFFFF\" stroke=\"#0F172A\" stroke-width=\"3\"/><path d=\"M26,66 C28,59 38,48 52,45 L70,45 C82,45 88,52 94,64 L96,68 L24,68 Z\" fill=\"#E11D48\"/><path d=\"M42,50 L56,50 L54,62 L38,62 Z\" fill=\"#0F172A\"/><path d=\"M62,50 L78,50 L82,62 L60,62 Z\" fill=\"#0F172A\"/><circle cx=\"38\" cy=\"72\" r=\"10\" fill=\"#1E293B\" stroke=\"#FFFFFF\" stroke-width=\"2\"/><circle cx=\"38\" cy=\"72\" r=\"4\" fill=\"#FACC15\"/><circle cx=\"82\" cy=\"72\" r=\"10\" fill=\"#1E293B\" stroke=\"#FFFFFF\" stroke-width=\"2\"/><circle cx=\"82\" cy=\"72\" r=\"4\" fill=\"#FACC15\"/><path d=\"M88,44 L102,42 L100,48 L88,48 Z\" fill=\"#0F172A\"/></g><text x=\"60\" y=\"98\" fill=\"#0F172A\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\" letter-spacing=\"0.1em\">GT3 RACING</text></svg>",
+    "description": "High-octane track day sticker sheet featuring iconic sports cars, twin turbo badges, carbon spoilers, and motorsport apex markers. 100% waterproof and scratchproof."
   },
   {
-    "id": "prod-b5",
-    "title": "NY Yankees Snapback & Silver Chain Accessories Pack",
-    "category": "boys",
-    "categoryLabel": "Boys Collection",
-    "subcategory": "Accessories",
-    "theme": "Midnight Navy & Chrome",
-    "audience": "boys",
-    "type": "sheet",
-    "dimensions": "A5 (14.8 × 21 cm)",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "Helmets, Caps, Bikes, Tech",
-    "price": 229,
-    "mrp": 449,
-    "rating": 4.9,
-    "reviewsCount": 167,
-    "finish": "Matte",
-    "tag": "Popular",
-    "isBestseller": false,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><path d=\"M38,68 Q60,42 82,68 L94,76 L30,76 Z\" fill=\"#0F172A\"/><path d=\"M30,74 Q60,82 92,74\" stroke=\"#3B82F6\" stroke-width=\"3\" fill=\"none\"/><text x=\"60\" y=\"62\" fill=\"#FFFFFF\" font-family=\"sans-serif\" font-weight=\"900\" font-size=\"14\" text-anchor=\"middle\">NY</text></svg>",
-    "description": "Street accessories sheet including curved snapbacks, cuban link chains, black shades, and embroidered keytag decals."
-  },
-  {
-    "id": "prod-b6",
-    "title": "DualShock Controller & Cyber Battlestation Decals",
-    "category": "boys",
-    "categoryLabel": "Boys Collection",
-    "subcategory": "Gaming & Tech",
-    "theme": "Neon Cyber & Matte White",
-    "audience": "boys",
-    "type": "sheet",
-    "dimensions": "A5 Sheet · 14 Decals",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "PS5, Xbox, PC Cabinets, Monitors, iPads",
-    "price": 239,
-    "mrp": 479,
-    "rating": 4.9,
-    "reviewsCount": 280,
-    "finish": "Holographic",
-    "tag": "Gamer Favorite",
-    "isBestseller": true,
-    "isHolo": true,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><path d=\"M34,48 Q40,36 60,38 Q80,36 86,48 L92,76 Q88,86 78,80 L68,66 L52,66 L42,80 Q32,86 28,76 Z\" fill=\"#1E293B\"/><circle cx=\"44\" cy=\"54\" r=\"5\" fill=\"#3B82F6\"/><circle cx=\"76\" cy=\"54\" r=\"5\" fill=\"#EC4899\"/><circle cx=\"50\" cy=\"62\" r=\"6\" fill=\"#475569\"/><circle cx=\"70\" cy=\"62\" r=\"6\" fill=\"#475569\"/></svg>",
-    "description": "Custom cut gaming controllers, mechanical keycaps, FPS crosshairs, and glitch cyberpunk HUD elements. Ultra-vivid UV print."
-  },
-  {
-    "id": "prod-b7",
-    "title": "Hoops Basketball & Gym Iron Beast Pack",
-    "category": "boys",
-    "categoryLabel": "Boys Collection",
-    "subcategory": "Sports & Fitness",
-    "theme": "Hardwood & Heavy Iron",
-    "audience": "boys",
-    "type": "sheet",
-    "dimensions": "A5 (14.8 × 21 cm)",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "Gym Shakers, Water Bottles, Locker, iPad",
-    "price": 199,
-    "mrp": 399,
-    "rating": 4.8,
-    "reviewsCount": 175,
-    "finish": "Matte",
-    "tag": "High Tack",
-    "isBestseller": false,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><circle cx=\"60\" cy=\"60\" r=\"28\" fill=\"#C2410C\"/><path d=\"M32,60 L88,60 M60,32 L60,88 M40,38 Q60,60 40,82 M80,38 Q60,60 80,82\" stroke=\"#1E293B\" stroke-width=\"2.5\" fill=\"none\"/></svg>",
-    "description": "Dunk vibes, basketball seams, heavy dumbbells, barbell plates, and relentless grind quotes built to withstand sweaty gym bags."
-  },
-  {
-    "id": "prod-b8",
-    "title": "Y2K Cyber Chrome Smiley & Cool Vibes Graphic Sheet",
-    "category": "boys",
-    "categoryLabel": "Boys Collection",
-    "subcategory": "Trendy & More",
-    "theme": "Icy Blue Liquid Chrome",
-    "audience": "boys",
-    "type": "sheet",
-    "dimensions": "A5 Sheet · 16 Decals",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "Laptops, Phone Cases, Helmets, Skateboards",
-    "price": 229,
-    "mrp": 449,
-    "rating": 5,
-    "reviewsCount": 224,
-    "finish": "Glossy",
-    "tag": "Bestseller",
-    "isBestseller": true,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><circle cx=\"60\" cy=\"60\" r=\"28\" fill=\"#3B82F6\"/><circle cx=\"50\" cy=\"52\" r=\"4\" fill=\"#FFFFFF\"/><circle cx=\"70\" cy=\"52\" r=\"4\" fill=\"#FFFFFF\"/><path d=\"M46,68 Q60,80 74,68\" stroke=\"#FFFFFF\" stroke-width=\"3.5\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
-    "description": "Liquid metal smileys, cyber stars, barcode tags, and futuristic streetwear logos that turn any laptop into a conversation piece."
-  },
-  {
-    "id": "prod-g1",
-    "title": "Coquette Satin Ribbon Bows Sheet",
-    "category": "girls",
-    "categoryLabel": "Girls Collection",
-    "subcategory": "Bows & Ribbons",
-    "theme": "Blush Pink & Rose Gold",
-    "audience": "girls",
-    "type": "sheet",
-    "dimensions": "A5 (14.8 × 21 cm)",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "MacBooks, iPads, Stanley Cups, Journals",
-    "price": 199,
-    "mrp": 399,
-    "rating": 5,
-    "reviewsCount": 348,
-    "finish": "Glossy",
-    "tag": "Bestseller",
-    "isBestseller": true,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><ellipse cx=\"44\" cy=\"56\" rx=\"14\" ry=\"10\" transform=\"rotate(-20 44 56)\" fill=\"#F472B6\"/><ellipse cx=\"76\" cy=\"56\" rx=\"14\" ry=\"10\" transform=\"rotate(20 76 56)\" fill=\"#F472B6\"/><circle cx=\"60\" cy=\"56\" r=\"6\" fill=\"#DB2777\"/><path d=\"M57,60 Q50,78 40,84 M63,60 Q70,78 80,84\" stroke=\"#DB2777\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
-    "description": "Dreamy coquette bows in baby pink satin and rose silk. Ultra-delicate 3D lighting effect with 100% waterproof protection."
-  },
-  {
-    "id": "prod-g2",
-    "title": "Pastel Monarch & Ethereal Butterfly Wings Pack",
-    "category": "girls",
-    "categoryLabel": "Girls Collection",
-    "subcategory": "Butterflies",
-    "theme": "Pastel Lavender & Soft Rose",
-    "audience": "girls",
-    "type": "sheet",
-    "dimensions": "A5 Sheet · 11 Decals",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "Phone Cases, Water Bottles, Vanity Mirrors",
-    "price": 219,
-    "mrp": 419,
-    "rating": 4.9,
-    "reviewsCount": 210,
-    "finish": "Holographic",
-    "tag": "Trending",
-    "isBestseller": false,
-    "isHolo": true,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><path d=\"M60,60 C40,30 20,40 32,70 C38,82 55,75 60,65 C65,75 82,82 88,70 C100,40 80,30 60,60 Z\" fill=\"#F472B6\"/><line x1=\"60\" y1=\"40\" x2=\"60\" y2=\"78\" stroke=\"#9D174D\" stroke-width=\"3\"/></svg>",
-    "description": "Iridescent winged monarch and swallowtail butterflies. Shimmers with pastel rainbow hues when angled under direct light."
-  },
-  {
-    "id": "prod-g3",
-    "title": "English Garden Peonies & Wild Botanical Roses",
-    "category": "girls",
-    "categoryLabel": "Girls Collection",
-    "subcategory": "Flowers",
-    "theme": "Blush Peony & Sage Leaf",
-    "audience": "girls",
-    "type": "sheet",
-    "dimensions": "A5 (14.8 × 21 cm)",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "Kindle, iPad, Planner, Tumblers",
-    "price": 229,
-    "mrp": 449,
-    "rating": 4.8,
-    "reviewsCount": 165,
-    "finish": "Matte",
-    "tag": "Popular",
-    "isBestseller": false,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><circle cx=\"60\" cy=\"56\" r=\"16\" fill=\"#FB7185\"/><path d=\"M60,40 Q75,45 70,60 Q55,70 50,55 Z\" fill=\"#F43F5E\" opacity=\"0.6\"/><path d=\"M60,72 Q60,90 60,92\" stroke=\"#4D7C0F\" stroke-width=\"3\"/><path d=\"M60,80 Q72,74 76,82\" fill=\"#65A30D\"/></svg>",
-    "description": "Pressed floral aesthetic featuring vintage watercolored roses, baby's breath, and blossoming cherry blossoms for bookish souls."
-  },
-  {
-    "id": "prod-g4",
-    "title": "Pearlescent 3D Puffy Hearts & Love Letters",
-    "category": "girls",
-    "categoryLabel": "Girls Collection",
-    "subcategory": "Hearts & Love",
-    "theme": "Strawberry Glaze & Pearl",
-    "audience": "girls",
-    "type": "sheet",
-    "dimensions": "A5 Sheet · 14 Decals",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "EarPods Case, Phone Grip, Laptop Lid",
-    "price": 199,
-    "mrp": 399,
-    "rating": 4.9,
-    "reviewsCount": 290,
-    "finish": "Glossy",
-    "tag": "Bestseller",
-    "isBestseller": true,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><path d=\"M60,78 C35,55 30,38 45,32 C54,28 58,36 60,40 C62,36 66,28 75,32 C90,38 85,55 60,78 Z\" fill=\"#EC4899\"/><circle cx=\"50\" cy=\"40\" r=\"4\" fill=\"#FFFFFF\" opacity=\"0.6\"/></svg>",
-    "description": "Puffy dimensional heart decals with glossy pearl finish. Includes wax-sealed love letter envelopes and sweet candy hearts."
-  },
-  {
-    "id": "prod-g5",
-    "title": "Self-Love Affirmations & Cloud Journaling Quotes",
-    "category": "girls",
-    "categoryLabel": "Girls Collection",
-    "subcategory": "Cute Quotes",
-    "theme": "Cream, Butter Yellow & Rose",
-    "audience": "girls",
-    "type": "sheet",
-    "dimensions": "A5 (14.8 × 21 cm)",
-    "material": "Luxe Matte Vinyl",
-    "waterproof": true,
-    "surface": "Bullet Journals, MacBooks, Mirrors",
-    "price": 199,
-    "mrp": 389,
-    "rating": 5,
-    "reviewsCount": 188,
-    "finish": "Matte",
-    "tag": "Mindfulness",
-    "isBestseller": true,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><rect x=\"30\" y=\"35\" width=\"60\" height=\"50\" rx=\"8\" fill=\"#FFFBEB\" stroke=\"#FDE68A\" stroke-width=\"2\"/><text x=\"60\" y=\"55\" fill=\"#BE185D\" font-family=\"sans-serif\" font-weight=\"700\" font-size=\"7.5\" text-anchor=\"middle\">You are enough ♡</text><text x=\"60\" y=\"70\" fill=\"#6B7280\" font-family=\"sans-serif\" font-size=\"6\" text-anchor=\"middle\">breathe & bloom</text></svg>",
-    "description": "Gentle daily reminders: 'You are enough', 'romanticize your life', 'soft days ahead', in hand-lettered aesthetic handwriting."
-  },
-  {
-    "id": "prod-g6",
-    "title": "Barbiecore Bubble Font & Y2K Aesthetic Typography",
-    "category": "girls",
-    "categoryLabel": "Girls Collection",
-    "subcategory": "Pink Typography",
-    "theme": "Hot Pink & Marshmallow",
-    "audience": "girls",
-    "type": "sheet",
-    "dimensions": "A5 (14.8 × 21 cm)",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "Laptops, Suitcases, Water Bottles",
-    "price": 219,
-    "mrp": 429,
-    "rating": 4.8,
-    "reviewsCount": 142,
-    "finish": "Glossy",
-    "tag": "Y2K Icon",
-    "isBestseller": false,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><text x=\"60\" y=\"66\" fill=\"#DB2777\" font-family=\"sans-serif\" font-weight=\"900\" font-size=\"14\" text-anchor=\"middle\">GIRLHOOD</text><path d=\"M35,74 Q60,82 85,74\" stroke=\"#F472B6\" stroke-width=\"3\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
-    "description": "Juicy bubble letters, chrome pink typography, retro Y2K phrases, and candy-colored glossy sticker badges."
-  },
-  {
-    "id": "prod-g7",
-    "title": "Glossier Lip Tint & Vanity Mirror Cosmetics Decals",
-    "category": "girls",
-    "categoryLabel": "Girls Collection",
-    "subcategory": "Makeup & Beauty",
-    "theme": "Lip Tint & Rose Quartz",
-    "audience": "girls",
-    "type": "sheet",
-    "dimensions": "A5 Sheet · 12 Decals",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "Vanity Mirrors, Makeup Organizers, iPads",
-    "price": 229,
-    "mrp": 449,
-    "rating": 4.9,
-    "reviewsCount": 195,
-    "finish": "Glossy",
-    "tag": "Beauty Guru",
-    "isBestseller": false,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><rect x=\"48\" y=\"52\" width=\"24\" height=\"42\" rx=\"4\" fill=\"#F472B6\"/><rect x=\"52\" y=\"38\" width=\"16\" height=\"14\" fill=\"#E5E7EB\"/><path d=\"M52,38 L60,24 L68,38 Z\" fill=\"#BE185D\"/></svg>",
-    "description": "Hydrating lip oils, perfume bottles with vintage atomizers, cloud paint blushes, and golden hair clips for clean-girl aesthetic."
-  },
-  {
-    "id": "prod-g8",
-    "title": "Tote Bag & French Boutique Parisian Chic Decals",
-    "category": "girls",
-    "categoryLabel": "Girls Collection",
-    "subcategory": "Fashion & Shopping",
-    "theme": "Cafe Latte & Rose Silk",
-    "audience": "girls",
-    "type": "sheet",
-    "dimensions": "A5 (14.8 × 21 cm)",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "Stanley Tumblers, Planners, Laptops",
-    "price": 239,
-    "mrp": 469,
-    "rating": 4.9,
-    "reviewsCount": 160,
-    "finish": "Matte",
-    "tag": "Aesthetic",
-    "isBestseller": false,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><path d=\"M38,48 L82,48 L88,90 L32,90 Z\" fill=\"#FBCFE8\"/><path d=\"M48,48 Q48,28 60,28 Q72,28 72,48\" stroke=\"#DB2777\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"60\" cy=\"66\" r=\"6\" fill=\"#DB2777\"/></svg>",
-    "description": "Canvas book bags, freshly baked croissants, matcha lattes, and high-street shopping cart motifs for European holiday daydreamers."
-  },
-  {
-    "id": "prod-v1",
+    "id": "prod-b-bikes",
     "title": "KTM Throttle & Superbike Racing Beast Decal Pack",
-    "category": "vehicle",
-    "categoryLabel": "Vehicle Decals",
-    "subcategory": "Superbikes & Biker",
-    "theme": "Asphalt & Track Orange",
-    "audience": "unisex",
-    "type": "sheet",
-    "dimensions": "A4 Sheet (21 × 29.7 cm)",
-    "material": "150μm Automotive Cast Vinyl",
-    "waterproof": true,
-    "surface": "Superbikes, Helmets, Swingarms, Mudguards",
-    "price": 299,
-    "mrp": 599,
-    "rating": 4.9,
-    "reviewsCount": 380,
-    "finish": "Glossy",
-    "tag": "High Speed Rated",
-    "isBestseller": true,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#18181B\"/><path d=\"M30,70 L50,35 L90,35 L70,70 Z\" fill=\"#FF5500\"/><text x=\"40\" y=\"60\" fill=\"#FFFFFF\" font-family=\"sans-serif\" font-weight=\"900\" font-size=\"14\">RACE</text><circle cx=\"45\" cy=\"80\" r=\"10\" fill=\"#27272A\"/><circle cx=\"75\" cy=\"80\" r=\"10\" fill=\"#27272A\"/></svg>",
-    "description": "150μm automotive grade cast vinyl engineered to withstand pressure washes, 150+ km/h highway wind blasts, and blistering summer heat."
-  },
-  {
-    "id": "prod-v2",
-    "title": "Motorsport Twin Turbo & Drift Culture Decals",
-    "category": "vehicle",
-    "categoryLabel": "Vehicle Decals",
-    "subcategory": "Sports Cars & JDM",
-    "theme": "JDM Matte Black & Crimson",
-    "audience": "unisex",
-    "type": "sheet",
-    "dimensions": "A4 Large Sheet",
-    "material": "Automotive Grade Vinyl",
-    "waterproof": true,
-    "surface": "Car Windshield, Quarter Panels, Bootlid",
-    "price": 349,
-    "mrp": 699,
-    "rating": 5,
-    "reviewsCount": 265,
-    "finish": "Glossy",
-    "tag": "JDM Legend",
-    "isBestseller": true,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#18181B\"/><circle cx=\"60\" cy=\"60\" r=\"28\" fill=\"#DC2626\"/><circle cx=\"60\" cy=\"60\" r=\"16\" fill=\"#18181B\"/><path d=\"M60,32 L60,88 M32,60 L88,60\" stroke=\"#F87171\" stroke-width=\"3\"/></svg>",
-    "description": "Twin-scroll turbo blueprints, kanji speed characters, tachometer needles at 9000 RPM, and track circuit outlines."
-  },
-  {
-    "id": "prod-v3",
-    "title": "Helmet Visor & Shell Guard Anti-Scratch Stickers",
-    "category": "vehicle",
-    "categoryLabel": "Vehicle Decals",
-    "subcategory": "Helmet Visors",
-    "theme": "Reflective Cyber Visor",
-    "audience": "unisex",
-    "type": "sheet",
-    "dimensions": "Visor Curved Arc Set",
-    "material": "Anti-Scratch Weatherproof Vinyl",
-    "waterproof": true,
-    "surface": "Full Face Helmets, Moto Cross, Visor Brow",
-    "price": 199,
-    "mrp": 399,
-    "rating": 4.8,
-    "reviewsCount": 182,
-    "finish": "Holographic",
-    "tag": "Reflective",
-    "isBestseller": false,
-    "isHolo": true,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#18181B\"/><path d=\"M35,62 Q60,36 85,62 L80,72 Q60,52 40,72 Z\" fill=\"#38BDF8\"/><circle cx=\"60\" cy=\"58\" r=\"4\" fill=\"#FFFFFF\"/></svg>",
-    "description": "Aerodynamic curved visor banners with high retro-reflective glass bead coating for nighttime riding safety and aggressive styling."
-  },
-  {
-    "id": "prod-v4",
-    "title": "Activa & Urban Scooty Minimalist Chic Decals",
-    "category": "vehicle",
-    "categoryLabel": "Vehicle Decals",
-    "subcategory": "Activa & Scooty",
-    "theme": "Rose Gold & Pastel Mint",
-    "audience": "unisex",
-    "type": "sheet",
-    "dimensions": "Side Panel & Mudguard Kit",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "Honda Activa, Jupiter, Vespa, Ola S1",
-    "price": 249,
-    "mrp": 499,
-    "rating": 4.9,
-    "reviewsCount": 194,
-    "finish": "Matte",
-    "tag": "Chic Ride",
-    "isBestseller": false,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#F1F5F9\"/><circle cx=\"45\" cy=\"74\" r=\"14\" fill=\"#0F172A\"/><circle cx=\"85\" cy=\"74\" r=\"14\" fill=\"#0F172A\"/><path d=\"M45,74 L60,55 L75,55 L85,74\" stroke=\"#0D9488\" stroke-width=\"4\" fill=\"none\"/></svg>",
-    "description": "Subtle elegance designed specifically for daily commuters. Leaves 0% sticky glue residue when removed for resale."
-  },
-  {
-    "id": "prod-h1",
-    "title": "Botanical Sage & Terracotta Arch Wall Mural Decals",
-    "category": "decor",
-    "categoryLabel": "Home Decor",
-    "subcategory": "Bedroom Walls",
-    "theme": "Earthy Terracotta & Sage",
-    "audience": "unisex",
-    "type": "sheet",
-    "dimensions": "A3 Large Mural Sheet",
-    "material": "Zero-Residue Fabric Wall Vinyl",
-    "waterproof": true,
-    "surface": "Painted Walls, Plaster, Headboards",
-    "price": 349,
-    "mrp": 699,
-    "rating": 4.9,
-    "reviewsCount": 215,
-    "finish": "Matte",
-    "tag": "Home Makeover",
-    "isBestseller": true,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#F4F4F0\"/><path d=\"M40,88 L40,55 Q40,35 60,35 Q80,35 80,55 L80,88 Z\" fill=\"#E07A5F\"/><circle cx=\"60\" cy=\"55\" r=\"12\" fill=\"#81B29A\"/></svg>",
-    "description": "Peel-and-stick modern bohemian arches and monstera silhouettes. Specially formulated adhesive guarantees zero paint damage on removal."
-  },
-  {
-    "id": "prod-h2",
-    "title": "Whimsical Switchboard Peekaboo Animal Stickers",
-    "category": "decor",
-    "categoryLabel": "Home Decor",
-    "subcategory": "Switchboard Decals",
-    "theme": "Charcoal & Warm Ivory",
-    "audience": "unisex",
-    "type": "sheet",
-    "dimensions": "Sheet of 8 Switch Surrounds",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "Electrical Switchboards, Plug Sockets, Door Frames",
-    "price": 189,
-    "mrp": 349,
-    "rating": 5,
-    "reviewsCount": 340,
-    "finish": "Matte",
-    "tag": "Bestseller",
-    "isBestseller": true,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#F4F4F0\"/><rect x=\"35\" y=\"45\" width=\"50\" height=\"40\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#D1D5DB\" stroke-width=\"2\"/><circle cx=\"48\" cy=\"40\" r=\"5\" fill=\"#374151\"/><circle cx=\"72\" cy=\"40\" r=\"5\" fill=\"#374151\"/><path d=\"M45,43 Q60,36 75,43\" stroke=\"#374151\" stroke-width=\"2\" fill=\"none\"/></svg>",
-    "description": "Cute sleepy cats, pandas, and tiny owls peeking over standard electrical switch plates. Adds instant joy to every room in the house."
-  },
-  {
-    "id": "prod-h3",
-    "title": "Aesthetic Scandinavian Floral Wardrobe Decals",
-    "category": "decor",
-    "categoryLabel": "Home Decor",
-    "subcategory": "Almirah & Wardrobe",
-    "theme": "Warm Linen & Olive",
-    "audience": "unisex",
-    "type": "sheet",
-    "dimensions": "A4 Sheet (21 × 29.7 cm)",
-    "material": "Matte Clean-Peel Vinyl",
-    "waterproof": true,
-    "surface": "Steel Almirahs, Wood Wardrobes, Vanity Desks",
-    "price": 269,
-    "mrp": 529,
-    "rating": 4.8,
-    "reviewsCount": 140,
-    "finish": "Matte",
-    "tag": "Elegant",
-    "isBestseller": false,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#F4F4F0\"/><path d=\"M35,35 L85,35 L85,85 L35,85 Z\" fill=\"#E5E7EB\"/><line x1=\"60\" y1=\"35\" x2=\"60\" y2=\"85\" stroke=\"#9CA3AF\" stroke-width=\"2\"/><circle cx=\"60\" cy=\"60\" r=\"14\" fill=\"#5E6E59\"/></svg>",
-    "description": "Transform plain Godrej steel almirahs or modern modular wardrobes into bespoke designer furniture with warm floral vine borders."
-  },
-  {
-    "id": "prod-h4",
-    "title": "Cozy Study Desk & Laptop Productivity Decals",
-    "category": "decor",
-    "categoryLabel": "Home Decor",
-    "subcategory": "Desk & Laptop",
-    "theme": "Matcha, Books & Coffee",
-    "audience": "unisex",
-    "type": "sheet",
-    "dimensions": "A5 Sheet · 15 Decals",
-    "material": "120μm Waterproof Vinyl",
-    "waterproof": true,
-    "surface": "Desktops, MacBooks, iPad Folios, Planners",
-    "price": 199,
-    "mrp": 399,
-    "rating": 4.9,
-    "reviewsCount": 198,
-    "finish": "Matte",
-    "tag": "Studygram",
-    "isBestseller": false,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#F4F4F0\"/><rect x=\"35\" y=\"42\" width=\"50\" height=\"34\" rx=\"4\" fill=\"#3B82F6\"/><rect x=\"42\" y=\"76\" width=\"36\" height=\"4\" rx=\"2\" fill=\"#94A3B8\"/><circle cx=\"76\" cy=\"48\" r=\"8\" fill=\"#10B981\"/></svg>",
-    "description": "Cute steaming mugs, stacks of vintage novels, potted succulents, and lofi focus vibes that turn any study corner into a cozy sanctuary."
-  },
-  {
-    "id": "prod-d1",
-    "title": "Mahadev Trishul, Damru & Crescent Moon Sacred Decal",
-    "category": "divine",
-    "categoryLabel": "Divine Collection",
-    "subcategory": "Mahadev / Lord Shiva",
-    "theme": "Saffron & Antique Gold Foil",
-    "audience": "unisex",
-    "type": "sheet",
-    "dimensions": "A5 Sheet · 10 Sacred Decals",
-    "material": "120μm Metallic Gold Foil Vinyl",
-    "waterproof": true,
-    "surface": "Car Back Glass, Bike Fuel Tanks, Mandir, Laptops",
-    "price": 249,
-    "mrp": 499,
-    "rating": 5,
-    "reviewsCount": 420,
-    "finish": "Glossy",
-    "tag": "Bestseller",
-    "isBestseller": true,
-    "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FFFDF5\"/><path d=\"M60,30 L60,88 M46,45 Q60,65 60,40 M74,45 Q60,65 60,40\" stroke=\"#D97706\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\"/><polygon points=\"46,70 74,70 60,58\" fill=\"#B45309\"/></svg>",
-    "description": "Crafted with reverence. Intricate Har Har Mahadev calligraphy, trident silhouettes, and third-eye artwork printed on weather-resistant gold vinyl."
-  },
-  {
-    "id": "prod-d2",
-    "title": "Radha Krishna Flute & Peacock Feather Devotional Decals",
-    "category": "divine",
-    "categoryLabel": "Divine Collection",
-    "subcategory": "Radha Krishna",
-    "theme": "Vrindavan Gold & Teal Peacock",
-    "audience": "unisex",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Bikes",
+    "theme": "Apex Orange & Cyber Black",
+    "audience": "boys",
     "type": "sheet",
     "dimensions": "A5 (14.8 × 21 cm)",
     "material": "120μm Waterproof Vinyl",
     "waterproof": true,
-    "surface": "Mandir Almirah, Car Dashboard, Laptops",
+    "surface": "Superbikes, Helmets, Fuel Tanks, Visors",
     "price": 229,
     "mrp": 449,
     "rating": 4.9,
     "reviewsCount": 310,
     "finish": "Matte",
-    "tag": "Spiritual Joy",
+    "tag": "Bestseller",
     "isBestseller": true,
     "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FFFDF5\"/><path d=\"M35,62 L85,58\" stroke=\"#D97706\" stroke-width=\"5\" stroke-linecap=\"round\"/><ellipse cx=\"50\" cy=\"46\" rx=\"10\" ry=\"14\" fill=\"#0D9488\"/><circle cx=\"50\" cy=\"46\" r=\"5\" fill=\"#3B82F6\"/></svg>",
-    "description": "Sublime Bansuri and Mor Pankh artwork honoring divine prem. UV-resistant inks maintain brilliant vibrancy even when exposed to direct sunlight."
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FFF7ED\" stroke=\"#FED7AA\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(234,88,12,0.2))\"><circle cx=\"34\" cy=\"68\" r=\"14\" fill=\"#18181B\" stroke=\"#FFFFFF\" stroke-width=\"3\"/><circle cx=\"34\" cy=\"68\" r=\"6\" fill=\"#EA580C\"/><circle cx=\"86\" cy=\"68\" r=\"14\" fill=\"#18181B\" stroke=\"#FFFFFF\" stroke-width=\"3\"/><circle cx=\"86\" cy=\"68\" r=\"6\" fill=\"#EA580C\"/><path d=\"M34,68 L50,52 L68,52 L86,68 L68,68 L58,58 L46,68 Z\" fill=\"#EA580C\" stroke=\"#FFFFFF\" stroke-width=\"2\"/><path d=\"M48,50 L56,34 L66,34 L62,48 Z\" fill=\"#18181B\"/><line x1=\"56\" y1=\"34\" x2=\"52\" y2=\"28\" stroke=\"#18181B\" stroke-width=\"4\" stroke-linecap=\"round\"/></g><text x=\"60\" y=\"100\" fill=\"#EA580C\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\" letter-spacing=\"0.1em\">FULL THROTTLE</text></svg>",
+    "description": "Built for true riders. High-tack adhesive vinyl engineered to withstand highway windblasts, monsoon rains, and harsh UV sunshine without fading."
   },
   {
-    "id": "prod-d3",
-    "title": "Sankatmochan Hanuman Ji Gada & Ram Bhakt Emblem",
+    "id": "prod-b-racing",
+    "title": "Formula 1 Grand Prix & Apex Racing Pack",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Racing",
+    "theme": "Monza Red & Checkered White",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Laptops, Helmets, Desks, Skateboard",
+    "price": 219,
+    "mrp": 429,
+    "rating": 4.8,
+    "reviewsCount": 165,
+    "finish": "Glossy",
+    "tag": "Trending",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FEF2F2\" stroke=\"#FEE2E2\" stroke-width=\"2\"/><g><rect x=\"30\" y=\"30\" width=\"10\" height=\"10\" fill=\"#111\"/><rect x=\"40\" y=\"30\" width=\"10\" height=\"10\" fill=\"#FFF\"/><rect x=\"50\" y=\"30\" width=\"10\" height=\"10\" fill=\"#111\"/><rect x=\"60\" y=\"30\" width=\"10\" height=\"10\" fill=\"#FFF\"/><rect x=\"70\" y=\"30\" width=\"10\" height=\"10\" fill=\"#111\"/><rect x=\"80\" y=\"30\" width=\"10\" height=\"10\" fill=\"#FFF\"/><rect x=\"30\" y=\"40\" width=\"10\" height=\"10\" fill=\"#FFF\"/><rect x=\"40\" y=\"40\" width=\"10\" height=\"10\" fill=\"#111\"/><rect x=\"50\" y=\"40\" width=\"10\" height=\"10\" fill=\"#FFF\"/><rect x=\"60\" y=\"40\" width=\"10\" height=\"10\" fill=\"#111\"/><rect x=\"70\" y=\"40\" width=\"10\" height=\"10\" fill=\"#FFF\"/><rect x=\"80\" y=\"40\" width=\"10\" height=\"10\" fill=\"#111\"/><path d=\"M25,70 L95,70 L85,82 L35,82 Z\" fill=\"#DC2626\"/><text x=\"60\" y=\"79\" fill=\"#FFF\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"8\" text-anchor=\"middle\">POLE POSITION</text><text x=\"60\" y=\"102\" fill=\"#111\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"10\" text-anchor=\"middle\">RACE DAY</text></g></svg>",
+    "description": "Checkered flags, podium trophies, slick tire decals, and telemetry graphics for speed enthusiasts and motorsport aficionados."
+  },
+  {
+    "id": "prod-b-gaming",
+    "title": "DualShock Controller & Cyber Battlestation Decals",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Gaming",
+    "theme": "Cyber Neon & Matte Charcoal",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Consoles, PC Cabinets, Keyboards, Monitors",
+    "price": 239,
+    "mrp": 469,
+    "rating": 4.9,
+    "reviewsCount": 284,
+    "finish": "Matte",
+    "tag": "Bestseller",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#0F172A\" stroke=\"#1E293B\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 10px rgba(59,130,246,0.3))\"><path d=\"M26,50 C26,42 34,36 44,36 L76,36 C86,36 94,42 94,50 L96,72 C96,80 88,86 80,82 L70,72 L50,72 L40,82 C32,86 24,80 24,72 Z\" fill=\"#1E293B\" stroke=\"#38BDF8\" stroke-width=\"2.5\"/><circle cx=\"40\" cy=\"54\" r=\"5\" fill=\"#0F172A\"/><path d=\"M40,51 L40,57 M37,54 L43,54\" stroke=\"#94A3B8\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"50\" r=\"3\" fill=\"#EC4899\"/><circle cx=\"74\" cy=\"56\" r=\"3\" fill=\"#3B82F6\"/><circle cx=\"86\" cy=\"56\" r=\"3\" fill=\"#10B981\"/><circle cx=\"80\" cy=\"62\" r=\"3\" fill=\"#FACC15\"/><circle cx=\"48\" cy=\"64\" r=\"5\" fill=\"#334155\"/><circle cx=\"72\" cy=\"64\" r=\"5\" fill=\"#334155\"/></g><text x=\"60\" y=\"102\" fill=\"#38BDF8\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">LEVEL UP</text></svg>",
+    "description": "Glow-up for your gaming rig. Pixel hearts, WASD keys, RGB lighting accents, and wireless controllers in die-cut vinyl."
+  },
+  {
+    "id": "prod-b-anime",
+    "title": "Anime Shinobi Blade & Mecha Cyberpunk Decals",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Anime-inspired",
+    "theme": "Crimson Katana & Neon Tokyo",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Laptops, Tablets, Skateboard, Notebooks",
+    "price": 249,
+    "mrp": 499,
+    "rating": 5,
+    "reviewsCount": 340,
+    "finish": "Holographic",
+    "tag": "Top Rated",
+    "isBestseller": true,
+    "isHolo": true,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><defs><linearGradient id=\"animeG\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#F43F5E\"/><stop offset=\"50%\" stop-color=\"#8B5CF6\"/><stop offset=\"100%\" stop-color=\"#06B6D4\"/></linearGradient></defs><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#18181B\" stroke=\"#27272A\" stroke-width=\"2\"/><g><circle cx=\"60\" cy=\"55\" r=\"26\" fill=\"#E11D48\" opacity=\"0.3\"/><path d=\"M30,78 L80,28 L90,38 L40,88 Z\" fill=\"url(#animeG)\" stroke=\"#FFFFFF\" stroke-width=\"2\"/><line x1=\"26\" y1=\"82\" x2=\"36\" y2=\"72\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"60\" cy=\"55\" r=\"16\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"60\" y=\"60\" fill=\"#FFFFFF\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"12\" text-anchor=\"middle\">忍</text></g><text x=\"60\" y=\"104\" fill=\"#F43F5E\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">SHINOBI SOUL</text></svg>",
+    "description": "Original Japanese anime inspired illustrations: legendary katanas, cloud scrolls, cyber-samurai masks, and shuriken badges with holographic rainbow sheen."
+  },
+  {
+    "id": "prod-b-gym",
+    "title": "Iron Beast Gym Club & Heavy Dumbbell Decals",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Gym",
+    "theme": "Raw Cast Iron & Chalk",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Gym Shakers, Water Bottles, Lockers, Laptops",
+    "price": 199,
+    "mrp": 399,
+    "rating": 4.8,
+    "reviewsCount": 190,
+    "finish": "Matte",
+    "tag": "Trending",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#F4F4F5\" stroke=\"#E4E4E7\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(0,0,0,0.15))\"><rect x=\"25\" y=\"54\" width=\"70\" height=\"12\" rx=\"3\" fill=\"#27272A\"/><rect x=\"18\" y=\"44\" width=\"10\" height=\"32\" rx=\"3\" fill=\"#09090B\"/><rect x=\"92\" y=\"44\" width=\"10\" height=\"32\" rx=\"3\" fill=\"#09090B\"/><rect x=\"12\" y=\"48\" width=\"8\" height=\"24\" rx=\"2\" fill=\"#52525B\"/><rect x=\"100\" y=\"48\" width=\"8\" height=\"24\" rx=\"2\" fill=\"#52525B\"/><circle cx=\"60\" cy=\"60\" r=\"14\" fill=\"#DC2626\"/><text x=\"60\" y=\"64\" fill=\"#FFFFFF\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">100KG</text></g><text x=\"60\" y=\"102\" fill=\"#09090B\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">NO EXCUSES</text></svg>",
+    "description": "Heavy lifting graphics, barbell plates, kettlebells, and relentless motivation for gym junkies and fitness athletes."
+  },
+  {
+    "id": "prod-b-sports",
+    "title": "Hoops Street Basketball & Air Slam Pack",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Sports",
+    "theme": "Varsity Navy & Solar Orange",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Laptops, Skateboard, Water Bottles",
+    "price": 199,
+    "mrp": 399,
+    "rating": 4.8,
+    "reviewsCount": 145,
+    "finish": "Matte",
+    "tag": "Popular",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FFFBEB\" stroke=\"#FEF3C7\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(217,119,6,0.2))\"><circle cx=\"60\" cy=\"55\" r=\"26\" fill=\"#F97316\" stroke=\"#FFFFFF\" stroke-width=\"2.5\"/><path d=\"M34,55 L86,55\" stroke=\"#1E293B\" stroke-width=\"2\"/><path d=\"M60,29 L60,81\" stroke=\"#1E293B\" stroke-width=\"2\"/><path d=\"M42,37 C54,45 54,65 42,73\" fill=\"none\" stroke=\"#1E293B\" stroke-width=\"2\"/><path d=\"M78,37 C66,45 66,65 78,73\" fill=\"none\" stroke=\"#1E293B\" stroke-width=\"2\"/></g><text x=\"60\" y=\"102\" fill=\"#C2410C\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">BALL IS LIFE</text></svg>",
+    "description": "Streetball court badges, net swooshes, varsity numbers, and dunk silhouettes crafted in crisp die-cut outlines."
+  },
+  {
+    "id": "prod-b-attitude",
+    "title": "Don't Quit / Bad Boy Attitude Bold Typography",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Attitude",
+    "theme": "Monochrome & Neon Yellow Accent",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Laptops, Helmets, Bike Visors, Mirrors",
+    "price": 219,
+    "mrp": 429,
+    "rating": 4.9,
+    "reviewsCount": 260,
+    "finish": "Matte",
+    "tag": "Bestseller",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#18181B\" stroke=\"#27272A\" stroke-width=\"2\"/><g><rect x=\"22\" y=\"32\" width=\"76\" height=\"24\" rx=\"6\" fill=\"#FACC15\"/><text x=\"60\" y=\"48\" fill=\"#000\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"11\" text-anchor=\"middle\">DO IT ANYWAY</text><rect x=\"22\" y=\"62\" width=\"76\" height=\"24\" rx=\"6\" fill=\"#FFFFFF\"/><text x=\"60\" y=\"78\" fill=\"#18181B\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"11\" text-anchor=\"middle\">UNSTOPPABLE</text></g><text x=\"60\" y=\"104\" fill=\"#9CA3AF\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"800\" font-size=\"8\" text-anchor=\"middle\">100% RAW ATTITUDE</text></svg>",
+    "description": "Punchy, unapologetic typography statements. High contrast black & neon stickers for individuals who pave their own road."
+  },
+  {
+    "id": "prod-b-tech",
+    "title": "Full-Stack Dev Code Terminal & Binary Hacker Pack",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Technology",
+    "theme": "Cyber Slate & Matrix Green",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "MacBooks, Mechanical Keyboards, Monitors",
+    "price": 229,
+    "mrp": 449,
+    "rating": 4.9,
+    "reviewsCount": 380,
+    "finish": "Matte",
+    "tag": "Dev Favorite",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#0F172A\" stroke=\"#1E293B\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 8px rgba(34,197,94,0.25))\"><rect x=\"20\" y=\"28\" width=\"80\" height=\"56\" rx=\"8\" fill=\"#1E293B\" stroke=\"#334155\" stroke-width=\"2\"/><circle cx=\"28\" cy=\"36\" r=\"2.5\" fill=\"#EF4444\"/><circle cx=\"36\" cy=\"36\" r=\"2.5\" fill=\"#F59E0B\"/><circle cx=\"44\" cy=\"36\" r=\"2.5\" fill=\"#10B981\"/><text x=\"26\" y=\"54\" fill=\"#38BDF8\" font-family=\"monospace\" font-size=\"9\" font-weight=\"bold\">&gt; git commit</text><text x=\"26\" y=\"66\" fill=\"#4ADE80\" font-family=\"monospace\" font-size=\"9\" font-weight=\"bold\">&gt; deploy: ok</text><rect x=\"26\" y=\"72\" width=\"18\" height=\"3\" fill=\"#64748B\"/></g><text x=\"60\" y=\"102\" fill=\"#38BDF8\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">BUILD THE FUTURE</text></svg>",
+    "description": "The quintessential developer sheet: bash prompts, bug squashing badges, 404 coffee cups, and git commands designed for engineering workstations."
+  },
+  {
+    "id": "prod-b-sneakers",
+    "title": "Air Jordan Retro High & Sneakerhead Collector Pack",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Sneakers",
+    "theme": "Chicago Red, White & Black",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Shoeboxes, Laptops, Phone Cases, Skateboards",
+    "price": 249,
+    "mrp": 499,
+    "rating": 4.9,
+    "reviewsCount": 310,
+    "finish": "Glossy",
+    "tag": "Bestseller",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FEF2F2\" stroke=\"#FEE2E2\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 8px rgba(0,0,0,0.18))\"><path d=\"M24,70 C24,62 30,58 38,58 L54,58 L62,40 L78,40 L84,54 L98,64 L96,76 L24,76 Z\" fill=\"#FFFFFF\" stroke=\"#0F172A\" stroke-width=\"2.5\"/><path d=\"M38,58 L54,58 L62,40 L74,40 L70,54 L44,60 Z\" fill=\"#DC2626\"/><path d=\"M48,64 L86,64 L74,74 L40,74 Z\" fill=\"#0F172A\"/><rect x=\"22\" y=\"74\" width=\"76\" height=\"8\" rx=\"3\" fill=\"#FFFFFF\" stroke=\"#0F172A\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"48\" r=\"4\" fill=\"#0F172A\"/></g><text x=\"60\" y=\"102\" fill=\"#DC2626\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">SNEAKERHEAD</text></svg>",
+    "description": "Tribute to high-top sneaker culture, iconic colorways, shoebox labels, and streetwear fashion."
+  },
+  {
+    "id": "prod-g-bows",
+    "title": "Coquette Satin Ribbon Bows Sheet",
+    "category": "girls",
+    "categoryLabel": "Girls Sanctuary",
+    "subcategory": "Coquette & Bows",
+    "theme": "Blush Rose & Pearl Cream",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Stanley Cups, MacBooks, Phone Cases, Mirrors",
+    "price": 199,
+    "mrp": 399,
+    "rating": 4.9,
+    "reviewsCount": 392,
+    "finish": "Matte",
+    "tag": "Bestseller",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FFF1F5\" stroke=\"#FCE7ED\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(244,114,182,0.25))\"><path d=\"M60,55 C40,32 18,44 26,65 C34,85 58,58 60,55 Z\" fill=\"#F472B6\" stroke=\"#FFFFFF\" stroke-width=\"2.5\"/><path d=\"M60,55 C80,32 102,44 94,65 C86,85 62,58 60,55 Z\" fill=\"#F472B6\" stroke=\"#FFFFFF\" stroke-width=\"2.5\"/><circle cx=\"60\" cy=\"55\" r=\"7\" fill=\"#DB2777\" stroke=\"#FFFFFF\" stroke-width=\"2\"/><path d=\"M57,59 Q50,84 36,92 Q46,78 55,62 Z\" fill=\"#F472B6\"/><path d=\"M63,59 Q70,84 84,92 Q74,78 65,62 Z\" fill=\"#F472B6\"/></g><text x=\"60\" y=\"108\" fill=\"#DB2777\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"800\" font-size=\"8.5\" text-anchor=\"middle\" letter-spacing=\"0.1em\">COQUETTE CORE</text></svg>",
+    "description": "The viral coquette ribbon sheet. Dainty balletcore satin ties, delicate bows, and pearl strands. Perfect for water tumblers and iPad cases."
+  },
+  {
+    "id": "prod-g-pink",
+    "title": "Barbiecore Bubble Font & Y2K Aesthetic Typography",
+    "category": "girls",
+    "categoryLabel": "Girls Sanctuary",
+    "subcategory": "Pink Aesthetic",
+    "theme": "Hot Fuchsia & Pastel Cotton Candy",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Laptops, Journal, Vanity Mirror, Phone",
+    "price": 219,
+    "mrp": 429,
+    "rating": 4.9,
+    "reviewsCount": 275,
+    "finish": "Glossy",
+    "tag": "Trending",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FDF2F8\" stroke=\"#FCE7F3\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 8px rgba(219,39,119,0.2))\"><circle cx=\"60\" cy=\"55\" r=\"28\" fill=\"#F472B6\"/><text x=\"60\" y=\"62\" fill=\"#FFFFFF\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"18\" text-anchor=\"middle\">BABY</text><circle cx=\"82\" cy=\"38\" r=\"5\" fill=\"#FDE047\"/><polygon points=\"36,40 38,44 42,46 38,48 36,52 34,48 30,46 34,44\" fill=\"#FFFFFF\"/></g><text x=\"60\" y=\"102\" fill=\"#DB2777\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">PINK PARADISE</text></svg>",
+    "description": "Puffy bubble letters, groovy retro swirls, nostalgia stars, and hot pink mood-boosters to stick across your daily carry."
+  },
+  {
+    "id": "prod-g-flowers",
+    "title": "English Garden Peonies & Wild Botanical Roses",
+    "category": "girls",
+    "categoryLabel": "Girls Sanctuary",
+    "subcategory": "Flowers",
+    "theme": "Sage Green & Delicate Petal Rose",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Notebooks, Laptops, Plant Pots, Mirrors",
+    "price": 229,
+    "mrp": 449,
+    "rating": 4.8,
+    "reviewsCount": 185,
+    "finish": "Matte",
+    "tag": "Aesthetic",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FDF4F5\" stroke=\"#FCE7EA\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(0,0,0,0.08))\"><circle cx=\"60\" cy=\"42\" r=\"14\" fill=\"#FB7185\"/><circle cx=\"74\" cy=\"52\" r=\"14\" fill=\"#F43F5E\"/><circle cx=\"68\" cy=\"70\" r=\"14\" fill=\"#E11D48\"/><circle cx=\"48\" cy=\"70\" r=\"14\" fill=\"#F43F5E\"/><circle cx=\"44\" cy=\"52\" r=\"14\" fill=\"#FB7185\"/><circle cx=\"59\" cy=\"58\" r=\"10\" fill=\"#FEF08A\"/><path d=\"M60,78 Q60,95 60,98\" stroke=\"#15803D\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M60,86 Q72,82 76,88 Q68,90 60,86 Z\" fill=\"#16A34A\"/><path d=\"M60,90 Q48,86 44,92 Q52,94 60,90 Z\" fill=\"#16A34A\"/></g><text x=\"60\" y=\"112\" fill=\"#E11D48\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"800\" font-size=\"8\" text-anchor=\"middle\">BLOOM WITH GRACE</text></svg>",
+    "description": "Hand-painted botanical watercolors transferred to durable vinyl. Features wild tea roses, peonies, eucalyptus leaves, and tiny daisies."
+  },
+  {
+    "id": "prod-g-butterflies",
+    "title": "Pastel Monarch & Ethereal Butterfly Wings Pack",
+    "category": "girls",
+    "categoryLabel": "Girls Sanctuary",
+    "subcategory": "Butterflies",
+    "theme": "Lavender Mist & Holographic Sky",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Laptops, Water Bottles, Mirrors, Journal",
+    "price": 219,
+    "mrp": 429,
+    "rating": 4.9,
+    "reviewsCount": 320,
+    "finish": "Holographic",
+    "tag": "Bestseller",
+    "isBestseller": true,
+    "isHolo": true,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><defs><linearGradient id=\"bfG\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#C084FC\"/><stop offset=\"50%\" stop-color=\"#F472B6\"/><stop offset=\"100%\" stop-color=\"#67E8F9\"/></linearGradient></defs><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FAF5FF\" stroke=\"#F3E8FF\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 8px rgba(192,132,252,0.3))\"><path d=\"M60,54 C50,28 20,32 26,56 C30,70 54,62 60,66 C66,62 90,70 94,56 C100,32 70,28 60,54 Z\" fill=\"url(#bfG)\" stroke=\"#FFFFFF\" stroke-width=\"2\"/><path d=\"M60,66 C48,74 36,88 44,94 C54,98 58,78 60,66 Z\" fill=\"url(#bfG)\" stroke=\"#FFFFFF\" stroke-width=\"1.5\"/><path d=\"M60,66 C72,74 84,88 76,94 C66,98 62,78 60,66 Z\" fill=\"url(#bfG)\" stroke=\"#FFFFFF\" stroke-width=\"1.5\"/><ellipse cx=\"60\" cy=\"60\" rx=\"2\" ry=\"12\" fill=\"#581C87\"/></g><text x=\"60\" y=\"108\" fill=\"#7E22CE\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"800\" font-size=\"8.5\" text-anchor=\"middle\">TRANSFORMATION</text></svg>",
+    "description": "Multi-layered butterfly wing designs printed on holographic iridescent adhesive. Shifts between lavender, pink, and aqua under sunlight."
+  },
+  {
+    "id": "prod-g-hearts",
+    "title": "Pearlescent 3D Puffy Hearts & Love Letters",
+    "category": "girls",
+    "categoryLabel": "Girls Sanctuary",
+    "subcategory": "Hearts",
+    "theme": "Candy Rose & Sweet Caramel",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Phone, AirPods Case, Diary, Tumbler",
+    "price": 199,
+    "mrp": 399,
+    "rating": 4.8,
+    "reviewsCount": 210,
+    "finish": "Glossy",
+    "tag": "Trending",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FFF1F2\" stroke=\"#FFE4E6\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(225,29,72,0.2))\"><path d=\"M60,78 C60,78 30,58 30,42 C30,30 42,26 50,34 L60,44 L70,34 C78,26 90,30 90,42 C90,58 60,78 60,78 Z\" fill=\"#FB7185\" stroke=\"#FFFFFF\" stroke-width=\"3\"/><path d=\"M42,38 C40,36 44,32 48,36\" stroke=\"#FFFFFF\" stroke-width=\"2\" stroke-linecap=\"round\" fill=\"none\"/></g><text x=\"60\" y=\"102\" fill=\"#E11D48\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">PURE LOVE</text></svg>",
+    "description": "Sweet candy hearts, wax-sealed love envelopes, tiny heart patterns, and pastel gradient kiss marks."
+  },
+  {
+    "id": "prod-g-animals",
+    "title": "Kawaii Boba Panda, Kitten & Bunny Decals",
+    "category": "girls",
+    "categoryLabel": "Girls Sanctuary",
+    "subcategory": "Cute Animals",
+    "theme": "Matcha Latte & Soft Mochi",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Laptops, Tablets, Lunchboxes, Notebooks",
+    "price": 219,
+    "mrp": 429,
+    "rating": 5,
+    "reviewsCount": 360,
+    "finish": "Matte",
+    "tag": "Most Loved",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#F0FDF4\" stroke=\"#DCFCE7\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(0,0,0,0.1))\"><circle cx=\"44\" cy=\"38\" r=\"8\" fill=\"#18181B\"/><circle cx=\"76\" cy=\"38\" r=\"8\" fill=\"#18181B\"/><circle cx=\"60\" cy=\"56\" r=\"24\" fill=\"#FFFFFF\" stroke=\"#18181B\" stroke-width=\"2.5\"/><ellipse cx=\"50\" cy=\"54\" rx=\"5\" ry=\"7\" fill=\"#18181B\"/><circle cx=\"51\" cy=\"52\" r=\"1.5\" fill=\"#FFF\"/><ellipse cx=\"70\" cy=\"54\" rx=\"5\" ry=\"7\" fill=\"#18181B\"/><circle cx=\"69\" cy=\"52\" r=\"1.5\" fill=\"#FFF\"/><ellipse cx=\"60\" cy=\"62\" rx=\"3\" ry=\"2\" fill=\"#18181B\"/><circle cx=\"44\" cy=\"62\" r=\"4\" fill=\"#FBCFE8\"/><circle cx=\"76\" cy=\"62\" r=\"4\" fill=\"#FBCFE8\"/></g><text x=\"60\" y=\"102\" fill=\"#15803D\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">BOBA PANDA</text></svg>",
+    "description": "Cute cuddly companions: sleeping kittens inside matcha cups, mochi bunnies with bows, and pandas sipping iced boba tea."
+  },
+  {
+    "id": "prod-g-journal",
+    "title": "Self-Love Affirmations & Cloud Journaling Quotes",
+    "category": "girls",
+    "categoryLabel": "Girls Sanctuary",
+    "subcategory": "Journaling",
+    "theme": "Lavender Oat & Calming Mist",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Bullet Journals, MacBooks, Mirrors, Planners",
+    "price": 199,
+    "mrp": 399,
+    "rating": 4.8,
+    "reviewsCount": 195,
+    "finish": "Matte",
+    "tag": "Mindful",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FAF5FF\" stroke=\"#F3E8FF\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(147,51,234,0.15))\"><path d=\"M30,55 C30,45 42,40 50,44 C56,36 74,38 78,48 C88,48 92,60 86,68 C80,76 36,76 30,55 Z\" fill=\"#FFFFFF\" stroke=\"#C084FC\" stroke-width=\"2\"/><text x=\"60\" y=\"58\" fill=\"#7E22CE\" font-family=\"'DM Sans', sans-serif\" font-weight=\"700\" font-size=\"7.5\" text-anchor=\"middle\">one day at a time</text></g><text x=\"60\" y=\"98\" fill=\"#6B21A8\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"800\" font-size=\"9\" text-anchor=\"middle\">DAILY AFFIRMATION</text></svg>",
+    "description": "Gentle reminders for mental clarity and peace: 'breathe easy', 'you are enough', pastel highlight strips, and bullet journal checkmarks."
+  },
+  {
+    "id": "prod-g-fashion",
+    "title": "Tote Bag & French Boutique Parisian Chic Decals",
+    "category": "girls",
+    "categoryLabel": "Girls Sanctuary",
+    "subcategory": "Fashion",
+    "theme": "Cafe Noir & Parisian Cream",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Laptops, Luggage, Journals, Vanity",
+    "price": 239,
+    "mrp": 469,
+    "rating": 4.9,
+    "reviewsCount": 160,
+    "finish": "Matte",
+    "tag": "Chic",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FFFBEB\" stroke=\"#FEF3C7\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(0,0,0,0.12))\"><path d=\"M42,48 L78,48 L72,82 L48,82 Z\" fill=\"#D97706\" stroke=\"#111\" stroke-width=\"2.5\"/><path d=\"M52,48 C52,36 68,36 68,48\" fill=\"none\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"60\" y=\"66\" fill=\"#FFF\" font-family=\"serif\" font-style=\"italic\" font-size=\"9\" font-weight=\"bold\" text-anchor=\"middle\">Paris</text></g><text x=\"60\" y=\"102\" fill=\"#92400E\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">HAUTE COUTURE</text></svg>",
+    "description": "Croissant sketches, vintage perfume flacons, woven canvas totes, sunglasses, and classic French street signage."
+  },
+  {
+    "id": "prod-d-mahadev",
+    "title": "Mahadev Trishul, Damru & Crescent Moon Sacred Decal",
     "category": "divine",
     "categoryLabel": "Divine Collection",
-    "subcategory": "Hanuman Ji",
-    "theme": "Sinduri Vermilion & Warm Gold",
+    "subcategory": "Mahadev",
+    "theme": "Kailash Azure & Rich Saffron Gold",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "Gold Foil Cast Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Car Rear Glass, Bike Tank, Laptops, Pooja Room",
+    "price": 249,
+    "mrp": 499,
+    "rating": 5,
+    "reviewsCount": 480,
+    "finish": "Matte",
+    "tag": "Divine Bestseller",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FFFDF7\" stroke=\"#FEF3C7\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 8px rgba(217,119,6,0.25))\"><line x1=\"60\" y1=\"24\" x2=\"60\" y2=\"84\" stroke=\"#D97706\" stroke-width=\"3.5\" stroke-linecap=\"round\"/><path d=\"M44,36 C48,52 72,52 76,36\" fill=\"none\" stroke=\"#D97706\" stroke-width=\"3\" stroke-linecap=\"round\"/><polygon points=\"60,22 55,30 65,30\" fill=\"#B45309\"/><polygon points=\"44,34 40,40 48,40\" fill=\"#B45309\"/><polygon points=\"76,34 72,40 80,40\" fill=\"#B45309\"/><path d=\"M52,54 C58,60 62,60 68,54 L68,66 C62,60 58,60 52,66 Z\" fill=\"#D97706\"/><circle cx=\"68\" cy=\"30\" r=\"8\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"2.5\"/><circle cx=\"70\" cy=\"30\" r=\"7\" fill=\"#FFFDF7\"/></g><text x=\"60\" y=\"102\" fill=\"#B45309\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\" letter-spacing=\"0.1em\">HAR HAR MAHADEV</text></svg>",
+    "description": "Sacred emblems of Lord Shiva: the mighty Trishul, rhythmic Damru, third eye, and Chandrama. Crafted in non-fade gold adhesive foil."
+  },
+  {
+    "id": "prod-d-krishna",
+    "title": "Radha Krishna Flute & Peacock Feather Devotional Decals",
+    "category": "divine",
+    "categoryLabel": "Divine Collection",
+    "subcategory": "Radha Krishna",
+    "theme": "Vrindavan Peacock Green & Celestial Gold",
     "audience": "unisex",
     "type": "sheet",
     "dimensions": "A5 (14.8 × 21 cm)",
     "material": "120μm Waterproof Vinyl",
     "waterproof": true,
-    "surface": "Motorcycle Tanks, Car Rear Glass, Gym Gear",
-    "price": 239,
-    "mrp": 479,
-    "rating": 5,
-    "reviewsCount": 365,
+    "surface": "Car Dashboard, Laptops, Mobile, Mandir",
+    "price": 229,
+    "mrp": 449,
+    "rating": 4.9,
+    "reviewsCount": 390,
     "finish": "Glossy",
-    "tag": "Power & Protection",
+    "tag": "Bestseller",
     "isBestseller": true,
     "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FFFDF5\"/><circle cx=\"60\" cy=\"55\" r=\"20\" fill=\"#EA580C\"/><path d=\"M60,55 L60,88\" stroke=\"#D97706\" stroke-width=\"5\" stroke-linecap=\"round\"/><circle cx=\"60\" cy=\"44\" r=\"8\" fill=\"#FDE047\"/></svg>",
-    "description": "Fierce and protective Bajrangbali emblems with sacred Jai Shri Ram chants in elegant Devanagari script."
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FFFDF7\" stroke=\"#FEF3C7\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(13,148,136,0.25))\"><line x1=\"28\" y1=\"65\" x2=\"92\" y2=\"45\" stroke=\"#D97706\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"48\" cy=\"58\" r=\"2\" fill=\"#78350F\"/><circle cx=\"58\" cy=\"55\" r=\"2\" fill=\"#78350F\"/><circle cx=\"68\" cy=\"52\" r=\"2\" fill=\"#78350F\"/><path d=\"M68,52 C64,28 88,24 84,40 C80,50 72,50 68,52 Z\" fill=\"#0D9488\" stroke=\"#F59E0B\" stroke-width=\"2\"/><ellipse cx=\"78\" cy=\"34\" rx=\"4\" ry=\"6\" fill=\"#1D4ED8\"/><circle cx=\"78\" cy=\"35\" r=\"2\" fill=\"#F59E0B\"/></g><text x=\"60\" y=\"102\" fill=\"#B45309\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">RADHE RADHE</text></svg>",
+    "description": "Vrindavan divine flute (bansuri) adorned with vibrant iridescent peacock feathers. Spreads serene spiritual grace wherever placed."
   },
   {
-    "id": "prod-d4",
+    "id": "prod-d-hanuman",
+    "title": "Sankatmochan Hanuman Ji Gada & Ram Bhakt Emblem",
+    "category": "divine",
+    "categoryLabel": "Divine Collection",
+    "subcategory": "Hanuman Ji",
+    "theme": "Sindoor Saffron & Radiant Gold",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Car Rear Glass, Motorcycles, Gym Shakers, Laptops",
+    "price": 239,
+    "mrp": 469,
+    "rating": 5,
+    "reviewsCount": 520,
+    "finish": "Matte",
+    "tag": "Bestseller",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FFF7ED\" stroke=\"#FED7AA\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 8px rgba(234,88,12,0.3))\"><circle cx=\"60\" cy=\"42\" r=\"18\" fill=\"#EA580C\" stroke=\"#FFFFFF\" stroke-width=\"2\"/><path d=\"M48,42 L72,42 M60,30 L60,54\" stroke=\"#FFF7ED\" stroke-width=\"2.5\"/><line x1=\"60\" y1=\"58\" x2=\"60\" y2=\"88\" stroke=\"#B45309\" stroke-width=\"4.5\" stroke-linecap=\"round\"/><circle cx=\"60\" cy=\"88\" r=\"4\" fill=\"#D97706\"/></g><text x=\"60\" y=\"104\" fill=\"#C2410C\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9.5\" text-anchor=\"middle\">JAI BAJRANGBALI</text></svg>",
+    "description": "Symbol of boundless courage, strength, and devotion. Weatherproof emblem of the golden Gada and Sankat Mochan blessings."
+  },
+  {
+    "id": "prod-d-ganesh",
+    "title": "Vighnaharta Shri Ganesh Ji Modak & Lotus Blessings",
+    "category": "divine",
+    "categoryLabel": "Divine Collection",
+    "subcategory": "Ganesh Ji",
+    "theme": "Sacred Kumkum & Saffron Petals",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Main Door, Car Dashboard, Laptops, Notebooks",
+    "price": 219,
+    "mrp": 429,
+    "rating": 4.9,
+    "reviewsCount": 290,
+    "finish": "Glossy",
+    "tag": "Auspicious",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FFFDF7\" stroke=\"#FEF3C7\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(217,119,6,0.2))\"><circle cx=\"60\" cy=\"42\" r=\"14\" fill=\"#F59E0B\"/><path d=\"M60,42 Q60,68 72,66\" stroke=\"#D97706\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"52\" cy=\"40\" r=\"2.5\" fill=\"#B45309\"/><circle cx=\"68\" cy=\"40\" r=\"2.5\" fill=\"#B45309\"/><path d=\"M42,68 C42,82 78,82 78,68 Z\" fill=\"#E11D48\"/><circle cx=\"60\" cy=\"74\" r=\"4\" fill=\"#FBBF24\"/></g><text x=\"60\" y=\"102\" fill=\"#B45309\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">SHREE GANESHAYA NAMAH</text></svg>",
+    "description": "Remover of obstacles. Minimalist modern line-art of Lord Ganesha, sacred Tilak, sweet Modak, and auspicious Swastik decals."
+  },
+  {
+    "id": "prod-d-ram",
+    "title": "Maryada Purushottam Shri Ram Ayodhya Dhanush Emblem",
+    "category": "divine",
+    "categoryLabel": "Divine Collection",
+    "subcategory": "Shri Ram",
+    "theme": "Sun Dynasty Solar Radiance & Gold",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Car Rear Glass, Windshield, Laptops, Main Door",
+    "price": 249,
+    "mrp": 499,
+    "rating": 5,
+    "reviewsCount": 610,
+    "finish": "Matte",
+    "tag": "Bestseller",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FFFBEB\" stroke=\"#FDE68A\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 8px rgba(217,119,6,0.3))\"><circle cx=\"60\" cy=\"50\" r=\"26\" fill=\"none\" stroke=\"#D97706\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><path d=\"M38,50 Q60,20 82,50\" stroke=\"#B45309\" stroke-width=\"3.5\" fill=\"none\" stroke-linecap=\"round\"/><line x1=\"38\" y1=\"50\" x2=\"82\" y2=\"50\" stroke=\"#D97706\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"28\" x2=\"60\" y2=\"72\" stroke=\"#B45309\" stroke-width=\"3\" stroke-linecap=\"round\"/><polygon points=\"60,22 56,30 64,30\" fill=\"#EA580C\"/></g><text x=\"60\" y=\"102\" fill=\"#B45309\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"10\" text-anchor=\"middle\">JAI SHREE RAM</text></svg>",
+    "description": "Ayodhya Kodanda bow and arrow emblem symbolizing dharma, truth, and righteousness. Weatherproof outdoor adhesive."
+  },
+  {
+    "id": "prod-d-om",
     "title": "Sacred Om & Gayatri Mantra Medallion Decal",
     "category": "divine",
     "categoryLabel": "Divine Collection",
-    "subcategory": "Sacred Om & Gayatri Mantra",
+    "subcategory": "Om & Mantras",
     "theme": "Ivory, Sandalwood & Rich Gold",
     "audience": "unisex",
     "type": "sheet",
-    "dimensions": "Circle Medallion Sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
     "material": "Gold Metallic Cast Vinyl",
     "waterproof": true,
     "surface": "Main Door, Pooja Ghar, Car Windshield",
@@ -6655,8 +7046,272 @@
     "tag": "Peace & Harmony",
     "isBestseller": false,
     "isHolo": false,
-    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FFFDF5\"/><circle cx=\"60\" cy=\"60\" r=\"32\" fill=\"none\" stroke=\"#D97706\" stroke-width=\"3\"/><text x=\"60\" y=\"70\" fill=\"#B45309\" font-family=\"serif\" font-weight=\"900\" font-size=\"28\" text-anchor=\"middle\">ॐ</text></svg>",
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FFFDF5\" stroke=\"#FEF3C7\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(217,119,6,0.2))\"><circle cx=\"60\" cy=\"52\" r=\"28\" fill=\"none\" stroke=\"#D97706\" stroke-width=\"3\"/><text x=\"60\" y=\"62\" fill=\"#B45309\" font-family=\"serif\" font-weight=\"900\" font-size=\"28\" text-anchor=\"middle\">ॐ</text></g><text x=\"60\" y=\"102\" fill=\"#78350F\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"800\" font-size=\"9\" text-anchor=\"middle\">SHANTI & HARMONY</text></svg>",
     "description": "Harmonizing sacred geometry and Vedic chants. Precision kiss-cut on premium non-fade gold adhesive foil."
+  },
+  {
+    "id": "prod-w-bedroom",
+    "title": "Botanical Sage & Terracotta Arch Bedroom Wall Mural",
+    "category": "decor",
+    "categoryLabel": "Home & Wall Decor",
+    "subcategory": "Bedroom",
+    "theme": "Terracotta Earth & Soft Olive Sage",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A4 Deluxe Sheet",
+    "material": "Zero-Residue Matte Wall Vinyl",
+    "waterproof": true,
+    "surface": "Painted Walls, Headboards, Bedrooms",
+    "price": 349,
+    "mrp": 699,
+    "rating": 4.9,
+    "reviewsCount": 175,
+    "finish": "Matte",
+    "tag": "Interior Favorite",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FDFBF7\" stroke=\"#EFECE6\" stroke-width=\"2\"/><g><path d=\"M35,85 L35,45 C35,32 50,32 60,32 C70,32 85,32 85,45 L85,85 Z\" fill=\"#D97706\" opacity=\"0.35\"/><circle cx=\"60\" cy=\"48\" r=\"14\" fill=\"#C2410C\" opacity=\"0.7\"/><path d=\"M48,85 Q54,58 72,64\" stroke=\"#5E6E59\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"72\" cy=\"64\" r=\"4\" fill=\"#5E6E59\"/></g><text x=\"60\" y=\"104\" fill=\"#5E6E59\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"800\" font-size=\"8.5\" text-anchor=\"middle\">WARM MINIMALISM</text></svg>",
+    "description": "Transform your bedroom into a tranquil boutique sanctuary. Zero-residue peel adhesive safe on painted drywall and plaster."
+  },
+  {
+    "id": "prod-w-mirror",
+    "title": "Morning Glow Self-Care Affirmation Mirror Decals",
+    "category": "decor",
+    "categoryLabel": "Home & Wall Decor",
+    "subcategory": "Mirror",
+    "theme": "Frost White & Golden Glow",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "Zero-Residue Frosted Cast Vinyl",
+    "waterproof": true,
+    "surface": "Bathroom Mirrors, Vanity Mirrors, Windows",
+    "price": 199,
+    "mrp": 399,
+    "rating": 4.9,
+    "reviewsCount": 220,
+    "finish": "Matte",
+    "tag": "Trending",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#F8FAFC\" stroke=\"#E2E8F0\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(0,0,0,0.06))\"><rect x=\"25\" y=\"25\" width=\"70\" height=\"70\" rx=\"12\" fill=\"#FFFFFF\" stroke=\"#CBD5E1\" stroke-width=\"2\"/><line x1=\"30\" y1=\"35\" x2=\"45\" y2=\"25\" stroke=\"#E2E8F0\" stroke-width=\"2\"/><text x=\"60\" y=\"56\" fill=\"#1E293B\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"800\" font-size=\"8\" text-anchor=\"middle\">YOU LOOK</text><text x=\"60\" y=\"68\" fill=\"#EC4899\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">BEAUTIFUL</text></g><text x=\"60\" y=\"106\" fill=\"#64748B\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"800\" font-size=\"8\" text-anchor=\"middle\">VANITY REFLECTION</text></svg>",
+    "description": "Start every day with love: 'You look amazing', 'Kind heart, fierce mind', and delicate floral corner accents for mirrors."
+  },
+  {
+    "id": "prod-w-fridge",
+    "title": "Aesthetic Pantry & Herb Recipe Refrigerator Decals",
+    "category": "decor",
+    "categoryLabel": "Home & Wall Decor",
+    "subcategory": "Refrigerator",
+    "theme": "Olive Garden & Kitchen Herbarium",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Refrigerator Door, Freezers, Pantry Glass",
+    "price": 219,
+    "mrp": 429,
+    "rating": 4.8,
+    "reviewsCount": 140,
+    "finish": "Glossy",
+    "tag": "Kitchen Chic",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#F0FDF4\" stroke=\"#DCFCE7\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(0,0,0,0.08))\"><rect x=\"36\" y=\"24\" width=\"48\" height=\"66\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#334155\" stroke-width=\"2.5\"/><line x1=\"36\" y1=\"52\" x2=\"84\" y2=\"52\" stroke=\"#334155\" stroke-width=\"2\"/><circle cx=\"42\" cy=\"40\" r=\"1.5\" fill=\"#334155\"/><circle cx=\"42\" cy=\"64\" r=\"1.5\" fill=\"#334155\"/><path d=\"M54,38 Q64,32 68,40\" stroke=\"#16A34A\" stroke-width=\"2\" fill=\"none\"/></g><text x=\"60\" y=\"104\" fill=\"#15803D\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"8.5\" text-anchor=\"middle\">GOOD FOOD VIBES</text></svg>",
+    "description": "Cute meal reminders, farmers market veggies, vintage milk bottles, and herb sprigs made specifically for refrigerator doors."
+  },
+  {
+    "id": "prod-w-kitchen",
+    "title": "Warm Espresso Coffee & Kitchen Chef Doodles Decals",
+    "category": "decor",
+    "categoryLabel": "Home & Wall Decor",
+    "subcategory": "Kitchen",
+    "theme": "Cafe Mocha & Steaming Caramel",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Kitchen Tiles, Coffee Machines, Cabinets",
+    "price": 199,
+    "mrp": 399,
+    "rating": 4.8,
+    "reviewsCount": 190,
+    "finish": "Matte",
+    "tag": "Cozy Kitchen",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FFFBEB\" stroke=\"#FEF3C7\" stroke-width=\"2\"/><g filter=\"drop-shadow(0 4px 6px rgba(120,53,15,0.15))\"><path d=\"M35,46 L85,46 L78,80 L42,80 Z\" fill=\"#78350F\" stroke=\"#FFFFFF\" stroke-width=\"2\"/><path d=\"M82,54 C90,54 94,66 80,70\" stroke=\"#78350F\" stroke-width=\"3\" fill=\"none\"/><path d=\"M50,38 Q52,28 50,22 M60,38 Q62,28 60,22 M70,38 Q72,28 70,22\" stroke=\"#D97706\" stroke-width=\"2\" stroke-linecap=\"round\" fill=\"none\"/></g><text x=\"60\" y=\"102\" fill=\"#78350F\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">FRESH BREW</text></svg>",
+    "description": "Moka pots, latte cups, steam swirls, and baker doodles to bring cafe warmth to your kitchen or breakfast counter."
+  },
+  {
+    "id": "prod-w-wallquotes",
+    "title": "Modern Architectural Wall Quotes & Mindset Decal",
+    "category": "decor",
+    "categoryLabel": "Home & Wall Decor",
+    "subcategory": "Wall Quotes",
+    "theme": "Swiss Helvetica & Jet Carbon",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A4 Deluxe Sheet",
+    "material": "Matte Zero-Residue Vinyl",
+    "waterproof": true,
+    "surface": "Living Room, Home Office, Studio Walls",
+    "price": 299,
+    "mrp": 599,
+    "rating": 4.9,
+    "reviewsCount": 230,
+    "finish": "Matte",
+    "tag": "Designer Pick",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#F4F4F0\" stroke=\"#ECEAE4\" stroke-width=\"2\"/><g><text x=\"60\" y=\"44\" fill=\"#141416\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"12\" text-anchor=\"middle\">SIMPLICITY</text><text x=\"60\" y=\"60\" fill=\"#141416\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"12\" text-anchor=\"middle\">IS LUXURY.</text><line x1=\"34\" y1=\"70\" x2=\"86\" y2=\"70\" stroke=\"#141416\" stroke-width=\"2\"/></g><text x=\"60\" y=\"100\" fill=\"#71717A\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"700\" font-size=\"8\" text-anchor=\"middle\">STICKZY HOME ATELIER</text></svg>",
+    "description": "Crisp architectural lettering with zero background border. Looks exactly like hand-stenciled typography on painted walls."
+  },
+  {
+    "id": "prod-w-motivational",
+    "title": "Dream Big Do Bigger Bold Typography Wall Decals",
+    "category": "decor",
+    "categoryLabel": "Home & Wall Decor",
+    "subcategory": "Motivational stickers",
+    "theme": "Studio Graphite & Inspiration Amber",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A4 Deluxe Sheet",
+    "material": "Zero-Residue Matte Wall Vinyl",
+    "waterproof": true,
+    "surface": "Study Desks, Workspaces, Bedroom Walls",
+    "price": 279,
+    "mrp": 549,
+    "rating": 4.9,
+    "reviewsCount": 280,
+    "finish": "Matte",
+    "tag": "Bestseller",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#18181B\" stroke=\"#27272A\" stroke-width=\"2\"/><g><rect x=\"22\" y=\"30\" width=\"76\" height=\"26\" rx=\"6\" fill=\"#F59E0B\"/><text x=\"60\" y=\"47\" fill=\"#000\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"11\" text-anchor=\"middle\">DREAM BIG</text><rect x=\"22\" y=\"62\" width=\"76\" height=\"26\" rx=\"6\" fill=\"#FFFFFF\"/><text x=\"60\" y=\"79\" fill=\"#000\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"11\" text-anchor=\"middle\">DO BIGGER.</text></g><text x=\"60\" y=\"106\" fill=\"#9CA3AF\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"800\" font-size=\"8\" text-anchor=\"middle\">MINDSET SHIFT</text></svg>",
+    "description": "Daily fuel for creators and high achievers. Sticks smoothly to study desks, whiteboard corners, and bedroom ceilings."
+  },
+  {
+    "id": "prod-w-switch",
+    "title": "Whimsical Switchboard Peekaboo Animal Stickers",
+    "category": "decor",
+    "categoryLabel": "Home & Wall Decor",
+    "subcategory": "Switchboard",
+    "theme": "Soft Charcoal & Pastel Cream",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "Sheet of 12 Decals",
+    "material": "Non-Fade Peel-and-Stick Vinyl",
+    "waterproof": true,
+    "surface": "Switchboards, Power Outlets, Door Frames",
+    "price": 189,
+    "mrp": 379,
+    "rating": 4.8,
+    "reviewsCount": 310,
+    "finish": "Matte",
+    "tag": "Cute Decor",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FAF5FF\" stroke=\"#F3E8FF\" stroke-width=\"2\"/><g><rect x=\"35\" y=\"48\" width=\"50\" height=\"38\" rx=\"4\" fill=\"#FFFFFF\" stroke=\"#334155\" stroke-width=\"2\"/><circle cx=\"50\" cy=\"62\" r=\"3\" fill=\"#64748B\"/><circle cx=\"70\" cy=\"62\" r=\"3\" fill=\"#64748B\"/><path d=\"M44,48 C44,32 76,32 76,48 Z\" fill=\"#1E293B\"/><ellipse cx=\"52\" cy=\"42\" rx=\"2\" ry=\"3\" fill=\"#FFF\"/><ellipse cx=\"68\" cy=\"42\" rx=\"2\" ry=\"3\" fill=\"#FFF\"/><path d=\"M58,45 L62,45\" stroke=\"#EC4899\" stroke-width=\"1.5\"/></g><text x=\"60\" y=\"104\" fill=\"#7E22CE\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"800\" font-size=\"8.5\" text-anchor=\"middle\">PEEKABOO CAT</text></svg>",
+    "description": "Charming animals peeking over your light switches and electrical plates. Instant joy every time you turn on the lights."
+  },
+  {
+    "id": "prod-w-almirah",
+    "title": "Aesthetic Scandinavian Floral Wardrobe Decals",
+    "category": "decor",
+    "categoryLabel": "Home & Wall Decor",
+    "subcategory": "Almirah",
+    "theme": "Nordic Amber & Calming Olive",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A4 Sheet (Set of 8)",
+    "material": "Zero-Residue Matt Vinyl",
+    "waterproof": true,
+    "surface": "Almirahs, Wardrobes, Dresser Drawers",
+    "price": 269,
+    "mrp": 529,
+    "rating": 4.9,
+    "reviewsCount": 160,
+    "finish": "Matte",
+    "tag": "Scandinavian",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#FBF9F5\" stroke=\"#EBE7DE\" stroke-width=\"2\"/><g><rect x=\"35\" y=\"24\" width=\"50\" height=\"68\" rx=\"4\" fill=\"#FAF6EE\" stroke=\"#78350F\" stroke-width=\"2\"/><line x1=\"60\" y1=\"24\" x2=\"60\" y2=\"92\" stroke=\"#78350F\" stroke-width=\"1.5\"/><circle cx=\"56\" cy=\"58\" r=\"1.5\" fill=\"#78350F\"/><circle cx=\"64\" cy=\"58\" r=\"1.5\" fill=\"#78350F\"/><circle cx=\"48\" cy=\"40\" r=\"4\" fill=\"#5E6E59\"/><circle cx=\"72\" cy=\"40\" r=\"4\" fill=\"#D97706\"/></g><text x=\"60\" y=\"106\" fill=\"#78350F\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"800\" font-size=\"8.5\" text-anchor=\"middle\">NORDIC WARDROBE</text></svg>",
+    "description": "Transform plain almirah and wooden wardrobe panels into designer mid-century art pieces."
+  },
+  {
+    "id": "prod-v-motorsport",
+    "title": "Motorsport Twin Turbo & Drift Culture Decals",
+    "category": "vehicle",
+    "categoryLabel": "Vehicle Decals",
+    "subcategory": "Sports Cars & JDM",
+    "theme": "Speed Red & Carbon Smoke",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Highway Vinyl",
+    "waterproof": true,
+    "surface": "Cars, Visors, Bumpers, Laptops",
+    "price": 349,
+    "mrp": 699,
+    "rating": 4.9,
+    "reviewsCount": 380,
+    "finish": "Glossy",
+    "tag": "High Tack",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#18181B\" stroke=\"#27272A\" stroke-width=\"2\"/><g><circle cx=\"60\" cy=\"52\" r=\"22\" fill=\"#E11D48\"/><path d=\"M52,42 L68,52 L52,62 Z\" fill=\"#FFF\"/></g><text x=\"60\" y=\"92\" fill=\"#FFF\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"10\" text-anchor=\"middle\">DRIFT TRIBE</text></svg>",
+    "description": "Engineered specifically for car rear glasses and bumpers. Highway tested up to 160km/h."
+  },
+  {
+    "id": "prod-v-helmet",
+    "title": "Helmet Visor & Shell Guard Anti-Scratch Stickers",
+    "category": "vehicle",
+    "categoryLabel": "Vehicle Decals",
+    "subcategory": "Helmet Visors",
+    "theme": "Reflective Cyber Chrome",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "Custom Curved Strips Pack",
+    "material": "Anti-Scratch Weatherproof Cast",
+    "waterproof": true,
+    "surface": "Full-Face Helmets, Open Visors",
+    "price": 199,
+    "mrp": 399,
+    "rating": 4.8,
+    "reviewsCount": 220,
+    "finish": "Glossy",
+    "tag": "Biker Safety",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#F1F5F9\" stroke=\"#E2E8F0\" stroke-width=\"2\"/><g><path d=\"M30,68 C30,42 42,32 60,32 C78,32 90,42 90,68 Z\" fill=\"#0F172A\"/><path d=\"M38,58 L82,58 L80,72 L40,72 Z\" fill=\"#38BDF8\"/></g><text x=\"60\" y=\"98\" fill=\"#0F172A\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">HELMET GUARD</text></svg>",
+    "description": "Curved stickers designed to fit the contours of Axor, SMK, Vega, and Steelbird motorcycle helmets."
+  },
+  {
+    "id": "prod-v-activa",
+    "title": "Activa & Urban Scooty Minimalist Chic Decals",
+    "category": "vehicle",
+    "categoryLabel": "Vehicle Decals",
+    "subcategory": "Activa & Scooty",
+    "theme": "Modern Sage & Pearl White",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "Sheet of 8 Curved Decals",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Honda Activa, Jupiter, Vespa, Ola S1",
+    "price": 249,
+    "mrp": 499,
+    "rating": 4.9,
+    "reviewsCount": 310,
+    "finish": "Matte",
+    "tag": "Daily Commute",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" rx=\"20\" fill=\"#F8FAFC\" stroke=\"#E2E8F0\" stroke-width=\"2\"/><g><path d=\"M32,70 L48,70 L54,50 L42,50 Z\" fill=\"#475569\"/><circle cx=\"38\" cy=\"74\" r=\"8\" fill=\"#0F172A\"/><circle cx=\"78\" cy=\"74\" r=\"8\" fill=\"#0F172A\"/><path d=\"M52,50 L72,50 L78,66 L58,66 Z\" fill=\"#0284C7\"/></g><text x=\"60\" y=\"102\" fill=\"#0284C7\" font-family=\"'Plus Jakarta Sans', sans-serif\" font-weight=\"900\" font-size=\"9\" text-anchor=\"middle\">URBAN SCOOTY</text></svg>",
+    "description": "Subtle minimalist decals to elevate your Honda Activa, TVS Jupiter, Vespa, or EV scooter."
   }
 ];
 
@@ -6670,6 +7325,7 @@
           return stored;
         }
       } catch(e) {}
+      localStorage.setItem('stickzy_products', JSON.stringify(DEFAULT_PRODUCTS));
       return DEFAULT_PRODUCTS;
     })();
     let cart = JSON.parse(localStorage.getItem('stickzy_cart')) || [];
@@ -6719,107 +7375,102 @@
     let currentSubcategory = 'all';
 
     const CATEGORY_DATA = {
-      girls: {
-        kicker: "Collection",
-        title: "Girls",
-        desc: "Bows, butterflies & soft little joys.",
-        theme: "girls",
-        heroImg: "/assets/aistudio/image_7bb33513.png",
-        numberedCategories: [
-          { num: "01", name: "Bows & Ribbons", count: "8 packs available", artType: "bow" },
-          { num: "02", name: "Butterflies", count: "6 packs available", artType: "butterfly" },
-          { num: "03", name: "Flowers", count: "10 packs available", artType: "flower" },
-          { num: "04", name: "Hearts & Love", count: "9 packs available", artType: "heart" },
-          { num: "05", name: "Cute Quotes", count: "7 packs available", artType: "quote" },
-          { num: "06", name: "Pink Typography", count: "8 packs available", artType: "pink-typo" },
-          { num: "07", name: "Makeup & Beauty", count: "5 packs available", artType: "makeup" },
-          { num: "08", name: "Fashion & Shopping", count: "6 packs available", artType: "fashion" }
-        ],
-        subcategories: [
-          "All Girls", "Bows & Ribbons", "Butterflies", "Flowers", "Hearts & Love",
-          "Cute Quotes", "Pink Typography", "Makeup & Beauty", "Fashion & Shopping"
-        ]
-      },
       boys: {
         kicker: "Collection",
         title: "Boys",
-        desc: "Cool vibes, bigger dreams.",
+        desc: "Cars, bikes, racing, gaming, anime, gym, sports, attitude & technology.",
         theme: "boys",
         heroImg: "/assets/aistudio/image_03f3067e.png",
         numberedCategories: [
-          { num: "01", name: "T-Shirts & Tees", count: "14 packs available", artType: "tee" },
-          { num: "02", name: "Hoodies & Sweatshirts", count: "12 packs available", artType: "hoodie" },
-          { num: "03", name: "Jeans & Pants", count: "8 packs available", artType: "jeans" },
-          { num: "04", name: "Sneakers & Shoes", count: "15 packs available", artType: "sneaker" },
-          { num: "05", name: "Accessories", count: "11 packs available", artType: "cap" },
-          { num: "06", name: "Gaming & Tech", count: "16 packs available", artType: "controller" },
-          { num: "07", name: "Sports & Fitness", count: "10 packs available", artType: "sports" },
-          { num: "08", name: "Trendy & More", count: "13 packs available", artType: "trendy" }
+          { num: "01", name: "Cars & Supercars", count: "12 packs available", artType: "car" },
+          { num: "02", name: "Bikes & Throttle", count: "15 packs available", artType: "bike" },
+          { num: "03", name: "Apex Racing", count: "9 packs available", artType: "race" },
+          { num: "04", name: "Gaming & Tech", count: "16 packs available", artType: "controller" },
+          { num: "05", name: "Anime Originals", count: "14 packs available", artType: "tee" },
+          { num: "06", name: "Gym & Heavy Iron", count: "10 packs available", artType: "sports" },
+          { num: "07", name: "Attitude Typography", count: "11 packs available", artType: "quote" },
+          { num: "08", name: "Dev & Technology", count: "13 packs available", artType: "hoodie" }
         ],
         subcategories: [
-          "All Boys", "T-Shirts & Tees", "Hoodies & Sweatshirts", "Jeans & Pants",
-          "Sneakers & Shoes", "Accessories", "Gaming & Tech", "Sports & Fitness", "Trendy & More"
+          "All Boys", "Cars", "Bikes", "Racing", "Gaming", "Anime-inspired", "Gym", "Sports", "Attitude", "Technology"
+        ]
+      },
+      girls: {
+        kicker: "Collection",
+        title: "Girls",
+        desc: "Coquette bows, pink aesthetic, flowers, butterflies, cute animals, journaling & fashion.",
+        theme: "girls",
+        heroImg: "/assets/aistudio/image_7bb33513.png",
+        numberedCategories: [
+          { num: "01", name: "Coquette Bows", count: "14 packs available", artType: "bow" },
+          { num: "02", name: "Pink Aesthetic", count: "12 packs available", artType: "pink-typo" },
+          { num: "03", name: "Garden Flowers", count: "15 packs available", artType: "flower" },
+          { num: "04", name: "Butterflies", count: "11 packs available", artType: "butterfly" },
+          { num: "05", name: "3D Hearts & Love", count: "9 packs available", artType: "heart" },
+          { num: "06", name: "Cute Animals & Boba", count: "16 packs available", artType: "fashion" },
+          { num: "07", name: "Mindful Journaling", count: "10 packs available", artType: "quote" },
+          { num: "08", name: "Parisian Fashion", count: "8 packs available", artType: "makeup" }
+        ],
+        subcategories: [
+          "All Girls", "Coquette & Bows", "Pink Aesthetic", "Flowers", "Butterflies", "Hearts", "Cute Animals", "Journaling", "Fashion"
+        ]
+      },
+      divine: {
+        kicker: "Collection",
+        title: "Divine",
+        desc: "Mahadev, Radha Krishna, Hanuman Ji, Ganesh Ji, Shri Ram and devotional mantras.",
+        theme: "divine",
+        heroImg: "/assets/aistudio/image_1ec77ed4.png",
+        numberedCategories: [
+          { num: "01", name: "Mahadev", count: "18 packs available", artType: "shiva" },
+          { num: "02", name: "Radha Krishna", count: "14 packs available", artType: "krishna" },
+          { num: "03", name: "Hanuman Ji", count: "16 packs available", artType: "hanuman" },
+          { num: "04", name: "Ganesh Ji", count: "12 packs available", artType: "ganesh" },
+          { num: "05", name: "Shri Ram", count: "15 packs available", artType: "ram" },
+          { num: "06", name: "Om & Mantras", count: "19 packs available", artType: "om" },
+          { num: "07", name: "Mata Rani", count: "8 packs available", artType: "durga" },
+          { num: "08", name: "Khatu Shyam Ji", count: "9 packs available", artType: "shyam" }
+        ],
+        subcategories: [
+          "All Divine", "Mahadev", "Radha Krishna", "Hanuman Ji", "Ganesh Ji", "Shri Ram", "Om & Mantras"
+        ]
+      },
+      decor: {
+        kicker: "Collection",
+        title: "Home & Wall Decor",
+        desc: "Zero-residue peel art for bedroom, mirror, refrigerator, kitchen & wall quotes.",
+        theme: "decor",
+        heroImg: "/assets/aistudio/image_1ec77ed4.png",
+        numberedCategories: [
+          { num: "01", name: "Bedroom Walls", count: "14 packs available", artType: "wall" },
+          { num: "02", name: "Mirror Affirmations", count: "10 packs available", artType: "mirror" },
+          { num: "03", name: "Refrigerator Decals", count: "12 packs available", artType: "kitchen" },
+          { num: "04", name: "Kitchen & Cafe", count: "11 packs available", artType: "kitchen" },
+          { num: "05", name: "Wall Quotes", count: "16 packs available", artType: "quote" },
+          { num: "06", name: "Motivational Stickers", count: "15 packs available", artType: "quote" },
+          { num: "07", name: "Switchboard Peekaboo", count: "18 packs available", artType: "switch" },
+          { num: "08", name: "Almirah & Wardrobe", count: "9 packs available", artType: "wardrobe" }
+        ],
+        subcategories: [
+          "All Home Decor", "Bedroom", "Mirror", "Refrigerator", "Kitchen", "Wall Quotes", "Motivational stickers", "Switchboard"
         ]
       },
       vehicle: {
         kicker: "Collection",
         title: "Vehicle Decals",
-        desc: "Highway-tested weatherproof vinyl for bikes, cars & helmets.",
+        desc: "Highway-tested weatherproof vinyl for bikes, cars, scooty & helmets.",
         theme: "vehicle",
         heroImg: "/assets/aistudio/image_1ec77ed4.png",
         numberedCategories: [
           { num: "01", name: "Superbikes & Biker", count: "16 packs available", artType: "bike" },
           { num: "02", name: "Sports Cars & JDM", count: "14 packs available", artType: "car" },
           { num: "03", name: "Helmet Visors", count: "10 packs available", artType: "helmet" },
-          { num: "04", name: "Windshield Banners", count: "9 packs available", artType: "shield" },
-          { num: "05", name: "Racing Numbers", count: "6 packs available", artType: "race" },
-          { num: "06", name: "Fuel Tank Decals", count: "7 packs available", artType: "tank" },
-          { num: "07", name: "Reflective Vinyl", count: "12 packs available", artType: "reflector" },
-          { num: "08", name: "Activa & Scooty", count: "8 packs available", artType: "scooty" }
+          { num: "04", name: "Activa & Scooty", count: "12 packs available", artType: "scooty" },
+          { num: "05", name: "Windshield Banners", count: "9 packs available", artType: "shield" },
+          { num: "06", name: "Racing Numbers", count: "6 packs available", artType: "race" }
         ],
         subcategories: [
-          "All Vehicles", "Superbikes & Biker", "Sports Cars & JDM", "Helmet Visors",
-          "Windshield Banners", "Racing Numbers", "Fuel Tank Decals"
-        ]
-      },
-      decor: {
-        kicker: "Collection",
-        title: "Home Decor",
-        desc: "Make your space yours with zero-residue peel art.",
-        theme: "decor",
-        heroImg: "/assets/aistudio/image_1ec77ed4.png",
-        numberedCategories: [
-          { num: "01", name: "Bedroom Walls", count: "12 packs available", artType: "wall" },
-          { num: "02", name: "Almirah & Wardrobe", count: "9 packs available", artType: "wardrobe" },
-          { num: "03", name: "Mirrors & Vanity", count: "7 packs available", artType: "mirror" },
-          { num: "04", name: "Switchboard Decals", count: "15 packs available", artType: "switch" },
-          { num: "05", name: "Kitchen & Pantry", count: "8 packs available", artType: "kitchen" },
-          { num: "06", name: "Kids Room", count: "11 packs available", artType: "kids" },
-          { num: "07", name: "Desk & Laptop", count: "6 packs available", artType: "study" },
-          { num: "08", name: "Motivational Quotes", count: "14 packs available", artType: "quote" }
-        ],
-        subcategories: [
-          "All Home Decor", "Bedroom Walls", "Almirah & Wardrobe", "Switchboard Decals", "Mirrors & Vanity"
-        ]
-      },
-      divine: {
-        kicker: "Collection",
-        title: "Divine",
-        desc: "A little faith, a lot of devotion.",
-        theme: "divine",
-        heroImg: "/assets/aistudio/image_1ec77ed4.png",
-        numberedCategories: [
-          { num: "01", name: "Mahadev", count: "15 packs available", artType: "shiva" },
-          { num: "02", name: "Radha Krishna", count: "12 packs available", artType: "krishna" },
-          { num: "03", name: "Hanuman Ji", count: "14 packs available", artType: "hanuman" },
-          { num: "04", name: "Ganesh Ji", count: "10 packs available", artType: "ganesh" },
-          { num: "05", name: "Shri Ram", count: "11 packs available", artType: "ram" },
-          { num: "06", name: "Om & Mantras", count: "16 packs available", artType: "om" },
-          { num: "07", name: "Mata Rani", count: "8 packs available", artType: "durga" },
-          { num: "08", name: "Khatu Shyam Ji", count: "7 packs available", artType: "shyam" }
-        ],
-        subcategories: [
-          "All Divine", "Mahadev", "Radha Krishna", "Hanuman Ji", "Ganesh Ji", "Shri Ram", "Om & Mantras"
+          "All Vehicles", "Sports Cars & JDM", "Helmet Visors", "Activa & Scooty", "Superbikes & Biker"
         ]
       }
     };
@@ -7241,6 +7892,14 @@
           </div>
         `;
       }).join('');
+
+      // GSAP Scroll/Stagger entrance for products
+      if (window.gsap) {
+        gsap.fromTo(grid.querySelectorAll('.product-card'),
+          { opacity: 0, y: 16 },
+          { opacity: 1, y: 0, duration: 0.35, stagger: 0.035, ease: "power2.out", clearProps: "transform" }
+        );
+      }
     }
 
     /* Open Separate Dedicated Category Page (Requirement 5) */
@@ -8662,36 +9321,59 @@
     }
 
     /* ==========================================================================
-       CHECKOUT & OTP VERIFICATION LOGIC
+       STRICT 3-STEP CHECKOUT & UPI PAYMENT LOGIC
        ========================================================================== */
+    let currentCheckoutOrderId = null;
+    let lastConfirmedOrder = null;
+
     function openCheckoutModal() {
       if (cart.length === 0) {
         alert("Your cart is empty. Add some sticker sheets first!");
         return;
       }
       toggleCartDrawer(false);
+
+      // Pre-fill from previous session if exists
+      try {
+        const savedAddr = JSON.parse(localStorage.getItem('stickzy_shipping_address'));
+        if (savedAddr) {
+          if (document.getElementById('custFullName')) document.getElementById('custFullName').value = savedAddr.name || '';
+          if (document.getElementById('custHouseNo')) document.getElementById('custHouseNo').value = savedAddr.houseNo || '';
+          if (document.getElementById('custStreetAddress')) document.getElementById('custStreetAddress').value = savedAddr.address || '';
+          if (document.getElementById('custLocality')) document.getElementById('custLocality').value = savedAddr.locality || '';
+          if (document.getElementById('custCity')) document.getElementById('custCity').value = savedAddr.city || '';
+          if (document.getElementById('custState')) document.getElementById('custState').value = savedAddr.state || '';
+          if (document.getElementById('custPincode')) document.getElementById('custPincode').value = savedAddr.pincode || '';
+        }
+      } catch(e) {}
+
+      // Reset to Step 1
       document.getElementById('checkoutStep1').style.display = 'block';
       document.getElementById('checkoutStep2').style.display = 'none';
       document.getElementById('checkoutStep3').style.display = 'none';
-
-      // Reset Step 3 sub-views
-      const step3Content = document.getElementById('checkoutStep3Content');
-      const successScreen = document.getElementById('upiSuccessScreenSection');
-      if (step3Content) step3Content.style.display = 'block';
-      if (successScreen) successScreen.style.display = 'none';
 
       document.getElementById('pillStep1').className = 'step-pill active';
       document.getElementById('pillStep2').className = 'step-pill';
       document.getElementById('pillStep3').className = 'step-pill';
 
+      // Summary calculations
       const subtotal = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
       const shipping = subtotal >= 499 ? 0 : 50;
       const total = subtotal + shipping;
-      document.getElementById('checkoutTotalPayable').innerText = `₹${total}`;
-      const upiAmt = document.getElementById('upiQrPayableAmount');
-      if (upiAmt) upiAmt.innerText = `₹${total}`;
 
-      selectPaymentMethod('upi');
+      const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
+      if (document.getElementById('checkoutItemCountSummary')) {
+        document.getElementById('checkoutItemCountSummary').innerText = totalItems;
+      }
+      if (document.getElementById('checkoutSubtotalSummary')) {
+        document.getElementById('checkoutSubtotalSummary').innerText = `₹${subtotal}`;
+      }
+      if (document.getElementById('checkoutShippingSummary')) {
+        document.getElementById('checkoutShippingSummary').innerText = shipping === 0 ? 'FREE' : '₹50';
+      }
+      if (document.getElementById('checkoutTotalPayable')) {
+        document.getElementById('checkoutTotalPayable').innerText = `₹${total}`;
+      }
 
       document.getElementById('checkoutModalBackdrop').classList.add('open');
       document.body.style.overflow = 'hidden';
@@ -8703,160 +9385,273 @@
     }
 
     function autoDetectCity(pin) {
-      if (pin.length === 6) {
+      if (pin && pin.length === 6) {
         const map = {
-          '1100': 'New Delhi',
-          '4000': 'Mumbai',
-          '5600': 'Bengaluru',
-          '7000': 'Kolkata',
-          '6000': 'Chennai',
-          '5000': 'Hyderabad'
+          '1100': { city: 'New Delhi', state: 'Delhi' },
+          '4000': { city: 'Mumbai', state: 'Maharashtra' },
+          '5600': { city: 'Bengaluru', state: 'Karnataka' },
+          '7000': { city: 'Kolkata', state: 'West Bengal' },
+          '6000': { city: 'Chennai', state: 'Tamil Nadu' },
+          '5000': { city: 'Hyderabad', state: 'Telangana' },
+          '3800': { city: 'Ahmedabad', state: 'Gujarat' },
+          '3020': { city: 'Jaipur', state: 'Rajasthan' },
+          '2260': { city: 'Lucknow', state: 'Uttar Pradesh' },
+          '1600': { city: 'Chandigarh', state: 'Punjab' },
+          '4110': { city: 'Pune', state: 'Maharashtra' }
         };
         const prefix = pin.substring(0, 4);
         if (map[prefix]) {
-          document.getElementById('custCity').value = map[prefix];
+          if (document.getElementById('custCity') && !document.getElementById('custCity').value) {
+            document.getElementById('custCity').value = map[prefix].city;
+          }
+          if (document.getElementById('custState') && !document.getElementById('custState').value) {
+            document.getElementById('custState').value = map[prefix].state;
+          }
         }
       }
     }
 
-    function proceedToOtpStep() {
-      const name = document.getElementById('custName').value.trim();
-      const phone = document.getElementById('custPhone').value.trim();
-      const address = document.getElementById('custAddress').value.trim();
+    /* Step 1 -> Step 2: Validate address & Open UPI Screen */
+    function proceedToUpiPaymentStep() {
+      const name = document.getElementById('custFullName').value.trim();
+      const houseNo = document.getElementById('custHouseNo').value.trim();
+      const locality = document.getElementById('custLocality').value.trim();
+      const address = document.getElementById('custStreetAddress').value.trim();
+      const city = document.getElementById('custCity').value.trim();
+      const state = document.getElementById('custState').value.trim();
+      const pin = document.getElementById('custPincode').value.trim();
 
-      if (!name || !phone || !address) {
-        alert("Please fill in your name, phone number, and address.");
+      if (!name || !houseNo || !address || !locality || !city || !state || !pin) {
+        alert("Please complete all shipping address fields.");
+        return;
+      }
+      if (pin.length !== 6 || isNaN(pin)) {
+        alert("Please enter a valid 6-digit Indian PIN Code.");
         return;
       }
 
-      // Generate 4-digit OTP
-      simulatedOtpCode = Math.floor(1000 + Math.random() * 9000).toString();
-      document.getElementById('generatedOtpCode').innerText = simulatedOtpCode;
-      document.getElementById('otpDisplayPhone').innerText = `+91 ${phone}`;
+      // Save shipping details locally
+      const shippingAddress = { name, houseNo, locality, address, city, state, pincode: pin };
+      localStorage.setItem('stickzy_shipping_address', JSON.stringify(shippingAddress));
 
-      // Auto-populate for user convenience
-      document.getElementById('otp1').value = simulatedOtpCode[0];
-      document.getElementById('otp2').value = simulatedOtpCode[1];
-      document.getElementById('otp3').value = simulatedOtpCode[2];
-      document.getElementById('otp4').value = simulatedOtpCode[3];
+      // Calculate exact total amount
+      const subtotal = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+      const shipping = subtotal >= 499 ? 0 : 50;
+      const total = subtotal + shipping;
 
+      currentCheckoutOrderId = `STK-${Math.floor(10000 + Math.random() * 90000)}`;
+
+      // Update Step 2 UPI Payment card
+      if (document.getElementById('upiCardExactAmount')) {
+        document.getElementById('upiCardExactAmount').innerText = `₹${total}`;
+      }
+      if (document.getElementById('upiIdDisplayString')) {
+        document.getElementById('upiIdDisplayString').innerText = 'anshikatrikha4@okhdfcbank';
+      }
+
+      // Prepare mobile UPI intent deep link
+      const upiUrl = `upi://pay?pa=anshikatrikha4@okhdfcbank&pn=Anshika%20Trikha&am=${total}&cu=INR&tn=STICKZY%20Order%20${currentCheckoutOrderId}`;
+      const intentBtn = document.getElementById('btnPayNowUpiIntent');
+      if (intentBtn) {
+        intentBtn.setAttribute('href', upiUrl);
+      }
+
+      // Pre-fill Name in Step 3 verification
+      if (document.getElementById('verifyCustomerName')) {
+        document.getElementById('verifyCustomerName').value = name;
+      }
+
+      // Switch view
       document.getElementById('checkoutStep1').style.display = 'none';
       document.getElementById('checkoutStep2').style.display = 'block';
+      document.getElementById('checkoutStep3').style.display = 'none';
 
       document.getElementById('pillStep1').className = 'step-pill';
       document.getElementById('pillStep2').className = 'step-pill active';
-
-      startOtpTimer();
+      document.getElementById('pillStep3').className = 'step-pill';
     }
 
-    let otpTimerInterval = null;
-    function startOtpTimer() {
-      let seconds = 45;
-      clearInterval(otpTimerInterval);
-      otpTimerInterval = setInterval(() => {
-        seconds--;
-        document.getElementById('resendTimer').innerText = seconds;
-        if (seconds <= 0) clearInterval(otpTimerInterval);
-      }, 1000);
+    function backToAddressStep() {
+      document.getElementById('checkoutStep1').style.display = 'block';
+      document.getElementById('checkoutStep2').style.display = 'none';
+      document.getElementById('checkoutStep3').style.display = 'none';
+
+      document.getElementById('pillStep1').className = 'step-pill active';
+      document.getElementById('pillStep2').className = 'step-pill';
+      document.getElementById('pillStep3').className = 'step-pill';
     }
 
-    function resendOtpCode() {
-      simulatedOtpCode = Math.floor(1000 + Math.random() * 9000).toString();
-      document.getElementById('generatedOtpCode').innerText = simulatedOtpCode;
-      startOtpTimer();
-      alert(`New OTP sent: ${simulatedOtpCode}`);
+    function copyUpiIdToClipboard() {
+      const upiId = 'anshikatrikha4@okhdfcbank';
+      navigator.clipboard.writeText(upiId).then(() => {
+        const textSpan = document.getElementById('copyUpiText');
+        const original = textSpan.innerText;
+        textSpan.innerText = '✓ Copied to Clipboard!';
+        setTimeout(() => {
+          textSpan.innerText = original;
+        }, 2200);
+      }).catch(() => {
+        alert("UPI ID: anshikatrikha4@okhdfcbank");
+      });
     }
 
-    function moveOtpFocus(current, nextId) {
-      if (current.value.length >= 1 && nextId) {
-        document.getElementById(nextId)?.focus();
+    /* Step 2 -> Step 3: Enter UTR */
+    function proceedToUpiVerificationStep() {
+      document.getElementById('checkoutStep1').style.display = 'none';
+      document.getElementById('checkoutStep2').style.display = 'none';
+      document.getElementById('checkoutStep3').style.display = 'block';
+
+      document.getElementById('checkoutStep3Form').style.display = 'block';
+      document.getElementById('checkoutStep3Success').style.display = 'none';
+
+      document.getElementById('pillStep1').className = 'step-pill';
+      document.getElementById('pillStep2').className = 'step-pill';
+      document.getElementById('pillStep3').className = 'step-pill active';
+
+      document.getElementById('verifyUtrNumber')?.focus();
+    }
+
+    function backToUpiPaymentStep() {
+      document.getElementById('checkoutStep1').style.display = 'none';
+      document.getElementById('checkoutStep2').style.display = 'block';
+      document.getElementById('checkoutStep3').style.display = 'none';
+
+      document.getElementById('pillStep1').className = 'step-pill';
+      document.getElementById('pillStep2').className = 'step-pill active';
+      document.getElementById('pillStep3').className = 'step-pill';
+    }
+
+    /* Step 3: Submit Verification & Place Order */
+    function submitPaymentVerification() {
+      const custName = document.getElementById('verifyCustomerName').value.trim();
+      const upiUsed = document.getElementById('verifyUpiIdUsed').value.trim();
+      const utr = document.getElementById('verifyUtrNumber').value.trim();
+
+      if (!custName || !upiUsed || !utr) {
+        alert("Please fill in Customer Name, UPI ID Used, and UTR Number.");
+        return;
       }
-    }
-
-    function verifyEnteredOtp() {
-      const o1 = document.getElementById('otp1').value;
-      const o2 = document.getElementById('otp2').value;
-      const o3 = document.getElementById('otp3').value;
-      const o4 = document.getElementById('otp4').value;
-      const entered = `${o1}${o2}${o3}${o4}`;
-
-      if (entered === simulatedOtpCode || entered.length === 4) {
-        document.getElementById('checkoutStep2').style.display = 'none';
-        document.getElementById('checkoutStep3').style.display = 'block';
-
-        const step3Content = document.getElementById('checkoutStep3Content');
-        const successScreen = document.getElementById('upiSuccessScreenSection');
-        if (step3Content) step3Content.style.display = 'block';
-        if (successScreen) successScreen.style.display = 'none';
-
-        selectPaymentMethod('upi');
-
-        document.getElementById('pillStep2').className = 'step-pill';
-        document.getElementById('pillStep3').className = 'step-pill active';
-      } else {
-        alert("Invalid OTP code. Please enter the correct code shown.");
+      if (utr.length < 6) {
+        alert("Please enter a valid UTR Number / Transaction ID.");
+        return;
       }
-    }
-
-    function selectPaymentMethod(method) {
-      selectedPaymentMethod = method;
-      document.querySelectorAll('.payment-option-card').forEach(c => c.classList.remove('selected'));
-      if (method === 'razorpay') document.getElementById('payOptRazorpay').classList.add('selected');
-      if (method === 'whatsapp') document.getElementById('payOptWhatsApp').classList.add('selected');
-      if (method === 'cod') document.getElementById('payOptCod').classList.add('selected');
-    }
-
-    function executeFinalOrderPlacement() {
-      const orderId = `STK-${Math.floor(10000 + Math.random() * 90000)}`;
-      const name = document.getElementById('custName').value;
-      const phone = document.getElementById('custPhone').value;
-      const city = document.getElementById('custCity').value;
-      const address = document.getElementById('custAddress').value;
 
       const subtotal = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
       const shipping = subtotal >= 499 ? 0 : 50;
       const total = subtotal + shipping;
 
+      const savedAddr = JSON.parse(localStorage.getItem('stickzy_shipping_address')) || {
+        name: custName,
+        houseNo: "",
+        locality: "",
+        address: "",
+        city: "",
+        state: "",
+        pincode: ""
+      };
+
       const newOrder = {
-        id: orderId,
+        id: currentCheckoutOrderId || `STK-${Math.floor(10000 + Math.random() * 90000)}`,
         date: new Date().toISOString().split('T')[0],
-        customer: { name, phone, city, address },
+        timestamp: new Date().toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' }),
+        customer: {
+          name: custName,
+          houseNo: savedAddr.houseNo,
+          locality: savedAddr.locality,
+          address: savedAddr.address,
+          city: savedAddr.city,
+          state: savedAddr.state,
+          pincode: savedAddr.pincode
+        },
+        payment: {
+          method: "UPI QR Scanner",
+          payee: "Anshika Trikha (anshikatrikha4@okhdfcbank)",
+          payerName: custName,
+          payerUpiId: upiUsed,
+          utr: utr,
+          amount: total
+        },
         items: [...cart],
+        subtotal: subtotal,
+        shipping: shipping,
         total: total,
-        paymentMethod: selectedPaymentMethod,
-        status: "Confirmed",
+        status: "Pending Verification",
         trackingNo: `BD-${Math.floor(10000000 + Math.random() * 90000000)}IN`
       };
 
+      lastConfirmedOrder = newOrder;
+
+      // Persist in local storage
       orders.unshift(newOrder);
       localStorage.setItem('stickzy_orders', JSON.stringify(orders));
 
-      // Sync with Supabase if connected
+      // Sync with Supabase if available
       if (supabaseClient) {
         supabaseClient.from('orders').insert([newOrder]).then(res => {
-          console.log("Supabase order logged:", res);
+          console.log("Order logged to Supabase:", res);
         });
       }
 
       // Celebrate with confetti
       if (window.confetti) {
-        window.confetti({ particleCount: 120, spread: 70, origin: { y: 0.6 } });
+        window.confetti({ particleCount: 140, spread: 80, origin: { y: 0.6 } });
       }
 
-      if (selectedPaymentMethod === 'whatsapp') {
-        const itemSummary = cart.map(i => `• ${i.title} (x${i.qty}) - ₹${i.price * i.qty}`).join('\n');
-        const msg = `🎉 *STICKZY NEW ORDER CONFIRMED!*\n\n*Order ID:* ${orderId}\n*Customer:* ${name} (+91 ${phone})\n*Delivery Address:* ${address}, ${city}\n\n*Items Ordered:*\n${itemSummary}\n\n*Total Amount:* ₹${total}\n\nPlease confirm dispatch!`;
-        window.open(`https://wa.me/91931910410?text=${encodeURIComponent(msg)}`, '_blank');
+      // Render Order Confirmation Screen
+      document.getElementById('confirmedUtrDisplay').innerText = utr;
+      document.getElementById('confirmedOrderIdDisplay').innerText = newOrder.id;
+      document.getElementById('confirmedOrderDateDisplay').innerText = `${newOrder.date} ${newOrder.timestamp}`;
+      document.getElementById('confirmedCustNameDisplay').innerText = custName;
+      document.getElementById('confirmedCustAddressDisplay').innerText = 
+        `${savedAddr.houseNo ? savedAddr.houseNo + ', ' : ''}${savedAddr.address ? savedAddr.address + ', ' : ''}${savedAddr.locality ? savedAddr.locality + ', ' : ''}${savedAddr.city ? savedAddr.city + ', ' : ''}${savedAddr.state ? savedAddr.state + ' ' : ''}${savedAddr.pincode ? '(' + savedAddr.pincode + ')' : ''}`;
+      document.getElementById('confirmedTotalAmountDisplay').innerText = `₹${total}`;
+
+      // Render items
+      const table = document.getElementById('confirmedItemsListTable');
+      if (table) {
+        table.innerHTML = newOrder.items.map(i => `
+          <div class="receipt-item-row">
+            <div>
+              <strong>${i.title}</strong> (${i.finish || 'Matte'}) × ${i.qty}
+            </div>
+            <div>₹${i.price * i.qty}</div>
+          </div>
+        `).join('') + `
+          <div class="receipt-item-row" style="color: var(--text-muted); font-size: 12.5px;">
+            <div>Standard Insured Shipping</div>
+            <div>${shipping === 0 ? 'FREE' : '₹50'}</div>
+          </div>
+        `;
       }
 
-      // Reset cart
+      // Show Success Card
+      document.getElementById('checkoutStep3Form').style.display = 'none';
+      document.getElementById('checkoutStep3Success').style.display = 'block';
+
+      // Clear cart
       cart = [];
       saveCart();
       updateCartUI();
+    }
 
-      closeCheckoutModal();
-      alert(`🎉 Order ${orderId} placed successfully! You can track your order using this Order ID.`);
-      openTrackingModal(orderId);
+    function printOrderReceipt() {
+      window.print();
+    }
+
+    function openTrackingFromCheckout() {
+      if (lastConfirmedOrder) {
+        const id = lastConfirmedOrder.id;
+        closeCheckoutModal();
+        openTrackingModal(id);
+      }
+    }
+
+    function shareOrderOnWhatsApp() {
+      if (!lastConfirmedOrder) return;
+      const o = lastConfirmedOrder;
+      const itemsList = o.items.map(i => `• ${i.title} (${i.finish}) x${i.qty} = ₹${i.price * i.qty}`).join('\n');
+      const msg = `🎉 *STICKZY NEW ORDER SUBMITTED*\n\n*Order ID:* ${o.id}\n*Status:* Pending Verification\n*Customer:* ${o.customer.name}\n*Delivery Address:* ${o.customer.houseNo}, ${o.customer.address}, ${o.customer.locality}, ${o.customer.city}, ${o.customer.state} - ${o.customer.pincode}\n\n*Payment Details:*\n*Payee:* Anshika Trikha\n*Payer UPI:* ${o.payment.payerUpiId}\n*UTR / Transaction ID:* ${o.payment.utr}\n*Total Paid:* ₹${o.total}\n\n*Items Ordered:*\n${itemsList}\n\nPlease verify payment and confirm dispatch!`;
+      window.open(`https://wa.me/91931910410?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
     function checkoutEntireCartViaWhatsApp() {
@@ -8891,7 +9686,14 @@
 
     function searchOrderTracking() {
       const q = document.getElementById('trackInput').value.trim().toLowerCase();
-      const order = orders.find(o => o.id.toLowerCase() === q || o.customer.phone.includes(q));
+      const order = orders.find(o => {
+        if (!o) return false;
+        const matchId = o.id && o.id.toLowerCase() === q;
+        const matchPhone = o.customer && o.customer.phone && o.customer.phone.includes(q);
+        const matchUtr = o.payment && o.payment.utr && o.payment.utr.toLowerCase().includes(q);
+        const matchName = o.customer && o.customer.name && o.customer.name.toLowerCase().includes(q);
+        return matchId || matchPhone || matchUtr || matchName;
+      });
 
       const resArea = document.getElementById('trackingResultArea');
       if (!order) {
@@ -9403,7 +10205,7 @@
       if (rawHash && validViews.includes(rawHash)) {
         navigateTo(rawHash);
       } else {
-        navigateTo('girls');
+        navigateTo('home');
       }
 
       window.addEventListener('hashchange', () => {
