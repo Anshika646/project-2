@@ -1086,8 +1086,7 @@
        ========================================================================== */
     .page-view {
       display: none;
-      opacity: 0;
-      transition: opacity 0.25s ease;
+      opacity: 1;
     }
     .page-view.active {
       display: block;
@@ -3285,6 +3284,1075 @@
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom-bar { flex-direction: column; gap: 12px; text-align: center; }
     }
+  
+    /* ==========================================================================
+       STICKZY REDESIGNED STYLES: PIXEL-PERFECT BOYS & GIRLS REFERENCE
+       ========================================================================== */
+
+    .collection-page-wrap {
+      position: relative;
+      padding-top: 10px;
+      padding-bottom: 60px;
+    }
+    
+    .collection-canvas-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 600px;
+      margin-left: calc(-50vw + 50%);
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .canvas-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(48px);
+      opacity: 0.85;
+      pointer-events: none;
+    }
+
+    /* Girls Theme Colors */
+    body.theme-girls-active {
+      background-color: #FAF5F5;
+    }
+    .theme-girls-active .site-header {
+      background: rgba(250, 245, 245, 0.95);
+    }
+    .theme-girls-active .brand-logo-dot {
+      background: #F472B6;
+    }
+
+    /* Boys Theme Colors */
+    body.theme-boys-active {
+      background-color: #F0F6FF;
+    }
+    .theme-boys-active .site-header {
+      background: rgba(240, 246, 255, 0.95);
+    }
+    .theme-boys-active .brand-logo-dot {
+      background: #3B82F6;
+    }
+
+    /* Other Theme Active Colors */
+    body.theme-vehicle-active { background-color: #F8FAFC; }
+    body.theme-decor-active { background-color: #FAF8F5; }
+    body.theme-divine-active { background-color: #FFFDF7; }
+
+    /* Redesigned Header: Clean & Minimal (Matches Screenshot) */
+    .site-header {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+      padding: 0 12px;
+      background: rgba(250, 250, 248, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      position: sticky;
+      top: 0;
+      z-index: 45;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      max-width: 1360px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .brand-logo-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      color: #111827;
+      text-transform: lowercase;
+    }
+
+    .brand-logo-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #F472B6;
+      display: inline-block;
+      margin-left: 2px;
+      transform: translateY(3px);
+      transition: background 0.3s ease;
+    }
+
+    .nav-links-center {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      list-style: none;
+      margin: 0 auto;
+    }
+
+    .nav-link-pill {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: #111827;
+      padding: 7px 20px;
+      border-radius: 9999px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-link-pill:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    /* Active Pill States matching screenshots */
+    .nav-link-pill.active-girls {
+      background: #FCE6EC !important;
+      color: #111827 !important;
+      font-weight: 600;
+    }
+
+    .nav-link-pill.active-boys {
+      background: #5B92E5 !important;
+      color: #FFFFFF !important;
+      font-weight: 600;
+    }
+
+    .nav-link-pill.active-vehicle {
+      background: #1E293B !important;
+      color: #FFFFFF !important;
+      font-weight: 600;
+    }
+
+    .nav-link-pill.active-decor {
+      background: #EFECE6 !important;
+      color: #111827 !important;
+      font-weight: 600;
+    }
+
+    .nav-link-pill.active-divine {
+      background: #FEF3C7 !important;
+      color: #111827 !important;
+      font-weight: 600;
+    }
+
+    .header-right-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header-bag-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      border: 1.5px solid rgba(0, 0, 0, 0.12);
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      color: #111827;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .header-bag-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      border-color: #111827;
+    }
+
+    .header-bag-btn .bag-counter {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: #111827;
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #374151;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .header-icon-btn:hover {
+      color: #111827;
+      border-color: #111827;
+      background: #F9FAFB;
+    }
+
+    /* Redesigned Hero Section (Open, Airy, Exactly Matching Screenshot) */
+    .lovable-collection-hero {
+      position: relative;
+      border-radius: 0;
+      padding: 30px 0 24px;
+      margin: 0 0 24px;
+      overflow: visible;
+      border: none;
+      box-shadow: none;
+      background: transparent;
+      z-index: 1;
+    }
+
+    .lovable-hero-inner {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .lovable-collection-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      width: fit-content;
+      transition: all 0.2s ease;
+    }
+
+    .theme-girls-active .lovable-collection-badge {
+      background: #FCE6EC;
+      color: #C2315A;
+    }
+    .theme-boys-active .lovable-collection-badge {
+      background: #DBEAFE;
+      color: #1D4ED8;
+    }
+
+    .hero-doodle-wrap {
+      margin-bottom: 4px;
+      display: block;
+      width: fit-content;
+      animation: doodleFloat 4s ease-in-out infinite alternate;
+    }
+
+    .lovable-hero-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(54px, 7.5vw, 86px);
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      line-height: 1.02;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .theme-girls-active .lovable-hero-title {
+      color: #192A20;
+    }
+    .theme-boys-active .lovable-hero-title {
+      color: #0F172A;
+    }
+
+    .lovable-hero-title .sparkle-icon {
+      font-size: 34px;
+      display: inline-block;
+      animation: sparkleFloat 3s ease-in-out infinite alternate;
+    }
+    .theme-girls-active .sparkle-icon { color: #F472B6; }
+    .theme-boys-active .sparkle-icon { color: #3B82F6; }
+
+    .lovable-hero-subtitle {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 17px;
+      color: #4B5563;
+      margin-bottom: 28px;
+      max-width: 460px;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    .lovable-explore-btn {
+      background: #18181B;
+      color: #FFFFFF;
+      padding: 13px 28px;
+      border-radius: 9999px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+      width: fit-content;
+    }
+    .lovable-explore-btn:hover {
+      background: #27272A;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+    }
+
+    /* Right Showcase Card: Curved Tilted Sticker Sheet (Matches Screenshot) */
+    .lovable-hero-card-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .lovable-hero-card {
+      width: 100%;
+      max-width: 530px;
+      height: 280px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-radius: 36px;
+      padding: 10px;
+      box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.12);
+      border: 2px solid rgba(255, 255, 255, 0.95);
+      position: relative;
+      overflow: hidden;
+      transform: rotate(-1.5deg);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .lovable-hero-card:hover {
+      transform: rotate(0deg) scale(1.02);
+      box-shadow: 0 28px 54px -14px rgba(0, 0, 0, 0.18);
+    }
+
+    .card-inner-showcase {
+      width: 100%;
+      height: 100%;
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-showcase-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .theme-girls-active .hero-showcase-img {
+      object-position: 78% 28%;
+      transform: scale(1.95);
+    }
+
+    .theme-boys-active .hero-showcase-img {
+      object-position: 74% 28%;
+      transform: scale(1.85);
+    }
+
+    /* Numbered Category Cards: 4 Columns x 2 Rows */
+    .lovable-category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+
+    .lovable-cat-card {
+      background: #FFFFFF;
+      border-radius: 22px;
+      padding: 22px 20px;
+      border: 1px solid rgba(235, 240, 248, 0.9);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.035);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      min-height: 114px;
+    }
+
+    .theme-girls-active .lovable-cat-card {
+      border-color: rgba(245, 230, 235, 0.9);
+      box-shadow: 0 6px 20px rgba(220, 180, 195, 0.1);
+    }
+    .theme-boys-active .lovable-cat-card {
+      border-color: rgba(224, 236, 252, 0.95);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.07);
+    }
+
+    .lovable-cat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.09);
+    }
+    .theme-girls-active .lovable-cat-card:hover {
+      border-color: #F472B6;
+      box-shadow: 0 14px 32px rgba(220, 160, 180, 0.22);
+    }
+    .theme-boys-active .lovable-cat-card:hover {
+      border-color: #60A5FA;
+      box-shadow: 0 14px 32px rgba(59, 130, 246, 0.18);
+    }
+
+    .lovable-cat-card .card-info {
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+      padding-right: 10px;
+    }
+
+    .lovable-cat-card .card-num {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 5px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .theme-girls-active .lovable-cat-card .card-num { color: #F472B6; }
+    .theme-boys-active .lovable-cat-card .card-num { color: #3B82F6; }
+
+    .lovable-cat-card .card-title {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #111827;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.25;
+      margin-bottom: 4px;
+    }
+
+    .lovable-cat-card .card-subtext {
+      font-size: 12px;
+      color: #6B7280;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .lovable-cat-card .card-art-wrap {
+      width: 78px;
+      height: 78px;
+      border-radius: 20px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.25s ease;
+    }
+    .theme-girls-active .lovable-cat-card .card-art-wrap {
+      background: #FFF0F4;
+    }
+    .theme-boys-active .lovable-cat-card .card-art-wrap {
+      background: #EFF6FA;
+    }
+
+    .lovable-cat-card .card-arrow-btn {
+      position: absolute;
+      bottom: -3px;
+      right: -3px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      transition: all 0.2s ease;
+    }
+    .theme-girls-active .lovable-cat-card .card-arrow-btn {
+      background: #FCE4EC;
+      color: #831843;
+    }
+    .theme-boys-active .lovable-cat-card .card-arrow-btn {
+      background: #DBEAFE;
+      color: #1E3A8A;
+    }
+    .lovable-cat-card:hover .card-arrow-btn {
+      transform: scale(1.15) translate(1px, 1px);
+    }
+
+    /* Dedicated Category Page Styles */
+    .cat-page-hero {
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 36px 36px;
+      margin: 16px 0 28px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+      position: relative;
+    }
+
+    .cat-page-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #6B7280;
+      margin-bottom: 16px;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      background: transparent;
+      border: none;
+    }
+    .cat-page-back-btn:hover {
+      color: #111827;
+    }
+
+    .cat-page-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .cat-page-num {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #9CA3AF;
+      margin-bottom: 6px;
+    }
+
+    .cat-page-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      color: #111827;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .cat-page-desc {
+      font-size: 15px;
+      color: #4B5563;
+      max-width: 580px;
+      line-height: 1.5;
+    }
+
+    .cat-controls-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      background: #FFFFFF;
+      padding: 14px 20px;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .cat-search-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+      min-width: 260px;
+      background: #F9FAFB;
+      padding: 8px 14px;
+      border-radius: 10px;
+      border: 1px solid #E5E7EB;
+    }
+    .cat-search-wrap input {
+      border: none;
+      background: transparent;
+      width: 100%;
+      outline: none;
+      font-size: 13.5px;
+    }
+
+    .cat-filters-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* Dedicated Product Detail Page Styles */
+    .pdp-page-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 48px;
+      margin-top: 16px;
+      margin-bottom: 60px;
+    }
+
+    .pdp-page-stage {
+      position: sticky;
+      top: 100px;
+    }
+
+    .pdp-main-card-wrap {
+      background: #FFFFFF;
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pdp-main-image-box {
+      width: 100%;
+      max-width: 380px;
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .pdp-finish-preview-selector {
+      margin-top: 18px;
+      background: #FFFFFF;
+      padding: 16px 20px;
+      border-radius: 18px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    .pdp-label-mini {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #6B7280;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .pdp-finish-pill-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pdp-finish-pill {
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 12.5px;
+      font-weight: 600;
+      border: 1.5px solid #E5E7EB;
+      background: #FFFFFF;
+      color: #374151;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .pdp-finish-pill:hover,
+    .pdp-finish-pill.active {
+      border-color: #111827;
+      background: #111827;
+      color: #FFFFFF;
+    }
+
+    .pdp-trust-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .pdp-trust-box {
+      background: #FFFFFF;
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(0,0,0,0.05);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 11.5px;
+    }
+    .pdp-trust-box strong {
+      display: block;
+      color: #111827;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+    .pdp-trust-box span {
+      color: #6B7280;
+    }
+
+    .pdp-page-info {
+      padding-top: 8px;
+    }
+
+    .pdp-tags-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .pdp-badge-pill {
+      background: #FEF3C7;
+      color: #92400E;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 4px 12px;
+      border-radius: 9999px;
+    }
+    .pdp-stock-status {
+      font-size: 13px;
+      font-weight: 600;
+      color: #059669;
+    }
+
+    .pdp-page-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: #111827;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .pdp-rating-strip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      font-size: 13.5px;
+    }
+    .pdp-stars { color: #F59E0B; }
+    .pdp-score { font-weight: 700; color: #111827; }
+    .pdp-reviews-count { color: #6B7280; }
+
+    .pdp-page-price-box {
+      background: #FFFFFF;
+      padding: 18px 22px;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      margin-bottom: 24px;
+    }
+    .pdp-price-flex {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+    .pdp-big-price {
+      font-size: 32px;
+      font-weight: 800;
+      color: #111827;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .pdp-big-mrp {
+      font-size: 18px;
+      color: #9CA3AF;
+      text-decoration: line-through;
+    }
+    .pdp-discount-tag {
+      background: #DCFCE7;
+      color: #166534;
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 9999px;
+    }
+    .pdp-tax-note {
+      font-size: 12px;
+      color: #6B7280;
+    }
+
+    .pdp-selector-section {
+      margin-bottom: 24px;
+    }
+    .pdp-section-header-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #6B7280;
+      margin-bottom: 10px;
+    }
+
+    .pdp-size-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .pdp-size-card {
+      background: #FFFFFF;
+      border: 1.5px solid #E5E7EB;
+      border-radius: 14px;
+      padding: 12px 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .pdp-size-card:hover,
+    .pdp-size-card.active {
+      border-color: #111827;
+      background: #F9FAFB;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .pdp-size-card.active {
+      border-color: #111827;
+      background: #111827;
+      color: #FFFFFF;
+    }
+    .pdp-size-card.active .size-name,
+    .pdp-size-card.active .size-price { color: #FFFFFF; }
+    .pdp-size-card.active .size-note { color: #D1D5DB; }
+
+    .size-name { font-size: 13px; font-weight: 700; color: #111827; margin-bottom: 2px; }
+    .size-price { font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 2px; }
+    .size-note { font-size: 10.5px; color: #6B7280; }
+
+    .pdp-description-box {
+      font-size: 14.5px;
+      color: #4B5563;
+      line-height: 1.65;
+      margin-bottom: 24px;
+      background: #FFFFFF;
+      padding: 18px 20px;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .pdp-purchase-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .pdp-btn-cart {
+      flex: 1.2;
+      height: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      justify-content: center;
+      border-radius: 14px;
+    }
+    .pdp-btn-buy {
+      flex: 1;
+      height: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      justify-content: center;
+      background: #F3F4F6;
+      color: #111827;
+      border: 1.5px solid #111827;
+      border-radius: 14px;
+    }
+    .pdp-btn-buy:hover {
+      background: #111827;
+      color: #FFFFFF;
+    }
+
+    .pdp-pincode-box {
+      background: #FFFFFF;
+      padding: 18px 20px;
+      border-radius: 16px;
+      border: 1px solid rgba(0,0,0,0.06);
+      margin-bottom: 24px;
+    }
+    .pincode-input-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .pincode-input-row input {
+      flex: 1;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid #D1D5DB;
+      font-size: 13.5px;
+    }
+    .btn-pincode-check {
+      padding: 10px 18px;
+      background: #111827;
+      color: #FFFFFF;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .pincode-result {
+      margin-top: 10px;
+      font-size: 12.5px;
+      color: #4B5563;
+    }
+
+    .pdp-specs-card {
+      background: #FFFFFF;
+      padding: 22px;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    .specs-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 14px;
+    }
+    .specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      font-size: 12.5px;
+    }
+    .spec-row span {
+      display: block;
+      color: #6B7280;
+      margin-bottom: 2px;
+    }
+    .spec-row strong {
+      color: #111827;
+    }
+
+    .pdp-reviews-section {
+      margin-top: 48px;
+      padding-top: 36px;
+      border-top: 1px solid #E5E7EB;
+    }
+    .reviews-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 24px;
+    }
+    .reviews-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: #111827;
+      letter-spacing: -0.02em;
+    }
+    .reviews-sub {
+      font-size: 14px;
+      color: #6B7280;
+      margin-top: 4px;
+    }
+    .reviews-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .review-card-item {
+      background: #FFFFFF;
+      border-radius: 18px;
+      padding: 20px;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+    }
+    .review-user-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .review-user-name {
+      font-weight: 700;
+      font-size: 13.5px;
+      color: #111827;
+    }
+    .review-verified-badge {
+      font-size: 11px;
+      color: #059669;
+      font-weight: 600;
+    }
+    .review-text {
+      font-size: 13px;
+      color: #4B5563;
+      line-height: 1.5;
+    }
+
+    /* Live Tracking Timeline Modal */
+    .tracking-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+      position: relative;
+    }
+    .tracking-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      position: relative;
+    }
+    .tracking-step::before {
+      content: '';
+      position: absolute;
+      left: 13px;
+      top: 28px;
+      bottom: -16px;
+      width: 2px;
+      background: #E5E7EB;
+    }
+    .tracking-step:last-child::before {
+      display: none;
+    }
+    .tracking-step.done::before {
+      background: #059669;
+    }
+    .step-indicator {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #E5E7EB;
+      color: #6B7280;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      z-index: 2;
+    }
+    .tracking-step.done .step-indicator {
+      background: #059669;
+      color: #FFFFFF;
+    }
+    .tracking-step.active .step-indicator {
+      background: #3B82F6;
+      color: #FFFFFF;
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+    }
+    .step-info strong {
+      display: block;
+      font-size: 14px;
+      color: #111827;
+    }
+    .step-info span {
+      font-size: 12px;
+      color: #6B7280;
+    }
+
   </style>
 </head>
 <body>
@@ -3312,57 +4380,52 @@
        SITE HEADER NAVIGATION (Minimalist, Clean, Modern)
        ========================================================================== -->
   <header class="site-header" id="siteHeader">
-    <div class="container-wide">
-      <div class="nav-inner">
-        
-        <!-- Logo (Matches image_c5aedb19.png) -->
-        <div class="brand-logo" onclick="navigateTo('home')">
-          <span class="brand-logo-text">stickzy</span>
-          <span class="brand-logo-dot"></span>
-        </div>
+    <div class="nav-inner">
+      <!-- Brand Logo (Matches Screenshots) -->
+      <div class="brand-logo" onclick="navigateTo('home')" title="STICKZY Home">
+        <span class="brand-logo-text">stickzy</span>
+        <span class="brand-logo-dot" id="headerLogoDot"></span>
+      </div>
 
-        <!-- Desktop Navigation Links -->
-        <ul class="nav-links">
-          <li class="nav-item"><a href="javascript:void(0)" class="nav-link active" id="nav-home" onclick="navigateTo('home')">Home</a></li>
-          <li class="nav-item"><a href="javascript:void(0)" class="nav-link" id="nav-boys" onclick="navigateTo('boys')">Boys</a></li>
-          <li class="nav-item"><a href="javascript:void(0)" class="nav-link" id="nav-girls" onclick="navigateTo('girls')">Girls</a></li>
-          <li class="nav-item"><a href="javascript:void(0)" class="nav-link" id="nav-divine" onclick="navigateTo('divine')">Divine</a></li>
-          <li class="nav-item"><a href="javascript:void(0)" class="nav-link" id="nav-decor" onclick="navigateTo('decor')">Home & Wall</a></li>
-          <li class="nav-item"><a href="javascript:void(0)" class="nav-link" id="nav-vehicle" onclick="navigateTo('vehicle')">Vehicles</a></li>
-          <li class="nav-item">
-            <button class="nav-link custom-pill" onclick="openCustomizerStudio()">
-              ✨ Create Your Own
-            </button>
-          </li>
-        </ul>
+      <!-- Center Navigation Links (Exact 5 Categories as in Screenshots) -->
+      <nav class="nav-links-center" id="desktopNavLinks">
+        <a href="javascript:void(0)" class="nav-link-pill" id="nav-boys" onclick="navigateTo('boys')">Boys</a>
+        <a href="javascript:void(0)" class="nav-link-pill" id="nav-girls" onclick="navigateTo('girls')">Girls</a>
+        <a href="javascript:void(0)" class="nav-link-pill" id="nav-vehicle" onclick="navigateTo('vehicle')">Vehicle</a>
+        <a href="javascript:void(0)" class="nav-link-pill" id="nav-decor" onclick="navigateTo('decor')">Home</a>
+        <a href="javascript:void(0)" class="nav-link-pill" id="nav-divine" onclick="navigateTo('divine')">Divine</a>
+      </nav>
 
-        <!-- Action Buttons -->
-        <div class="header-actions">
-          <button class="action-btn icon-only" title="Track Order" onclick="openTrackingModal()">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-          </button>
+      <!-- Right Action Controls (Bag Icon as in Screenshot + Search + Wishlist) -->
+      <div class="header-right-actions">
+        <button class="header-icon-btn" onclick="openSearchModal()" title="Search stickers">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
 
-          <button class="action-btn icon-only" title="Wishlist" onclick="navigateTo('wishlist')">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            <span class="badge-counter" id="wishlistCountBadge">0</span>
-          </button>
+        <button class="header-icon-btn" onclick="navigateTo('wishlist')" title="Wishlist" style="position: relative;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span class="bag-counter" id="wishlistCountBadge" style="display: none; background: #E11D48;">0</span>
+          <span id="wishlistFilterCount" style="display: none;">0</span>
+        </button>
 
-          <button class="action-btn" title="Shopping Cart" onclick="toggleCartDrawer()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-            <span>Bag</span>
-            <span class="badge-counter" id="cartCountBadge">0</span>
-          </button>
+        <button class="header-icon-btn" onclick="openProfileModal()" title="My Account & Orders">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
 
-          <button class="action-btn icon-only" title="Admin Portal" onclick="openAdminModal()">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-          </button>
+        <!-- Bag Icon Button (Matches Screenshot) -->
+        <button class="header-bag-btn" onclick="toggleCartDrawer()" title="Shopping Bag">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="6" width="18" height="15" rx="3.5"/>
+            <path d="M8 6V4.5a3.5 3.5 0 0 1 7 0V6"/>
+            <path d="M10 10.5a2 2 0 0 0 4 0"/>
+          </svg>
+          <span class="bag-counter" id="cartCountBadge">0</span>
+        </button>
 
-          <!-- Mobile Hamburger Toggle -->
-          <button class="action-btn icon-only mobile-menu-btn" title="Navigation Menu" onclick="toggleMobileNavDrawer()">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-          </button>
-        </div>
-
+        <!-- Mobile Drawer Toggle -->
+        <button class="header-icon-btn mobile-menu-btn" onclick="toggleMobileNavDrawer()" title="Menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </div>
     </div>
   </header>
@@ -3408,6 +4471,10 @@
           <span>Divine Stickers</span>
           <span class="mobile-drawer-badge" style="background: rgba(217, 119, 6, 0.15); color: #B45309;">Sacred</span>
         </a>
+        <a href="javascript:void(0)" class="mobile-drawer-link" onclick="toggleMobileNavDrawer(); navigateTo('pinterest')">
+          <span>📌 Tales Templates</span>
+          <span class="mobile-drawer-badge" style="background: rgba(244, 63, 94, 0.15); color: #BE123C;">Pinterest Viral</span>
+        </a>
         <a href="javascript:void(0)" class="mobile-drawer-link" onclick="toggleMobileNavDrawer(); navigateTo('decor')">
           <span>Home & Wall Decor</span>
           <span class="mobile-drawer-badge">Walls & Mirrors</span>
@@ -3449,7 +4516,7 @@
     <!-- ========================================================================
          VIEW 1: SPACIOUS MINIMAL HOMEPAGE
          ======================================================================== -->
-    <div id="view-home" class="page-view active">
+    <div id="view-home" class="page-view" style="display: none;">
       
       <!-- Spacious Hero Section -->
       <section class="hero-section">
@@ -3809,78 +4876,73 @@
     <!-- ========================================================================
          VIEW 2: DEDICATED COLLECTION PAGE (Boys, Girls, Divine, Decor, Vehicles)
          ======================================================================== -->
-    <div id="view-collection" class="page-view" style="display: none;">
+    <div id="view-collection" class="page-view active">
       <div class="container collection-page-wrap">
         
+        <!-- Fluid Canvas Background Blobs (Matches Screenshot Atmosphere) -->
+        <div class="collection-canvas-bg" id="colCanvasBg">
+          <div class="canvas-blob" id="canvasBlobRight" style="width: 520px; height: 520px; right: 5%; top: -50px; background: rgba(255, 216, 227, 0.65);"></div>
+          <div class="canvas-blob" id="canvasBlobLeft" style="width: 440px; height: 440px; left: -100px; top: 120px; background: rgba(255, 240, 245, 0.8);"></div>
+        </div>
+
         <!-- Breadcrumb Navigation Strip -->
-        <div class="breadcrumb-strip">
+        <div class="breadcrumb-strip" style="position: relative; z-index: 2; margin-bottom: 8px;">
           <a href="javascript:void(0)" onclick="navigateTo('home')">Home</a>
           <span>/</span>
           <span>Collections</span>
           <span>/</span>
-          <span class="active" id="colBreadcrumb">Boys Collection</span>
+          <span class="active" id="colBreadcrumb">Girls</span>
         </div>
 
-        <!-- Dedicated Lovable Collection Hero (Matches image_c5aedb19.png) -->
+        <!-- Dedicated Lovable Collection Hero (Matches Screenshot Pixel-for-Pixel) -->
         <div class="lovable-collection-hero theme-girls" id="colHero">
-          <div class="sparkle-star s1">✦</div>
-          <div class="sparkle-star s2">✦</div>
-          <div class="sparkle-star s3">✦</div>
-          <div class="sparkle-star s4">✦</div>
-
           <div class="lovable-hero-inner">
+            <!-- Left Hero Content -->
             <div class="lovable-hero-left">
-              <div class="lovable-collection-badge">
+              <div class="lovable-collection-badge" id="colCollectionBadge">
                 <span id="colBadgeText">Collection</span>
-                <svg class="badge-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+                <svg class="badge-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
               </div>
 
-              <!-- Lovable Ribbon Line Doodle (Matches image_c5aedb19.png) -->
+              <!-- Ribbon Line Loop Doodle (Matches Screenshot) -->
               <div class="hero-doodle-wrap" id="colHeroDoodle">
-                <svg width="86" height="38" viewBox="0 0 86 38" fill="none" stroke="#F5A3B8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M8 28 C 24 6, 38 32, 50 16 C 60 2, 74 6, 68 20 C 62 30, 48 22, 56 10 C 64 2, 78 12, 82 16" />
+                <svg width="90" height="42" viewBox="0 0 90 42" fill="none" stroke="#F5A3B8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" id="colDoodleSvg">
+                  <path d="M6 30 C 24 6, 42 34, 52 16 C 62 0, 76 6, 70 20 C 64 32, 46 22, 56 8 C 66 0, 80 12, 86 16"/>
                 </svg>
               </div>
 
+              <!-- Massive Headline with 4-Point Sparkle Stars (Matches Screenshot) -->
               <h1 class="lovable-hero-title">
                 <span id="colHeroTitle">Girls</span>
-                <span class="sparkle-icon">✦</span>
+                <span class="sparkle-icon" id="colHeroSparkle">✦</span>
               </h1>
 
+              <!-- Subtitle -->
               <p class="lovable-hero-subtitle" id="colHeroSubtitle">
                 Bows, butterflies & soft little joys.
               </p>
 
+              <!-- Explore Button -->
               <button class="lovable-explore-btn" onclick="document.getElementById('colCategoriesSection').scrollIntoView({ behavior: 'smooth' })">
                 <span>Explore Collection</span>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
               </button>
             </div>
 
-            <!-- Right Showcase Card (Matches image_c5aedb19.png) -->
+            <!-- Right Showcase Card: Tilted Curved Sticker Sheet (Matches Screenshot) -->
             <div class="lovable-hero-card-wrap">
               <div class="lovable-hero-card" id="colHeroCard">
                 <div class="card-inner-showcase">
-                  <img src="/assets/aistudio/image_c5aedb19.png" alt="Collection Showcase" class="hero-showcase-img" id="colHeroImg" />
+                  <img src="/assets/aistudio/image_7bb33513.png" alt="Collection Showcase Sheet" class="hero-showcase-img" id="colHeroImg" />
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- NUMBERED CATEGORIES SECTION (Matches image_c5aedb19.png: 4 Columns Desktop) -->
-        <div class="lovable-categories-section" id="colCategoriesSection">
-          <div class="lovable-section-header">
-            <div class="lovable-section-title-wrap">
-              <span class="lovable-section-label">CURATED NICHES</span>
-              <h2 class="lovable-section-title">Shop by Category</h2>
-            </div>
-            <button class="btn-reset-niche" id="btnResetNiches" onclick="selectLovableCategory('all')">
-              Show All In Collection
-            </button>
-          </div>
-
-          <!-- Dynamic 4-Column Numbered Cards Grid -->
+        <!-- NUMBERED CATEGORIES SECTION (Matches Screenshot: 4 Columns x 2 Rows) -->
+        <div class="lovable-categories-section" id="colCategoriesSection" style="position: relative; z-index: 2;">
+          <!-- 4-Column x 2-Row Numbered Cards Grid -->
           <div class="lovable-category-grid" id="lovableCategoryGrid">
             <!-- Injected dynamically by renderLovableCategoryCards() -->
           </div>
@@ -3941,6 +5003,307 @@
           </div>
         </div>
 
+      </div>
+    </div>
+
+  
+    <!-- ========================================================================
+         VIEW 3: DEDICATED CATEGORY DETAIL PAGE (Opened on Category Card Click)
+         ======================================================================== -->
+    <div id="view-category" class="page-view" style="display: none;">
+      <div class="container" style="padding-top: 24px; padding-bottom: 60px;">
+        <!-- Breadcrumb Navigation Strip -->
+        <div class="breadcrumb-strip">
+          <a href="javascript:void(0)" onclick="navigateTo('home')">Home</a>
+          <span>/</span>
+          <a href="javascript:void(0)" id="catPageCollectionBreadcrumb" onclick="navigateTo(currentFilter)">Collection</a>
+          <span>/</span>
+          <span class="active" id="catPageTitleBreadcrumb">Category</span>
+        </div>
+
+        <!-- Category Banner -->
+        <div class="cat-page-hero" id="catPageHero">
+          <button class="cat-page-back-btn" onclick="navigateTo(currentFilter)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+            <span>Back to <span id="catBackCollectionName">Collection</span></span>
+          </button>
+          <div class="cat-page-header-row">
+            <div>
+              <div class="cat-page-num" id="catPageNum">CATEGORY 01</div>
+              <h1 class="cat-page-title" id="catPageTitle">Bows & Ribbons</h1>
+              <p class="cat-page-desc" id="catPageDesc">Curated premium die-cut vinyl stickers with Japanese UV ink.</p>
+            </div>
+            <div class="cat-page-art-badge" id="catPageArtBadge" style="width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center;"></div>
+          </div>
+        </div>
+
+        <!-- Search, Filter & Sort Controls Bar -->
+        <div class="cat-controls-bar">
+          <div class="cat-search-wrap">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" id="catSearchInput" placeholder="Search within this category..." oninput="renderCategoryPageProducts()" />
+          </div>
+
+          <div class="cat-filters-group">
+            <select class="filter-select-mini" id="catFinishFilter" onchange="renderCategoryPageProducts()">
+              <option value="all">All Finishes</option>
+              <option value="Matte">Luxe Matte</option>
+              <option value="Glossy">Ultra Gloss</option>
+              <option value="Holographic">Holographic</option>
+            </select>
+
+            <select class="filter-select-mini" id="catPriceFilter" onchange="renderCategoryPageProducts()">
+              <option value="all">All Prices</option>
+              <option value="under200">Under ₹200</option>
+              <option value="200to300">₹200 - ₹300</option>
+              <option value="above300">₹300+</option>
+            </select>
+
+            <select class="filter-select-mini" id="catSortSelect" onchange="renderCategoryPageProducts()">
+              <option value="featured">Featured First</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+              <option value="newest">Newest First</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category Products Grid -->
+        <div class="products-grid" id="categoryProductsGrid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+         VIEW 4: DEDICATED INDIVIDUAL PRODUCT DETAIL PAGE (PDP)
+         ======================================================================== -->
+    <div id="view-product" class="page-view" style="display: none;">
+      <div class="container" style="padding-top: 24px; padding-bottom: 80px;">
+        <!-- Breadcrumbs -->
+        <div class="breadcrumb-strip">
+          <a href="javascript:void(0)" onclick="navigateTo('home')">Home</a>
+          <span>/</span>
+          <a href="javascript:void(0)" id="pdpBreadcrumbCollection" onclick="navigateTo(activePdpProduct?.category || 'boys')">Collection</a>
+          <span>/</span>
+          <span class="active" id="pdpBreadcrumbTitle">Product</span>
+        </div>
+
+        <!-- PDP Split Layout -->
+        <div class="pdp-page-grid">
+          <!-- Left: Large Image Preview Stage -->
+          <div class="pdp-page-stage">
+            <div class="pdp-main-card-wrap">
+              <div class="pdp-main-image-box" id="pdpMainImageBox">
+                <div class="pdp-image-sticker" id="pdpPageImageContainer"></div>
+              </div>
+            </div>
+
+            <!-- Finish Preview Selector Pills -->
+            <div class="pdp-finish-preview-selector">
+              <span class="pdp-label-mini">LIVE FINISH PREVIEW:</span>
+              <div class="pdp-finish-pill-group">
+                <button class="pdp-finish-pill active" onclick="setPdpFinish('Matte')">Luxe Matte</button>
+                <button class="pdp-finish-pill" onclick="setPdpFinish('Glossy')">Ultra Gloss</button>
+                <button class="pdp-finish-pill" onclick="setPdpFinish('Holographic')">Holographic (+₹50)</button>
+                <button class="pdp-finish-pill" onclick="setPdpFinish('Clear')">Transparent Die-Cut</button>
+              </div>
+            </div>
+
+            <!-- Trust Badges Under Image -->
+            <div class="pdp-trust-strip">
+              <div class="pdp-trust-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <div>
+                  <strong>100% Waterproof</strong>
+                  <span>Dishwasher & monsoon safe</span>
+                </div>
+              </div>
+              <div class="pdp-trust-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <div>
+                  <strong>Zero-Residue Clean Peel</strong>
+                  <span>No sticky residue left behind</span>
+                </div>
+              </div>
+              <div class="pdp-trust-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                <div>
+                  <strong>Japanese UV Pigment</strong>
+                  <span>5+ Years fade resistance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Product Information & Purchase Form -->
+          <div class="pdp-page-info">
+            <div class="pdp-tags-row">
+              <span class="pdp-badge-pill" id="pdpPageBadge">BESTSELLER</span>
+              <span class="pdp-stock-status">● In Stock & Ready to Ship</span>
+            </div>
+
+            <h1 class="pdp-page-title" id="pdpPageTitle">Product Title</h1>
+
+            <div class="pdp-rating-strip">
+              <span class="pdp-stars">★★★★★</span>
+              <span class="pdp-score" id="pdpPageRatingScore">4.9</span>
+              <span class="pdp-reviews-count" id="pdpPageReviewsCount">(142 verified reviews)</span>
+            </div>
+
+            <div class="pdp-page-price-box">
+              <div class="pdp-price-flex">
+                <span class="pdp-big-price" id="pdpPagePrice">₹199</span>
+                <span class="pdp-big-mrp" id="pdpPageMrp">₹399</span>
+                <span class="pdp-discount-tag" id="pdpPageDiscount">50% OFF</span>
+              </div>
+              <div class="pdp-tax-note">Inclusive of all taxes · Free express shipping on ₹499+</div>
+            </div>
+
+            <!-- Size Selector -->
+            <div class="pdp-selector-section">
+              <div class="pdp-section-header-label">
+                <span>SELECT SIZE:</span>
+                <span id="pdpSelectedSizeLabel" style="color: var(--text-main); font-weight: 600;">Medium 3" (₹199)</span>
+              </div>
+              <div class="pdp-size-cards-grid">
+                <div class="pdp-size-card" id="sizeCard-small" onclick="selectPdpSize('small', 149)">
+                  <div class="size-name">Small (2")</div>
+                  <div class="size-price">₹149</div>
+                  <div class="size-note">Phones & Mugs</div>
+                </div>
+                <div class="pdp-size-card active" id="sizeCard-medium" onclick="selectPdpSize('medium', 199)">
+                  <div class="size-name">Medium (3")</div>
+                  <div class="size-price">₹199</div>
+                  <div class="size-note">Laptops & Bottles</div>
+                </div>
+                <div class="pdp-size-card" id="sizeCard-large" onclick="selectPdpSize('large', 249)">
+                  <div class="size-name">Large (4")</div>
+                  <div class="size-price">₹249</div>
+                  <div class="size-note">Helmets & Bikes</div>
+                </div>
+                <div class="pdp-size-card" id="sizeCard-sheet" onclick="selectPdpSize('sheet', 349)">
+                  <div class="size-name">A5 Sheet Pack</div>
+                  <div class="size-price">₹349</div>
+                  <div class="size-note">Full Set (8-12 pcs)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="pdp-description-box" id="pdpPageDescription">
+              High-definition waterproof vinyl decal printed with high-pigment Japanese UV ink. Resistant to water, dishwashers, scratches, and direct sunlight.
+            </div>
+
+            <!-- Quantity & Actions -->
+            <div class="pdp-purchase-actions">
+              <div class="qty-counter">
+                <button class="qty-btn" onclick="decrementPdpQty()">-</button>
+                <input type="text" class="qty-input" id="pdpPageQtyInput" value="1" readonly />
+                <button class="qty-btn" onclick="incrementPdpQty()">+</button>
+              </div>
+              <button class="btn-primary pdp-btn-cart" onclick="addActiveProductToCart()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span>Add to Bag</span>
+              </button>
+              <button class="btn-secondary pdp-btn-buy" onclick="buyNowActiveProduct()">
+                <span>Buy Now ⚡</span>
+              </button>
+            </div>
+
+            <!-- Pincode Delivery Checker -->
+            <div class="pdp-pincode-box">
+              <div class="pdp-section-header-label">DELIVERY CHECKER:</div>
+              <div class="pincode-input-row">
+                <input type="text" id="pdpPincodeInput" placeholder="Enter 6-digit Pincode (e.g. 110001)" maxlength="6" />
+                <button class="btn-pincode-check" onclick="checkPdpPincode()">Check</button>
+              </div>
+              <div class="pincode-result" id="pdpPincodeResult">
+                🚚 Enter your pincode to check instant estimated delivery.
+              </div>
+            </div>
+
+            <!-- Specifications Table -->
+            <div class="pdp-specs-card">
+              <div class="specs-title">Product Details & Specifications</div>
+              <div class="specs-grid">
+                <div class="spec-row"><span>Material</span><strong>3M High-Tack Bubble-Free Vinyl (120μm)</strong></div>
+                <div class="spec-row"><span>Printing</span><strong>High-Pigment Japanese UV Ink (No Fade)</strong></div>
+                <div class="spec-row"><span>Waterproof</span><strong>100% Weatherproof, Dishwasher & Rain Safe</strong></div>
+                <div class="spec-row"><span>Adhesive</span><strong>Clean-Peel Zero-Residue Acrylic Formula</strong></div>
+                <div class="spec-row"><span>Finish</span><strong id="pdpSpecFinish">Luxe Matte Velvet</strong></div>
+                <div class="spec-row"><span>Surfaces</span><strong>Laptops, Bikes, Helmets, Bottles, Walls, Glass</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Verified Reviews Section -->
+        <div class="pdp-reviews-section">
+          <div class="reviews-header">
+            <div>
+              <h2 class="reviews-title">Customer Reviews & Ratings</h2>
+              <div class="reviews-sub">Verified buyers who stuck their personality with STICKZY</div>
+            </div>
+          </div>
+
+          <div class="reviews-cards-grid" id="pdpReviewsGrid">
+            <div class="review-card-item">
+              <div class="review-user-row">
+                <span class="review-user-name">Tanvi Sharma</span>
+                <span class="review-verified-badge">✓ Verified Buyer</span>
+              </div>
+              <div class="pdp-stars" style="margin-bottom: 6px;">★★★★★</div>
+              <div class="review-text">The colors and coquette pink tones look even better in real life! Stuck them on my MacBook Air and water bottle, washed it multiple times and zero peeling.</div>
+            </div>
+            <div class="review-card-item">
+              <div class="review-user-row">
+                <span class="review-user-name">Rohan Verma</span>
+                <span class="review-verified-badge">✓ Verified Buyer</span>
+              </div>
+              <div class="pdp-stars" style="margin-bottom: 6px;">★★★★★</div>
+              <div class="review-text">Put the sneaker decals on my helmet. Survived rain, highway mud, and pressure washes without a scratch. Best vinyl quality in India.</div>
+            </div>
+            <div class="review-card-item">
+              <div class="review-user-row">
+                <span class="review-user-name">Ananya Sen</span>
+                <span class="review-verified-badge">✓ Verified Buyer</span>
+              </div>
+              <div class="pdp-stars" style="margin-bottom: 6px;">★★★★★</div>
+              <div class="review-text">Super fast shipping and lovely packaging with bonus mini die-cut stickers! Will definitely order the whole coquette collection.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Products Section -->
+        <div class="pdp-reviews-section" style="border-top: none; padding-top: 20px;">
+          <h2 class="reviews-title" style="margin-bottom: 20px;">You Might Also Like</h2>
+          <div class="products-grid" id="pdpRelatedGrid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+         VIEW 5: WISHLIST PAGE
+         ======================================================================== -->
+    <div id="view-wishlist" class="page-view" style="display: none;">
+      <div class="container" style="padding-top: 30px; padding-bottom: 80px;">
+        <div class="breadcrumb-strip">
+          <a href="javascript:void(0)" onclick="navigateTo('home')">Home</a>
+          <span>/</span>
+          <span class="active">My Wishlist</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 24px;">
+          <div>
+            <h1 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 32px; font-weight: 800; color: #111827;">Your Saved Stickers</h1>
+            <p style="color: #6B7280; font-size: 14.5px; margin-top: 4px;">Items you've bookmarked to personalize your gear.</p>
+          </div>
+          <button class="btn-secondary" onclick="navigateTo('boys')">Explore More Stickers</button>
+        </div>
+        <div class="products-grid" id="wishlistProductsGrid">
+          <!-- Rendered dynamically -->
+        </div>
       </div>
     </div>
 
@@ -4623,507 +5986,692 @@
        DATA STORE: PRODUCTS & COLLECTIONS
        ========================================================================== */
     const DEFAULT_PRODUCTS = [
-      // --- BOYS COLLECTION ---
-      {
-        id: "prod-b1",
-        title: "KTM Throttle & Racing Beast Sheet",
-        category: "boys",
-        categoryLabel: "Boys Collection",
-        subcategory: "KTM-inspired Racing",
-        theme: "Pastel Blue & Orange Lo-Fi",
-        audience: "boys",
-        type: "sheet",
-        dimensions: "A5 (14.8 × 21 cm)",
-        material: "120μm Waterproof Vinyl",
-        waterproof: true,
-        surface: "Bikes, Helmets, Laptops, Phone Cases",
-        price: 199,
-        mrp: 399,
-        rating: 4.9,
-        reviewsCount: 184,
-        finish: "Matte",
-        tag: "Bestseller",
-        isBestseller: true,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#E8F1FC"/><path d="M30,70 L50,35 L90,35 L70,70 Z" fill="#FF6B00"/><text x="40" y="60" fill="#FFFFFF" font-family="sans-serif" font-weight="900" font-size="14">KTM</text><circle cx="45" cy="80" r="10" fill="#1E293B"/><circle cx="75" cy="80" r="10" fill="#1E293B"/></svg>`,
-        description: "Adrenaline-fueled racing decals inspired by orange and midnight tracks. High-tack waterproof vinyl resistant to high-speed road dust and washings."
-      },
-      {
-        id: "prod-b2",
-        title: "Royal Enfield Vintage Rider Decal Pack",
-        category: "boys",
-        categoryLabel: "Boys Collection",
-        subcategory: "Royal Enfield-inspired",
-        theme: "Olive & Warm Linen",
-        audience: "boys",
-        type: "sheet",
-        dimensions: "A5 Sheet · 10 Decals",
-        material: "Luxe Matte Vinyl",
-        waterproof: true,
-        surface: "Fuel Tanks, Helmets, Toolboxes, MacBooks",
-        price: 229,
-        mrp: 449,
-        rating: 5.0,
-        reviewsCount: 230,
-        finish: "Matte",
-        tag: "Classic Rider",
-        isBestseller: true,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#EEF2E6"/><circle cx="60" cy="60" r="34" fill="#5A6B3A"/><path d="M40,55 Q60,40 80,55" stroke="#FAF8F2" stroke-width="4" fill="none"/><text x="60" y="72" fill="#FAF8F2" font-family="serif" font-weight="bold" font-size="9" text-anchor="middle">MADE LIKE A GUN</text></svg>`,
-        description: "Heritage military olive and brass-cream badges honoring classic thumper journeys from Leh-Ladakh to coastal highways."
-      },
-      {
-        id: "prod-b3",
-        title: "Dev Terminal & Pixel Code Sheet",
-        category: "boys",
-        categoryLabel: "Boys Collection",
-        subcategory: "Coding & Tech",
-        theme: "Pastel Blue & Slate Dev",
-        audience: "boys",
-        type: "sheet",
-        dimensions: "A5 Sheet · 14 Stickers",
-        material: "Matte Vinyl",
-        waterproof: true,
-        surface: "MacBooks, Monitors, Keyboards, Desks",
-        price: 199,
-        mrp: 349,
-        rating: 4.8,
-        reviewsCount: 96,
-        finish: "Matte",
-        tag: "Engineer Edition",
-        isBestseller: false,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#E8F1FC"/><rect x="25" y="25" width="70" height="70" rx="14" fill="#1E293B"/><text x="35" y="55" fill="#70A1FF" font-family="monospace" font-size="18" font-weight="bold">&lt;/&gt;</text><text x="35" y="75" fill="#4ADE80" font-family="monospace" font-size="12">GIT COMMIT</text></svg>`,
-        description: "Developer shortcuts, git commands, terminal shells, and lo-fi coffee mugs in pastel cyan and slate grey."
-      },
-      {
-        id: "prod-b4",
-        title: "Gym Iron & Savage Motivation Pack",
-        category: "boys",
-        categoryLabel: "Boys Collection",
-        subcategory: "Gym & Fitness",
-        theme: "Olive & Charcoal",
-        audience: "boys",
-        type: "sheet",
-        dimensions: "A5 Sheet · 12 Die-Cuts",
-        material: "Waterproof Vinyl",
-        waterproof: true,
-        surface: "Shaker Bottles, Gym Lockers, Phones",
-        price: 199,
-        mrp: 399,
-        rating: 4.9,
-        reviewsCount: 120,
-        finish: "Glossy",
-        tag: "Fitness",
-        isBestseller: false,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#EEF2E6"/><rect x="30" y="52" width="60" height="16" rx="4" fill="#1E293B"/><circle cx="36" cy="60" r="14" fill="#5A6B3A"/><circle cx="84" cy="60" r="14" fill="#5A6B3A"/><text x="60" y="64" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="10" text-anchor="middle">NO PAIN</text></svg>`,
-        description: "Heavy iron plates, kettlebells, and disciplined gym quotes designed to withstand drops and moisture on shaker bottles."
-      },
-
-      // --- GIRLS COLLECTION ---
-      {
-        id: "prod-g1",
-        title: "Coquette Satin Ribbon Bows Sheet",
-        category: "girls",
-        categoryLabel: "Girls Sanctuary",
-        subcategory: "Coquette & Bows",
-        theme: "Baby Pink & Light Rose",
-        audience: "girls",
-        type: "sheet",
-        dimensions: "A5 Sheet · 15 Bows",
-        material: "Velvet Matte Vinyl",
-        waterproof: true,
-        surface: "iPhones, Kindles, MacBooks, Journals",
-        price: 199,
-        mrp: 399,
-        rating: 5.0,
-        reviewsCount: 310,
-        finish: "Matte",
-        tag: "Trending #1",
-        isBestseller: true,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#FDEBF1"/><path d="M60,60 C40,40 20,50 30,70 C40,90 60,60 60,60 C60,60 80,90 90,70 C100,50 80,40 60,60 Z" fill="#FF85A2"/><circle cx="60" cy="60" r="7" fill="#D83A64"/></svg>`,
-        description: "Delicate Parisian coquette ribbon bows, pearl drops, and soft rose knots. Velvet touch matte finish."
-      },
-      {
-        id: "prod-g2",
-        title: "Blush Sakura & Dreamy Matcha Cafe",
-        category: "girls",
-        categoryLabel: "Girls Sanctuary",
-        subcategory: "Coffee & Food",
-        theme: "Baby Pink & Sage Cream",
-        audience: "girls",
-        type: "sheet",
-        dimensions: "A5 Sheet · 12 Die-Cuts",
-        material: "120μm Waterproof Vinyl",
-        waterproof: true,
-        surface: "Laptops, Hydro Flasks, Tumblers",
-        price: 199,
-        mrp: 399,
-        rating: 4.9,
-        reviewsCount: 175,
-        finish: "Glossy",
-        tag: "Bestseller",
-        isBestseller: true,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#FFF7F9"/><path d="M45,40 Q45,85 60,90 Q75,85 75,40 Z" fill="#FF85A2"/><ellipse cx="60" cy="40" rx="16" ry="5" fill="#FFE2EC"/><circle cx="60" cy="55" r="5" fill="#FFFFFF"/></svg>`,
-        description: "Strawberry boba tea, iced matcha lattes, buttery croissants, and cherry blossom sakura petals."
-      },
-      {
-        id: "prod-g3",
-        title: "Self-Love Affirmations & Cloud Journaling",
-        category: "girls",
-        categoryLabel: "Girls Sanctuary",
-        subcategory: "Self-love Quotes",
-        theme: "Blush Pink & Warm Linen",
-        audience: "girls",
-        type: "sheet",
-        dimensions: "A5 Sheet · 14 Quotes",
-        material: "Matte Vinyl",
-        waterproof: true,
-        surface: "Planners, Mirrors, Diaries, Phone Cases",
-        price: 199,
-        mrp: 349,
-        rating: 4.9,
-        reviewsCount: 140,
-        finish: "Matte",
-        tag: "Affirmations",
-        isBestseller: false,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#FDEBF1"/><rect x="25" y="35" width="70" height="50" rx="14" fill="#FFFFFF" stroke="#FFAAA6" stroke-width="3"/><text x="60" y="64" fill="#D83A64" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">YOU ARE ENOUGH</text></svg>`,
-        description: "Gentle daily reminders, smileys, and affirmations to decorate your mirror and morning journaling station."
-      },
-
-      // --- VEHICLE STICKERS ---
-      {
-        id: "prod-v1",
-        title: "Motorsport Racing Stripes & Speed Decal",
-        category: "vehicle",
-        categoryLabel: "Vehicle Stickers",
-        subcategory: "Car Stickers",
-        theme: "Asphalt Black & Cyan",
-        audience: "unisex",
-        type: "decal",
-        dimensions: "12 × 4 inches Decal",
-        material: "Automotive Grade Reflective Vinyl",
-        waterproof: true,
-        surface: "Car Rear Glass, Windshield, Bike Fairing",
-        price: 249,
-        mrp: 499,
-        rating: 4.8,
-        reviewsCount: 162,
-        finish: "Glossy",
-        tag: "Waterproof Decal",
-        isBestseller: true,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#1E293B"/><polygon points="25,75 55,40 70,40 40,75" fill="#70A1FF"/><polygon points="45,75 75,40 90,40 60,75" fill="#F8FAFC"/><text x="60" y="95" fill="#70A1FF" font-family="sans-serif" font-weight="900" font-size="9" text-anchor="middle">SPEED HUNTER</text></svg>`,
-        description: "Outdoor automotive vinyl decal. UV resistant, car-wash proof, and engineered for high weather resistance on cars and motorbikes."
-      },
-      {
-        id: "prod-v2",
-        title: "Activa & Scooty Minimalist Chic Decals",
-        category: "vehicle",
-        categoryLabel: "Vehicle Stickers",
-        subcategory: "Activa & Scooty",
-        theme: "Pastel Olive & Cream",
-        audience: "unisex",
-        type: "sheet",
-        dimensions: "A5 Sheet · 8 Decals",
-        material: "Outdoor Vinyl",
-        waterproof: true,
-        surface: "Activa Aprons, Scooty Sides, Helmets",
-        price: 199,
-        mrp: 399,
-        rating: 4.7,
-        reviewsCount: 88,
-        finish: "Matte",
-        tag: "City Rider",
-        isBestseller: false,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#EEF2E6"/><path d="M30,65 Q50,45 70,65 L85,65" stroke="#5A6B3A" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="45" cy="78" r="10" fill="#1E293B"/><circle cx="80" cy="78" r="10" fill="#1E293B"/></svg>`,
-        description: "Clean aesthetic decals crafted specifically for Honda Activa, Jupiter, and electric scooters."
-      },
-      {
-        id: "prod-v3",
-        title: "Helmet Visor & Shell Guard Stickers",
-        category: "vehicle",
-        categoryLabel: "Vehicle Stickers",
-        subcategory: "Helmet Stickers",
-        theme: "Reflective Prism",
-        audience: "unisex",
-        type: "sheet",
-        dimensions: "A5 Sheet · 10 Pieces",
-        material: "Scratchproof Vinyl",
-        waterproof: true,
-        surface: "Full Face Helmets, Half Helmets, Visors",
-        price: 199,
-        mrp: 399,
-        rating: 4.9,
-        reviewsCount: 115,
-        finish: "Glossy",
-        tag: "Helmet Safe",
-        isBestseller: false,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#F1F5F9"/><path d="M35,65 C35,40 85,40 85,65 C85,75 75,85 60,85 C45,85 35,75 35,65 Z" fill="#1E293B"/><path d="M42,65 Q60,55 78,65" stroke="#70A1FF" stroke-width="4" fill="none"/></svg>`,
-        description: "Curved surface-friendly adhesive designed to cling firmly to helmet contours without air bubbles or edge peeling."
-      },
-
-      // --- PHONE & GADGET STICKERS ---
-      {
-        id: "prod-gdt1",
-        title: "MacBook Minimalist Keyboard & Lid Set",
-        category: "gadget",
-        categoryLabel: "Phone & Gadget",
-        subcategory: "MacBook Stickers",
-        theme: "Space Grey & Pastel Accents",
-        audience: "unisex",
-        type: "sheet",
-        dimensions: "A5 Sheet · 16 Minis",
-        material: "Zero-Residue Vinyl",
-        waterproof: true,
-        surface: "MacBook Air/Pro, iPads, Magic Trackpads",
-        price: 199,
-        mrp: 399,
-        rating: 5.0,
-        reviewsCount: 240,
-        finish: "Matte",
-        tag: "Zero-Residue",
-        isBestseller: true,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#E2E8F0"/><rect x="30" y="35" width="60" height="40" rx="6" fill="#475569"/><polygon points="25,80 95,80 90,85 30,85" fill="#334155"/><circle cx="60" cy="55" r="8" fill="#F8FAFC"/></svg>`,
-        description: "Tailored for aluminum laptop chassis with micro-channel air release adhesive for zero bubbles and zero sticky residue upon removal."
-      },
-      {
-        id: "prod-gdt2",
-        title: "iPhone Case Camera & Back Decal Minis",
-        category: "gadget",
-        categoryLabel: "Phone & Gadget",
-        subcategory: "iPhone Stickers",
-        theme: "Holographic Sparkle",
-        audience: "unisex",
-        type: "sheet",
-        dimensions: "A6 Pocket Sheet",
-        material: "Prismatic Vinyl",
-        waterproof: true,
-        surface: "Clear Phone Cases, Silicone Covers, MagSafe",
-        price: 179,
-        mrp: 349,
-        rating: 4.8,
-        reviewsCount: 198,
-        finish: "Holographic",
-        tag: "Phone Case",
-        isBestseller: false,
-        isHolo: true,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#FDEBF1"/><rect x="38" y="25" width="44" height="70" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="3"/><circle cx="60" cy="85" r="4" fill="#E2E8F0"/><polygon points="60,40 64,48 72,50 66,56 68,64 60,60 52,64 54,56 48,50 56,48" fill="#FF85A2"/></svg>`,
-        description: "Compact miniature stickers calibrated to fit neatly inside clear iPhone and Android cases without crowding cameras."
-      },
-
-      // --- HOME DECOR STICKERS ---
-      {
-        id: "prod-h1",
-        title: "Botanical Sage & Terracotta Wall Mural",
-        category: "decor",
-        categoryLabel: "Home Decor",
-        subcategory: "Wall Stickers",
-        theme: "Sage, Cream & Terracotta",
-        audience: "unisex",
-        type: "wall",
-        dimensions: "Large Set (24 × 18 inches)",
-        material: "Peel & Stick Removable Wall Fabric",
-        waterproof: false,
-        surface: "Smooth Painted Walls, Tiles, Almirahs",
-        price: 499,
-        mrp: 899,
-        rating: 4.9,
-        reviewsCount: 132,
-        finish: "Matte",
-        tag: "Wall Mural",
-        isBestseller: true,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#FAF8F2"/><path d="M40,90 Q40,40 80,40" stroke="#5A6B3A" stroke-width="4" fill="none"/><ellipse cx="50" cy="55" rx="12" ry="6" fill="#889C5E" transform="rotate(-30 50 55)"/><ellipse cx="70" cy="42" rx="12" ry="6" fill="#D35400" transform="rotate(20 70 42)"/></svg>`,
-        description: "Artistic removable wall decals that brighten living rooms, bedrooms, and study corners without stripping wall paint."
-      },
-      {
-        id: "prod-h2",
-        title: "Whimsical Switchboard & Mirror Minis",
-        category: "decor",
-        categoryLabel: "Home Decor",
-        subcategory: "Switchboard Stickers",
-        theme: "Soft Cream & Gold",
-        audience: "unisex",
-        type: "sheet",
-        dimensions: "A5 Sheet · 18 Minis",
-        material: "Vinyl",
-        waterproof: true,
-        surface: "Switchboards, Wardrobe Mirrors, Study Tables",
-        price: 199,
-        mrp: 349,
-        rating: 4.8,
-        reviewsCount: 94,
-        finish: "Matte",
-        tag: "Room Decor",
-        isBestseller: false,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#FAF7F2"/><rect x="35" y="35" width="50" height="50" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="3"/><rect x="44" y="45" width="12" height="18" rx="2" fill="#141414"/><rect x="64" y="45" width="12" height="18" rx="2" fill="#141414"/><path d="M60,25 Q70,20 65,33" stroke="#D4AF37" stroke-width="3" fill="none"/></svg>`,
-        description: "Charming animals, delicate leaves, and golden sunbeams peeking playfully over standard household switchboards."
-      },
-
-      // --- DIVINE / BHAKTI STICKERS ---
-      {
-        id: "prod-d1",
-        title: "Mahadev Trishul & Damru Sacred Decal",
-        category: "divine",
-        categoryLabel: "Divine Stickzy",
-        subcategory: "Mahadev / Lord Shiva",
-        theme: "Ivory, Saffron & Gold",
-        audience: "unisex",
-        type: "decal",
-        dimensions: "5 × 5 inches Single Decal",
-        material: "Metallic Gold Vinyl",
-        waterproof: true,
-        surface: "Car Glass, Bike Tanks, Home Mandir, Laptops",
-        price: 199,
-        mrp: 399,
-        rating: 5.0,
-        reviewsCount: 380,
-        finish: "Metallic",
-        tag: "Divine Bestseller",
-        isBestseller: true,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#FEF3C7"/><path d="M60,30 L60,90" stroke="#B45309" stroke-width="4"/><path d="M45,45 Q60,30 75,45" stroke="#B45309" stroke-width="4" fill="none"/><circle cx="60" cy="55" r="8" fill="#D97706"/><ellipse cx="60" cy="40" rx="14" ry="4" fill="#B45309"/></svg>`,
-        description: "Reverently crafted Trishul and Damru silhouette embellished with warm saffron and antique gold sheen. Weatherproof for cars and home temples."
-      },
-      {
-        id: "prod-d2",
-        title: "Radha Krishna Flute & Peacock Feather",
-        category: "divine",
-        categoryLabel: "Divine Stickzy",
-        subcategory: "Radha Krishna",
-        theme: "Cream, Gold & Morpankh Blue",
-        audience: "unisex",
-        type: "sheet",
-        dimensions: "A5 Deluxe Sheet",
-        material: "Gold Accent Vinyl",
-        waterproof: true,
-        surface: "Home Temple, Car Dashboard, Laptops, Doors",
-        price: 229,
-        mrp: 449,
-        rating: 5.0,
-        reviewsCount: 290,
-        finish: "Matte",
-        tag: "Devotional",
-        isBestseller: true,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#FFFBEB"/><path d="M30,70 L90,45" stroke="#D97706" stroke-width="5" stroke-linecap="round"/><ellipse cx="85" cy="35" rx="12" ry="18" fill="#3B82F6" stroke="#D97706" stroke-width="2"/><circle cx="85" cy="35" r="6" fill="#10B981"/></svg>`,
-        description: "Serene sacred design featuring the divine flute, peacock feather (Morpankh), and Radha Krishna devotion. Printed on warm ivory resin."
-      },
-      {
-        id: "prod-d3",
-        title: "Hanuman Ji & Shri Ram Sankatmochan Pack",
-        category: "divine",
-        categoryLabel: "Divine Stickzy",
-        subcategory: "Hanuman Ji",
-        theme: "Saffron & Antique Gold",
-        audience: "unisex",
-        type: "sheet",
-        dimensions: "A5 Sheet · 10 Pieces",
-        material: "Waterproof Vinyl",
-        waterproof: true,
-        surface: "Vehicles, Helmets, Desks, Doors",
-        price: 199,
-        mrp: 399,
-        rating: 5.0,
-        reviewsCount: 340,
-        finish: "Matte",
-        tag: "Sankatmochan",
-        isBestseller: true,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#FEF3C7"/><circle cx="60" cy="60" r="35" fill="#EA580C"/><text x="60" y="66" fill="#FEF3C7" font-family="serif" font-weight="bold" font-size="14" text-anchor="middle">जय श्री राम</text></svg>`,
-        description: "Jai Shri Ram and Bajrangbali devotional sticker sheet. Sacred Gada and Ramcharitmanas verses printed in auspicious saffron."
-      },
-      {
-        id: "prod-d4",
-        title: "Sacred Om & Gayatri Mantra Medallion",
-        category: "divine",
-        categoryLabel: "Divine Stickzy",
-        subcategory: "Om Stickers",
-        theme: "Warm Ivory & Gold",
-        audience: "unisex",
-        type: "decal",
-        dimensions: "4 × 4 inches Round",
-        material: "Gold Foil Finish",
-        waterproof: true,
-        surface: "Car Glass, Laptops, Mirrors, Home Temple",
-        price: 189,
-        mrp: 349,
-        rating: 4.9,
-        reviewsCount: 210,
-        finish: "Metallic",
-        tag: "Sacred Symbol",
-        isBestseller: false,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#FEF3C7"/><circle cx="60" cy="60" r="34" fill="#D97706"/><text x="60" y="70" fill="#FEF3C7" font-family="sans-serif" font-weight="900" font-size="28" text-anchor="middle">ॐ</text></svg>`,
-        description: "Universal sacred vibration Om medallion with peaceful Gayatri Mantra micro-border. Suitable for car windshields and study tables."
-      },
-
-      // --- ANIME & GAMING ---
-      {
-        id: "prod-a1",
-        title: "Neo Tokyo Manga & Samurai Glitch Sheet",
-        category: "anime",
-        categoryLabel: "Anime & Gaming",
-        subcategory: "Anime Stickers",
-        theme: "Cyberpunk Violet & Cyan",
-        audience: "unisex",
-        type: "sheet",
-        dimensions: "A5 Sheet · 12 Die-Cuts",
-        material: "Glossy Vinyl",
-        waterproof: true,
-        surface: "Laptops, PC Cabinets, Consoles, Phones",
-        price: 199,
-        mrp: 399,
-        rating: 4.9,
-        reviewsCount: 220,
-        finish: "Glossy",
-        tag: "Anime",
-        isBestseller: true,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#EDE9FE"/><rect x="25" y="25" width="70" height="70" rx="14" fill="#7C3AED"/><polygon points="40,75 60,35 80,75" fill="#C4B5FD"/><circle cx="60" cy="55" r="8" fill="#F43F5E"/></svg>`,
-        description: "Manga action frames, energy slashes, ramen bowls, and Japanese typography for otaku workstations."
-      },
-
-      // --- PERSONALIZED NAME STICKERS ---
-      {
-        id: "prod-p1",
-        title: "Bespoke Monogram & Custom Name Labels",
-        category: "personalized",
-        categoryLabel: "Personalized",
-        subcategory: "Personalized Name Stickers",
-        theme: "Custom Palette",
-        audience: "unisex",
-        type: "sheet",
-        dimensions: "A5 Sheet · 18 Name Tags",
-        material: "Waterproof Vinyl",
-        waterproof: true,
-        surface: "Books, Laptops, Medical Equipment, Bottles",
-        price: 249,
-        mrp: 449,
-        rating: 5.0,
-        reviewsCount: 160,
-        finish: "Matte",
-        tag: "Custom Name",
-        isBestseller: true,
-        isHolo: false,
-        imageSvg: `<svg viewBox="0 0 120 120"><rect x="15" y="15" width="90" height="90" rx="20" fill="#FAF7F2"/><rect x="25" y="40" width="70" height="40" rx="10" fill="#141414"/><text x="60" y="65" fill="#FAF7F2" font-family="sans-serif" font-weight="bold" font-size="11" text-anchor="middle">YOUR NAME</text></svg>`,
-        description: "Custom printed waterproof name labels for students, doctors, engineers, and professionals."
-      }
-    ];
+  {
+    "id": "prod-b1",
+    "title": "Vintage Streetwear Graphic Tees Decal Pack",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "T-Shirts & Tees",
+    "theme": "Street Monochrome",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Laptops, Skateboard, Helmets, Lockers",
+    "price": 199,
+    "mrp": 399,
+    "rating": 4.9,
+    "reviewsCount": 192,
+    "finish": "Matte",
+    "tag": "Bestseller",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><path d=\"M45,35 L60,45 L75,35 L90,48 L80,60 L74,54 L74,88 L46,88 L46,54 L40,60 L30,48 Z\" fill=\"#1E293B\"/><text x=\"60\" y=\"72\" fill=\"#E2E8F0\" font-family=\"sans-serif\" font-weight=\"900\" font-size=\"8\" text-anchor=\"middle\">OFF-BEAT</text></svg>",
+    "description": "High-density screen-print artwork inspired by oversized Japanese streetwear graphics and gothic street typography. Matte laminated for zero glare."
+  },
+  {
+    "id": "prod-b2",
+    "title": "Drippy Oversized Hoodie & Streetwear Puffer Sheet",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Hoodies & Sweatshirts",
+    "theme": "Royal Blue & Storm",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Laptops, Thermos, Notebooks, Tech",
+    "price": 219,
+    "mrp": 429,
+    "rating": 4.8,
+    "reviewsCount": 145,
+    "finish": "Matte",
+    "tag": "Trending",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><path d=\"M42,32 Q60,25 78,32 L92,50 L82,62 L74,56 L74,90 L46,90 L46,56 L38,62 L28,50 Z\" fill=\"#2563EB\"/><circle cx=\"60\" cy=\"46\" r=\"10\" fill=\"#1D4ED8\"/><path d=\"M53,48 Q60,54 67,48\" stroke=\"#FFFFFF\" stroke-width=\"2\" fill=\"none\"/></svg>",
+    "description": "Cozy urban aesthetic hoodie art, drop shoulders, cyber puffers, and icy drip graphics. Waterproof and dishwasher proof."
+  },
+  {
+    "id": "prod-b3",
+    "title": "Raw Denim & Carpenter Pocket Patches Decal Pack",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Jeans & Pants",
+    "theme": "Indigo & Brass",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Toolboxes, Laptops, Phone Cases",
+    "price": 199,
+    "mrp": 389,
+    "rating": 4.7,
+    "reviewsCount": 98,
+    "finish": "Matte",
+    "tag": "New",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><path d=\"M42,32 L78,32 L82,88 L64,88 L60,52 L56,88 L38,88 Z\" fill=\"#3B82F6\"/><path d=\"M46,42 L56,42 L56,54 L46,54 Z\" fill=\"#1D4ED8\"/><path d=\"M64,42 L74,42 L74,54 L64,54 Z\" fill=\"#1D4ED8\"/></svg>",
+    "description": "Heavyweight denim stitching, hammer loops, double knee silhouettes, and selvage denim graphic motifs."
+  },
+  {
+    "id": "prod-b4",
+    "title": "Air Jordan Retro High & Sneakerhead Collector Pack",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Sneakers & Shoes",
+    "theme": "Chicago & Royal Hype",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 Sheet · 12 Die-Cuts",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Shoeboxes, Sneaker Crates, Laptops, Bikes",
+    "price": 249,
+    "mrp": 499,
+    "rating": 5,
+    "reviewsCount": 312,
+    "finish": "Glossy",
+    "tag": "Bestseller",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><path d=\"M30,72 Q38,50 56,46 L78,54 Q88,58 92,72 L88,78 L30,78 Z\" fill=\"#2563EB\"/><path d=\"M42,66 Q64,60 84,70\" stroke=\"#FFFFFF\" stroke-width=\"4\" fill=\"none\"/><rect x=\"28\" y=\"78\" width=\"66\" height=\"6\" rx=\"3\" fill=\"#FFFFFF\"/></svg>",
+    "description": "Iconic high-top retros, Jumpman silhouettes, sole grips, and deconstructed sneaker typography designed for true sneakerheads."
+  },
+  {
+    "id": "prod-b5",
+    "title": "NY Yankees Snapback & Silver Chain Accessories Pack",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Accessories",
+    "theme": "Midnight Navy & Chrome",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Helmets, Caps, Bikes, Tech",
+    "price": 229,
+    "mrp": 449,
+    "rating": 4.9,
+    "reviewsCount": 167,
+    "finish": "Matte",
+    "tag": "Popular",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><path d=\"M38,68 Q60,42 82,68 L94,76 L30,76 Z\" fill=\"#0F172A\"/><path d=\"M30,74 Q60,82 92,74\" stroke=\"#3B82F6\" stroke-width=\"3\" fill=\"none\"/><text x=\"60\" y=\"62\" fill=\"#FFFFFF\" font-family=\"sans-serif\" font-weight=\"900\" font-size=\"14\" text-anchor=\"middle\">NY</text></svg>",
+    "description": "Street accessories sheet including curved snapbacks, cuban link chains, black shades, and embroidered keytag decals."
+  },
+  {
+    "id": "prod-b6",
+    "title": "DualShock Controller & Cyber Battlestation Decals",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Gaming & Tech",
+    "theme": "Neon Cyber & Matte White",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 Sheet · 14 Decals",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "PS5, Xbox, PC Cabinets, Monitors, iPads",
+    "price": 239,
+    "mrp": 479,
+    "rating": 4.9,
+    "reviewsCount": 280,
+    "finish": "Holographic",
+    "tag": "Gamer Favorite",
+    "isBestseller": true,
+    "isHolo": true,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><path d=\"M34,48 Q40,36 60,38 Q80,36 86,48 L92,76 Q88,86 78,80 L68,66 L52,66 L42,80 Q32,86 28,76 Z\" fill=\"#1E293B\"/><circle cx=\"44\" cy=\"54\" r=\"5\" fill=\"#3B82F6\"/><circle cx=\"76\" cy=\"54\" r=\"5\" fill=\"#EC4899\"/><circle cx=\"50\" cy=\"62\" r=\"6\" fill=\"#475569\"/><circle cx=\"70\" cy=\"62\" r=\"6\" fill=\"#475569\"/></svg>",
+    "description": "Custom cut gaming controllers, mechanical keycaps, FPS crosshairs, and glitch cyberpunk HUD elements. Ultra-vivid UV print."
+  },
+  {
+    "id": "prod-b7",
+    "title": "Hoops Basketball & Gym Iron Beast Pack",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Sports & Fitness",
+    "theme": "Hardwood & Heavy Iron",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Gym Shakers, Water Bottles, Locker, iPad",
+    "price": 199,
+    "mrp": 399,
+    "rating": 4.8,
+    "reviewsCount": 175,
+    "finish": "Matte",
+    "tag": "High Tack",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><circle cx=\"60\" cy=\"60\" r=\"28\" fill=\"#C2410C\"/><path d=\"M32,60 L88,60 M60,32 L60,88 M40,38 Q60,60 40,82 M80,38 Q60,60 80,82\" stroke=\"#1E293B\" stroke-width=\"2.5\" fill=\"none\"/></svg>",
+    "description": "Dunk vibes, basketball seams, heavy dumbbells, barbell plates, and relentless grind quotes built to withstand sweaty gym bags."
+  },
+  {
+    "id": "prod-b8",
+    "title": "Y2K Cyber Chrome Smiley & Cool Vibes Graphic Sheet",
+    "category": "boys",
+    "categoryLabel": "Boys Collection",
+    "subcategory": "Trendy & More",
+    "theme": "Icy Blue Liquid Chrome",
+    "audience": "boys",
+    "type": "sheet",
+    "dimensions": "A5 Sheet · 16 Decals",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Laptops, Phone Cases, Helmets, Skateboards",
+    "price": 229,
+    "mrp": 449,
+    "rating": 5,
+    "reviewsCount": 224,
+    "finish": "Glossy",
+    "tag": "Bestseller",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#EBF3FD\"/><circle cx=\"60\" cy=\"60\" r=\"28\" fill=\"#3B82F6\"/><circle cx=\"50\" cy=\"52\" r=\"4\" fill=\"#FFFFFF\"/><circle cx=\"70\" cy=\"52\" r=\"4\" fill=\"#FFFFFF\"/><path d=\"M46,68 Q60,80 74,68\" stroke=\"#FFFFFF\" stroke-width=\"3.5\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+    "description": "Liquid metal smileys, cyber stars, barcode tags, and futuristic streetwear logos that turn any laptop into a conversation piece."
+  },
+  {
+    "id": "prod-g1",
+    "title": "Coquette Satin Ribbon Bows Sheet",
+    "category": "girls",
+    "categoryLabel": "Girls Collection",
+    "subcategory": "Bows & Ribbons",
+    "theme": "Blush Pink & Rose Gold",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "MacBooks, iPads, Stanley Cups, Journals",
+    "price": 199,
+    "mrp": 399,
+    "rating": 5,
+    "reviewsCount": 348,
+    "finish": "Glossy",
+    "tag": "Bestseller",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><ellipse cx=\"44\" cy=\"56\" rx=\"14\" ry=\"10\" transform=\"rotate(-20 44 56)\" fill=\"#F472B6\"/><ellipse cx=\"76\" cy=\"56\" rx=\"14\" ry=\"10\" transform=\"rotate(20 76 56)\" fill=\"#F472B6\"/><circle cx=\"60\" cy=\"56\" r=\"6\" fill=\"#DB2777\"/><path d=\"M57,60 Q50,78 40,84 M63,60 Q70,78 80,84\" stroke=\"#DB2777\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+    "description": "Dreamy coquette bows in baby pink satin and rose silk. Ultra-delicate 3D lighting effect with 100% waterproof protection."
+  },
+  {
+    "id": "prod-g2",
+    "title": "Pastel Monarch & Ethereal Butterfly Wings Pack",
+    "category": "girls",
+    "categoryLabel": "Girls Collection",
+    "subcategory": "Butterflies",
+    "theme": "Pastel Lavender & Soft Rose",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 Sheet · 11 Decals",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Phone Cases, Water Bottles, Vanity Mirrors",
+    "price": 219,
+    "mrp": 419,
+    "rating": 4.9,
+    "reviewsCount": 210,
+    "finish": "Holographic",
+    "tag": "Trending",
+    "isBestseller": false,
+    "isHolo": true,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><path d=\"M60,60 C40,30 20,40 32,70 C38,82 55,75 60,65 C65,75 82,82 88,70 C100,40 80,30 60,60 Z\" fill=\"#F472B6\"/><line x1=\"60\" y1=\"40\" x2=\"60\" y2=\"78\" stroke=\"#9D174D\" stroke-width=\"3\"/></svg>",
+    "description": "Iridescent winged monarch and swallowtail butterflies. Shimmers with pastel rainbow hues when angled under direct light."
+  },
+  {
+    "id": "prod-g3",
+    "title": "English Garden Peonies & Wild Botanical Roses",
+    "category": "girls",
+    "categoryLabel": "Girls Collection",
+    "subcategory": "Flowers",
+    "theme": "Blush Peony & Sage Leaf",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Kindle, iPad, Planner, Tumblers",
+    "price": 229,
+    "mrp": 449,
+    "rating": 4.8,
+    "reviewsCount": 165,
+    "finish": "Matte",
+    "tag": "Popular",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><circle cx=\"60\" cy=\"56\" r=\"16\" fill=\"#FB7185\"/><path d=\"M60,40 Q75,45 70,60 Q55,70 50,55 Z\" fill=\"#F43F5E\" opacity=\"0.6\"/><path d=\"M60,72 Q60,90 60,92\" stroke=\"#4D7C0F\" stroke-width=\"3\"/><path d=\"M60,80 Q72,74 76,82\" fill=\"#65A30D\"/></svg>",
+    "description": "Pressed floral aesthetic featuring vintage watercolored roses, baby's breath, and blossoming cherry blossoms for bookish souls."
+  },
+  {
+    "id": "prod-g4",
+    "title": "Pearlescent 3D Puffy Hearts & Love Letters",
+    "category": "girls",
+    "categoryLabel": "Girls Collection",
+    "subcategory": "Hearts & Love",
+    "theme": "Strawberry Glaze & Pearl",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 Sheet · 14 Decals",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "EarPods Case, Phone Grip, Laptop Lid",
+    "price": 199,
+    "mrp": 399,
+    "rating": 4.9,
+    "reviewsCount": 290,
+    "finish": "Glossy",
+    "tag": "Bestseller",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><path d=\"M60,78 C35,55 30,38 45,32 C54,28 58,36 60,40 C62,36 66,28 75,32 C90,38 85,55 60,78 Z\" fill=\"#EC4899\"/><circle cx=\"50\" cy=\"40\" r=\"4\" fill=\"#FFFFFF\" opacity=\"0.6\"/></svg>",
+    "description": "Puffy dimensional heart decals with glossy pearl finish. Includes wax-sealed love letter envelopes and sweet candy hearts."
+  },
+  {
+    "id": "prod-g5",
+    "title": "Self-Love Affirmations & Cloud Journaling Quotes",
+    "category": "girls",
+    "categoryLabel": "Girls Collection",
+    "subcategory": "Cute Quotes",
+    "theme": "Cream, Butter Yellow & Rose",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "Luxe Matte Vinyl",
+    "waterproof": true,
+    "surface": "Bullet Journals, MacBooks, Mirrors",
+    "price": 199,
+    "mrp": 389,
+    "rating": 5,
+    "reviewsCount": 188,
+    "finish": "Matte",
+    "tag": "Mindfulness",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><rect x=\"30\" y=\"35\" width=\"60\" height=\"50\" rx=\"8\" fill=\"#FFFBEB\" stroke=\"#FDE68A\" stroke-width=\"2\"/><text x=\"60\" y=\"55\" fill=\"#BE185D\" font-family=\"sans-serif\" font-weight=\"700\" font-size=\"7.5\" text-anchor=\"middle\">You are enough ♡</text><text x=\"60\" y=\"70\" fill=\"#6B7280\" font-family=\"sans-serif\" font-size=\"6\" text-anchor=\"middle\">breathe & bloom</text></svg>",
+    "description": "Gentle daily reminders: 'You are enough', 'romanticize your life', 'soft days ahead', in hand-lettered aesthetic handwriting."
+  },
+  {
+    "id": "prod-g6",
+    "title": "Barbiecore Bubble Font & Y2K Aesthetic Typography",
+    "category": "girls",
+    "categoryLabel": "Girls Collection",
+    "subcategory": "Pink Typography",
+    "theme": "Hot Pink & Marshmallow",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Laptops, Suitcases, Water Bottles",
+    "price": 219,
+    "mrp": 429,
+    "rating": 4.8,
+    "reviewsCount": 142,
+    "finish": "Glossy",
+    "tag": "Y2K Icon",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><text x=\"60\" y=\"66\" fill=\"#DB2777\" font-family=\"sans-serif\" font-weight=\"900\" font-size=\"14\" text-anchor=\"middle\">GIRLHOOD</text><path d=\"M35,74 Q60,82 85,74\" stroke=\"#F472B6\" stroke-width=\"3\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+    "description": "Juicy bubble letters, chrome pink typography, retro Y2K phrases, and candy-colored glossy sticker badges."
+  },
+  {
+    "id": "prod-g7",
+    "title": "Glossier Lip Tint & Vanity Mirror Cosmetics Decals",
+    "category": "girls",
+    "categoryLabel": "Girls Collection",
+    "subcategory": "Makeup & Beauty",
+    "theme": "Lip Tint & Rose Quartz",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 Sheet · 12 Decals",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Vanity Mirrors, Makeup Organizers, iPads",
+    "price": 229,
+    "mrp": 449,
+    "rating": 4.9,
+    "reviewsCount": 195,
+    "finish": "Glossy",
+    "tag": "Beauty Guru",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><rect x=\"48\" y=\"52\" width=\"24\" height=\"42\" rx=\"4\" fill=\"#F472B6\"/><rect x=\"52\" y=\"38\" width=\"16\" height=\"14\" fill=\"#E5E7EB\"/><path d=\"M52,38 L60,24 L68,38 Z\" fill=\"#BE185D\"/></svg>",
+    "description": "Hydrating lip oils, perfume bottles with vintage atomizers, cloud paint blushes, and golden hair clips for clean-girl aesthetic."
+  },
+  {
+    "id": "prod-g8",
+    "title": "Tote Bag & French Boutique Parisian Chic Decals",
+    "category": "girls",
+    "categoryLabel": "Girls Collection",
+    "subcategory": "Fashion & Shopping",
+    "theme": "Cafe Latte & Rose Silk",
+    "audience": "girls",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Stanley Tumblers, Planners, Laptops",
+    "price": 239,
+    "mrp": 469,
+    "rating": 4.9,
+    "reviewsCount": 160,
+    "finish": "Matte",
+    "tag": "Aesthetic",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FDF2F8\"/><path d=\"M38,48 L82,48 L88,90 L32,90 Z\" fill=\"#FBCFE8\"/><path d=\"M48,48 Q48,28 60,28 Q72,28 72,48\" stroke=\"#DB2777\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"60\" cy=\"66\" r=\"6\" fill=\"#DB2777\"/></svg>",
+    "description": "Canvas book bags, freshly baked croissants, matcha lattes, and high-street shopping cart motifs for European holiday daydreamers."
+  },
+  {
+    "id": "prod-v1",
+    "title": "KTM Throttle & Superbike Racing Beast Decal Pack",
+    "category": "vehicle",
+    "categoryLabel": "Vehicle Decals",
+    "subcategory": "Superbikes & Biker",
+    "theme": "Asphalt & Track Orange",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A4 Sheet (21 × 29.7 cm)",
+    "material": "150μm Automotive Cast Vinyl",
+    "waterproof": true,
+    "surface": "Superbikes, Helmets, Swingarms, Mudguards",
+    "price": 299,
+    "mrp": 599,
+    "rating": 4.9,
+    "reviewsCount": 380,
+    "finish": "Glossy",
+    "tag": "High Speed Rated",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#18181B\"/><path d=\"M30,70 L50,35 L90,35 L70,70 Z\" fill=\"#FF5500\"/><text x=\"40\" y=\"60\" fill=\"#FFFFFF\" font-family=\"sans-serif\" font-weight=\"900\" font-size=\"14\">RACE</text><circle cx=\"45\" cy=\"80\" r=\"10\" fill=\"#27272A\"/><circle cx=\"75\" cy=\"80\" r=\"10\" fill=\"#27272A\"/></svg>",
+    "description": "150μm automotive grade cast vinyl engineered to withstand pressure washes, 150+ km/h highway wind blasts, and blistering summer heat."
+  },
+  {
+    "id": "prod-v2",
+    "title": "Motorsport Twin Turbo & Drift Culture Decals",
+    "category": "vehicle",
+    "categoryLabel": "Vehicle Decals",
+    "subcategory": "Sports Cars & JDM",
+    "theme": "JDM Matte Black & Crimson",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A4 Large Sheet",
+    "material": "Automotive Grade Vinyl",
+    "waterproof": true,
+    "surface": "Car Windshield, Quarter Panels, Bootlid",
+    "price": 349,
+    "mrp": 699,
+    "rating": 5,
+    "reviewsCount": 265,
+    "finish": "Glossy",
+    "tag": "JDM Legend",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#18181B\"/><circle cx=\"60\" cy=\"60\" r=\"28\" fill=\"#DC2626\"/><circle cx=\"60\" cy=\"60\" r=\"16\" fill=\"#18181B\"/><path d=\"M60,32 L60,88 M32,60 L88,60\" stroke=\"#F87171\" stroke-width=\"3\"/></svg>",
+    "description": "Twin-scroll turbo blueprints, kanji speed characters, tachometer needles at 9000 RPM, and track circuit outlines."
+  },
+  {
+    "id": "prod-v3",
+    "title": "Helmet Visor & Shell Guard Anti-Scratch Stickers",
+    "category": "vehicle",
+    "categoryLabel": "Vehicle Decals",
+    "subcategory": "Helmet Visors",
+    "theme": "Reflective Cyber Visor",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "Visor Curved Arc Set",
+    "material": "Anti-Scratch Weatherproof Vinyl",
+    "waterproof": true,
+    "surface": "Full Face Helmets, Moto Cross, Visor Brow",
+    "price": 199,
+    "mrp": 399,
+    "rating": 4.8,
+    "reviewsCount": 182,
+    "finish": "Holographic",
+    "tag": "Reflective",
+    "isBestseller": false,
+    "isHolo": true,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#18181B\"/><path d=\"M35,62 Q60,36 85,62 L80,72 Q60,52 40,72 Z\" fill=\"#38BDF8\"/><circle cx=\"60\" cy=\"58\" r=\"4\" fill=\"#FFFFFF\"/></svg>",
+    "description": "Aerodynamic curved visor banners with high retro-reflective glass bead coating for nighttime riding safety and aggressive styling."
+  },
+  {
+    "id": "prod-v4",
+    "title": "Activa & Urban Scooty Minimalist Chic Decals",
+    "category": "vehicle",
+    "categoryLabel": "Vehicle Decals",
+    "subcategory": "Activa & Scooty",
+    "theme": "Rose Gold & Pastel Mint",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "Side Panel & Mudguard Kit",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Honda Activa, Jupiter, Vespa, Ola S1",
+    "price": 249,
+    "mrp": 499,
+    "rating": 4.9,
+    "reviewsCount": 194,
+    "finish": "Matte",
+    "tag": "Chic Ride",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#F1F5F9\"/><circle cx=\"45\" cy=\"74\" r=\"14\" fill=\"#0F172A\"/><circle cx=\"85\" cy=\"74\" r=\"14\" fill=\"#0F172A\"/><path d=\"M45,74 L60,55 L75,55 L85,74\" stroke=\"#0D9488\" stroke-width=\"4\" fill=\"none\"/></svg>",
+    "description": "Subtle elegance designed specifically for daily commuters. Leaves 0% sticky glue residue when removed for resale."
+  },
+  {
+    "id": "prod-h1",
+    "title": "Botanical Sage & Terracotta Arch Wall Mural Decals",
+    "category": "decor",
+    "categoryLabel": "Home Decor",
+    "subcategory": "Bedroom Walls",
+    "theme": "Earthy Terracotta & Sage",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A3 Large Mural Sheet",
+    "material": "Zero-Residue Fabric Wall Vinyl",
+    "waterproof": true,
+    "surface": "Painted Walls, Plaster, Headboards",
+    "price": 349,
+    "mrp": 699,
+    "rating": 4.9,
+    "reviewsCount": 215,
+    "finish": "Matte",
+    "tag": "Home Makeover",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#F4F4F0\"/><path d=\"M40,88 L40,55 Q40,35 60,35 Q80,35 80,55 L80,88 Z\" fill=\"#E07A5F\"/><circle cx=\"60\" cy=\"55\" r=\"12\" fill=\"#81B29A\"/></svg>",
+    "description": "Peel-and-stick modern bohemian arches and monstera silhouettes. Specially formulated adhesive guarantees zero paint damage on removal."
+  },
+  {
+    "id": "prod-h2",
+    "title": "Whimsical Switchboard Peekaboo Animal Stickers",
+    "category": "decor",
+    "categoryLabel": "Home Decor",
+    "subcategory": "Switchboard Decals",
+    "theme": "Charcoal & Warm Ivory",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "Sheet of 8 Switch Surrounds",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Electrical Switchboards, Plug Sockets, Door Frames",
+    "price": 189,
+    "mrp": 349,
+    "rating": 5,
+    "reviewsCount": 340,
+    "finish": "Matte",
+    "tag": "Bestseller",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#F4F4F0\"/><rect x=\"35\" y=\"45\" width=\"50\" height=\"40\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#D1D5DB\" stroke-width=\"2\"/><circle cx=\"48\" cy=\"40\" r=\"5\" fill=\"#374151\"/><circle cx=\"72\" cy=\"40\" r=\"5\" fill=\"#374151\"/><path d=\"M45,43 Q60,36 75,43\" stroke=\"#374151\" stroke-width=\"2\" fill=\"none\"/></svg>",
+    "description": "Cute sleepy cats, pandas, and tiny owls peeking over standard electrical switch plates. Adds instant joy to every room in the house."
+  },
+  {
+    "id": "prod-h3",
+    "title": "Aesthetic Scandinavian Floral Wardrobe Decals",
+    "category": "decor",
+    "categoryLabel": "Home Decor",
+    "subcategory": "Almirah & Wardrobe",
+    "theme": "Warm Linen & Olive",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A4 Sheet (21 × 29.7 cm)",
+    "material": "Matte Clean-Peel Vinyl",
+    "waterproof": true,
+    "surface": "Steel Almirahs, Wood Wardrobes, Vanity Desks",
+    "price": 269,
+    "mrp": 529,
+    "rating": 4.8,
+    "reviewsCount": 140,
+    "finish": "Matte",
+    "tag": "Elegant",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#F4F4F0\"/><path d=\"M35,35 L85,35 L85,85 L35,85 Z\" fill=\"#E5E7EB\"/><line x1=\"60\" y1=\"35\" x2=\"60\" y2=\"85\" stroke=\"#9CA3AF\" stroke-width=\"2\"/><circle cx=\"60\" cy=\"60\" r=\"14\" fill=\"#5E6E59\"/></svg>",
+    "description": "Transform plain Godrej steel almirahs or modern modular wardrobes into bespoke designer furniture with warm floral vine borders."
+  },
+  {
+    "id": "prod-h4",
+    "title": "Cozy Study Desk & Laptop Productivity Decals",
+    "category": "decor",
+    "categoryLabel": "Home Decor",
+    "subcategory": "Desk & Laptop",
+    "theme": "Matcha, Books & Coffee",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A5 Sheet · 15 Decals",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Desktops, MacBooks, iPad Folios, Planners",
+    "price": 199,
+    "mrp": 399,
+    "rating": 4.9,
+    "reviewsCount": 198,
+    "finish": "Matte",
+    "tag": "Studygram",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#F4F4F0\"/><rect x=\"35\" y=\"42\" width=\"50\" height=\"34\" rx=\"4\" fill=\"#3B82F6\"/><rect x=\"42\" y=\"76\" width=\"36\" height=\"4\" rx=\"2\" fill=\"#94A3B8\"/><circle cx=\"76\" cy=\"48\" r=\"8\" fill=\"#10B981\"/></svg>",
+    "description": "Cute steaming mugs, stacks of vintage novels, potted succulents, and lofi focus vibes that turn any study corner into a cozy sanctuary."
+  },
+  {
+    "id": "prod-d1",
+    "title": "Mahadev Trishul, Damru & Crescent Moon Sacred Decal",
+    "category": "divine",
+    "categoryLabel": "Divine Collection",
+    "subcategory": "Mahadev / Lord Shiva",
+    "theme": "Saffron & Antique Gold Foil",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A5 Sheet · 10 Sacred Decals",
+    "material": "120μm Metallic Gold Foil Vinyl",
+    "waterproof": true,
+    "surface": "Car Back Glass, Bike Fuel Tanks, Mandir, Laptops",
+    "price": 249,
+    "mrp": 499,
+    "rating": 5,
+    "reviewsCount": 420,
+    "finish": "Glossy",
+    "tag": "Bestseller",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FFFDF5\"/><path d=\"M60,30 L60,88 M46,45 Q60,65 60,40 M74,45 Q60,65 60,40\" stroke=\"#D97706\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\"/><polygon points=\"46,70 74,70 60,58\" fill=\"#B45309\"/></svg>",
+    "description": "Crafted with reverence. Intricate Har Har Mahadev calligraphy, trident silhouettes, and third-eye artwork printed on weather-resistant gold vinyl."
+  },
+  {
+    "id": "prod-d2",
+    "title": "Radha Krishna Flute & Peacock Feather Devotional Decals",
+    "category": "divine",
+    "categoryLabel": "Divine Collection",
+    "subcategory": "Radha Krishna",
+    "theme": "Vrindavan Gold & Teal Peacock",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Mandir Almirah, Car Dashboard, Laptops",
+    "price": 229,
+    "mrp": 449,
+    "rating": 4.9,
+    "reviewsCount": 310,
+    "finish": "Matte",
+    "tag": "Spiritual Joy",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FFFDF5\"/><path d=\"M35,62 L85,58\" stroke=\"#D97706\" stroke-width=\"5\" stroke-linecap=\"round\"/><ellipse cx=\"50\" cy=\"46\" rx=\"10\" ry=\"14\" fill=\"#0D9488\"/><circle cx=\"50\" cy=\"46\" r=\"5\" fill=\"#3B82F6\"/></svg>",
+    "description": "Sublime Bansuri and Mor Pankh artwork honoring divine prem. UV-resistant inks maintain brilliant vibrancy even when exposed to direct sunlight."
+  },
+  {
+    "id": "prod-d3",
+    "title": "Sankatmochan Hanuman Ji Gada & Ram Bhakt Emblem",
+    "category": "divine",
+    "categoryLabel": "Divine Collection",
+    "subcategory": "Hanuman Ji",
+    "theme": "Sinduri Vermilion & Warm Gold",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "A5 (14.8 × 21 cm)",
+    "material": "120μm Waterproof Vinyl",
+    "waterproof": true,
+    "surface": "Motorcycle Tanks, Car Rear Glass, Gym Gear",
+    "price": 239,
+    "mrp": 479,
+    "rating": 5,
+    "reviewsCount": 365,
+    "finish": "Glossy",
+    "tag": "Power & Protection",
+    "isBestseller": true,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FFFDF5\"/><circle cx=\"60\" cy=\"55\" r=\"20\" fill=\"#EA580C\"/><path d=\"M60,55 L60,88\" stroke=\"#D97706\" stroke-width=\"5\" stroke-linecap=\"round\"/><circle cx=\"60\" cy=\"44\" r=\"8\" fill=\"#FDE047\"/></svg>",
+    "description": "Fierce and protective Bajrangbali emblems with sacred Jai Shri Ram chants in elegant Devanagari script."
+  },
+  {
+    "id": "prod-d4",
+    "title": "Sacred Om & Gayatri Mantra Medallion Decal",
+    "category": "divine",
+    "categoryLabel": "Divine Collection",
+    "subcategory": "Sacred Om & Gayatri Mantra",
+    "theme": "Ivory, Sandalwood & Rich Gold",
+    "audience": "unisex",
+    "type": "sheet",
+    "dimensions": "Circle Medallion Sheet",
+    "material": "Gold Metallic Cast Vinyl",
+    "waterproof": true,
+    "surface": "Main Door, Pooja Ghar, Car Windshield",
+    "price": 219,
+    "mrp": 429,
+    "rating": 4.9,
+    "reviewsCount": 240,
+    "finish": "Matte",
+    "tag": "Peace & Harmony",
+    "isBestseller": false,
+    "isHolo": false,
+    "imageSvg": "<svg viewBox=\"0 0 120 120\"><rect x=\"15\" y=\"15\" width=\"90\" height=\"90\" rx=\"20\" fill=\"#FFFDF5\"/><circle cx=\"60\" cy=\"60\" r=\"32\" fill=\"none\" stroke=\"#D97706\" stroke-width=\"3\"/><text x=\"60\" y=\"70\" fill=\"#B45309\" font-family=\"serif\" font-weight=\"900\" font-size=\"28\" text-anchor=\"middle\">ॐ</text></svg>",
+    "description": "Harmonizing sacred geometry and Vedic chants. Precision kiss-cut on premium non-fade gold adhesive foil."
+  }
+];
 
     /* ==========================================================================
        LOCAL STATE PERSISTENCE & INITIALIZATION
        ========================================================================== */
-    let products = JSON.parse(localStorage.getItem('stickzy_products')) || DEFAULT_PRODUCTS;
+    let products = (() => {
+      try {
+        const stored = JSON.parse(localStorage.getItem('stickzy_products'));
+        if (stored && Array.isArray(stored) && stored.length >= DEFAULT_PRODUCTS.length) {
+          return stored;
+        }
+      } catch(e) {}
+      return DEFAULT_PRODUCTS;
+    })();
     let cart = JSON.parse(localStorage.getItem('stickzy_cart')) || [];
     let wishlist = JSON.parse(localStorage.getItem('stickzy_wishlist')) || [];
     let orders = JSON.parse(localStorage.getItem('stickzy_orders')) || [
@@ -5176,43 +6724,41 @@
         title: "Girls",
         desc: "Bows, butterflies & soft little joys.",
         theme: "girls",
-        heroImg: "/assets/aistudio/image_c5aedb19.png",
+        heroImg: "/assets/aistudio/image_7bb33513.png",
         numberedCategories: [
           { num: "01", name: "Bows & Ribbons", count: "8 packs available", artType: "bow" },
           { num: "02", name: "Butterflies", count: "6 packs available", artType: "butterfly" },
           { num: "03", name: "Flowers", count: "10 packs available", artType: "flower" },
           { num: "04", name: "Hearts & Love", count: "9 packs available", artType: "heart" },
           { num: "05", name: "Cute Quotes", count: "7 packs available", artType: "quote" },
-          { num: "06", name: "Makeup & Beauty", count: "5 packs available", artType: "makeup" },
-          { num: "07", name: "Pink Aesthetic", count: "12 packs available", artType: "aesthetic" },
+          { num: "06", name: "Pink Typography", count: "8 packs available", artType: "pink-typo" },
+          { num: "07", name: "Makeup & Beauty", count: "5 packs available", artType: "makeup" },
           { num: "08", name: "Fashion & Shopping", count: "6 packs available", artType: "fashion" }
         ],
         subcategories: [
           "All Girls", "Bows & Ribbons", "Butterflies", "Flowers", "Hearts & Love",
-          "Cute Quotes", "Makeup & Beauty", "Pink Aesthetic", "Fashion & Shopping",
-          "Coquette & Bows", "Cute Aesthetic", "Coffee & Food", "Self-love Quotes"
+          "Cute Quotes", "Pink Typography", "Makeup & Beauty", "Fashion & Shopping"
         ]
       },
       boys: {
         kicker: "Collection",
         title: "Boys",
-        desc: "Ride, game, explore & conquer.",
+        desc: "Cool vibes, bigger dreams.",
         theme: "boys",
-        heroImg: "/assets/aistudio/image_1ec77ed4.png",
+        heroImg: "/assets/aistudio/image_03f3067e.png",
         numberedCategories: [
-          { num: "01", name: "Bike & Biker", count: "14 packs available", artType: "bike" },
-          { num: "02", name: "Cars & Racing", count: "12 packs available", artType: "car" },
-          { num: "03", name: "KTM Inspired", count: "8 packs available", artType: "ktm" },
-          { num: "04", name: "Royal Enfield", count: "9 packs available", artType: "bullet" },
-          { num: "05", name: "Helmet Stickers", count: "11 packs available", artType: "helmet" },
-          { num: "06", name: "Gaming", count: "15 packs available", artType: "game" },
-          { num: "07", name: "Anime", count: "18 packs available", artType: "anime" },
-          { num: "08", name: "Gym & Fitness", count: "10 packs available", artType: "gym" }
+          { num: "01", name: "T-Shirts & Tees", count: "14 packs available", artType: "tee" },
+          { num: "02", name: "Hoodies & Sweatshirts", count: "12 packs available", artType: "hoodie" },
+          { num: "03", name: "Jeans & Pants", count: "8 packs available", artType: "jeans" },
+          { num: "04", name: "Sneakers & Shoes", count: "15 packs available", artType: "sneaker" },
+          { num: "05", name: "Accessories", count: "11 packs available", artType: "cap" },
+          { num: "06", name: "Gaming & Tech", count: "16 packs available", artType: "controller" },
+          { num: "07", name: "Sports & Fitness", count: "10 packs available", artType: "sports" },
+          { num: "08", name: "Trendy & More", count: "13 packs available", artType: "trendy" }
         ],
         subcategories: [
-          "All Boys", "Bike & Biker", "Cars & Racing", "KTM-inspired Racing",
-          "Royal Enfield-inspired", "Helmet Stickers", "Gaming Stickers", "Anime Stickers",
-          "Gym & Fitness", "Coding & Tech", "Attitude & Savage Quotes"
+          "All Boys", "T-Shirts & Tees", "Hoodies & Sweatshirts", "Jeans & Pants",
+          "Sneakers & Shoes", "Accessories", "Gaming & Tech", "Sports & Fitness", "Trendy & More"
         ]
       },
       vehicle: {
@@ -5222,18 +6768,18 @@
         theme: "vehicle",
         heroImg: "/assets/aistudio/image_1ec77ed4.png",
         numberedCategories: [
-          { num: "01", name: "Bike Stickers", count: "16 packs available", artType: "bike" },
-          { num: "02", name: "Car Decals", count: "14 packs available", artType: "car" },
+          { num: "01", name: "Superbikes & Biker", count: "16 packs available", artType: "bike" },
+          { num: "02", name: "Sports Cars & JDM", count: "14 packs available", artType: "car" },
           { num: "03", name: "Helmet Visors", count: "10 packs available", artType: "helmet" },
-          { num: "04", name: "Activa & Scooty", count: "8 packs available", artType: "scooty" },
-          { num: "05", name: "Fuel Tank Decals", count: "7 packs available", artType: "tank" },
-          { num: "06", name: "Windshield Banners", count: "9 packs available", artType: "shield" },
-          { num: "07", name: "Racing Numbers", count: "6 packs available", artType: "race" },
-          { num: "08", name: "Reflective Decals", count: "12 packs available", artType: "reflector" }
+          { num: "04", name: "Windshield Banners", count: "9 packs available", artType: "shield" },
+          { num: "05", name: "Racing Numbers", count: "6 packs available", artType: "race" },
+          { num: "06", name: "Fuel Tank Decals", count: "7 packs available", artType: "tank" },
+          { num: "07", name: "Reflective Vinyl", count: "12 packs available", artType: "reflector" },
+          { num: "08", name: "Activa & Scooty", count: "8 packs available", artType: "scooty" }
         ],
         subcategories: [
-          "All Vehicles", "Car Stickers", "Bike Stickers", "Activa & Scooty", "Helmet Stickers",
-          "Fuel Tank Stickers", "Rear Windshield", "Racing & Motorsport"
+          "All Vehicles", "Superbikes & Biker", "Sports Cars & JDM", "Helmet Visors",
+          "Windshield Banners", "Racing Numbers", "Fuel Tank Decals"
         ]
       },
       decor: {
@@ -5245,16 +6791,15 @@
         numberedCategories: [
           { num: "01", name: "Bedroom Walls", count: "12 packs available", artType: "wall" },
           { num: "02", name: "Almirah & Wardrobe", count: "9 packs available", artType: "wardrobe" },
-          { num: "03", name: "Mirrors & Glass", count: "7 packs available", artType: "mirror" },
+          { num: "03", name: "Mirrors & Vanity", count: "7 packs available", artType: "mirror" },
           { num: "04", name: "Switchboard Decals", count: "15 packs available", artType: "switch" },
           { num: "05", name: "Kitchen & Pantry", count: "8 packs available", artType: "kitchen" },
           { num: "06", name: "Kids Room", count: "11 packs available", artType: "kids" },
-          { num: "07", name: "Study Table", count: "6 packs available", artType: "study" },
+          { num: "07", name: "Desk & Laptop", count: "6 packs available", artType: "study" },
           { num: "08", name: "Motivational Quotes", count: "14 packs available", artType: "quote" }
         ],
         subcategories: [
-          "All Home Decor", "Wall Stickers", "Bedroom Wall Stickers", "Wardrobe & Almirah",
-          "Mirror Stickers", "Refrigerator Stickers", "Switchboard Stickers", "Kitchen Stickers"
+          "All Home Decor", "Bedroom Walls", "Almirah & Wardrobe", "Switchboard Decals", "Mirrors & Vanity"
         ]
       },
       divine: {
@@ -5274,73 +6819,404 @@
           { num: "08", name: "Khatu Shyam Ji", count: "7 packs available", artType: "shyam" }
         ],
         subcategories: [
-          "All Divine", "Mahadev / Lord Shiva", "Radha Krishna", "Hanuman Ji",
-          "Shri Ram", "Ganesh Ji", "Om Stickers", "Swastik Stickers", "Bhagavad Gita Quotes"
+          "All Divine", "Mahadev", "Radha Krishna", "Hanuman Ji", "Ganesh Ji", "Shri Ram", "Om & Mantras"
         ]
-      },
-      gadget: {
-        kicker: "Collection",
-        title: "Gadget Skins",
-        desc: "Ultra-thin zero-residue vinyl for MacBooks, iPhones & iPads.",
-        theme: "boys",
-        heroImg: "/assets/aistudio/image_1ec77ed4.png",
-        numberedCategories: [
-          { num: "01", name: "MacBook Stickers", count: "12 packs available", artType: "laptop" },
-          { num: "02", name: "iPhone Stickers", count: "14 packs available", artType: "phone" },
-          { num: "03", name: "iPad Skins", count: "8 packs available", artType: "ipad" },
-          { num: "04", name: "Water Bottles", count: "10 packs available", artType: "bottle" }
-        ],
-        subcategories: ["All Gadgets", "MacBook Stickers", "iPhone Stickers", "Phone Case Stickers", "Water Bottle Stickers"]
       }
     };
 
-    /* Category Art Vectors (Matches 3D items in image_c5aedb19.png) */
+    /* High-Fidelity Photorealistic Category Art Vectors (Matching Reference Screenshots) */
     function getLovableCategorySvg(artType) {
       switch (artType) {
+        // --- BOYS REFERENCE ARTWORK (Matches image_03f3067e.png) ---
+        case 'tee':
+          return `<svg viewBox="0 0 100 100" width="68" height="68">
+            <defs>
+              <linearGradient id="teeG" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#2D3035"/>
+                <stop offset="50%" stop-color="#181A1D"/>
+                <stop offset="100%" stop-color="#0D0E10"/>
+              </linearGradient>
+              <filter id="teeSh" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#000000" flood-opacity="0.25"/>
+              </filter>
+            </defs>
+            <g filter="url(#teeSh)">
+              <!-- T-Shirt Silhouette -->
+              <path d="M34 20 L20 28 L14 44 L25 48 L28 38 L28 78 L72 78 L72 38 L75 48 L86 44 L80 28 L66 20 C60 26, 40 26, 34 20 Z" fill="url(#teeG)"/>
+              <!-- Collar -->
+              <path d="M38 20 C42 27, 58 27, 62 20" fill="none" stroke="#374151" stroke-width="2.5"/>
+              <!-- Graphic Chest Print -->
+              <text x="50" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="7.5" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.1em">STICKZY</text>
+              <path d="M38 52 L62 52" stroke="#E5E7EB" stroke-width="1.2" stroke-linecap="round"/>
+              <circle cx="50" cy="56" r="1.5" fill="#60A5FA"/>
+            </g>
+          </svg>`;
+
+        case 'hoodie':
+          return `<svg viewBox="0 0 100 100" width="68" height="68">
+            <defs>
+              <linearGradient id="hoodieG" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#70A4E8"/>
+                <stop offset="60%" stop-color="#4B7EC2"/>
+                <stop offset="100%" stop-color="#3263A3"/>
+              </linearGradient>
+              <filter id="hoodieSh" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#1E3A8A" flood-opacity="0.22"/>
+              </filter>
+            </defs>
+            <g filter="url(#hoodieSh)">
+              <!-- Hoodie Body -->
+              <path d="M32 24 L18 32 L12 50 L24 54 L27 42 L27 80 L73 80 L73 42 L76 54 L88 50 L82 32 L68 24 Z" fill="url(#hoodieG)"/>
+              <!-- Hood Collar -->
+              <path d="M36 24 C36 14, 64 14, 64 24 Z" fill="#3B6FA8"/>
+              <path d="M40 24 C45 30, 55 30, 60 24" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+              <!-- Drawstrings -->
+              <line x1="46" y1="26" x2="45" y2="40" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="54" y1="26" x2="55" y2="40" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+              <!-- Kangaroo Pocket -->
+              <path d="M36 58 L64 58 L60 74 L40 74 Z" fill="#3B6DA4" opacity="0.85"/>
+              <text x="50" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="7" fill="#E0EDFD" text-anchor="middle">STK-02</text>
+            </g>
+          </svg>`;
+
+        case 'jeans':
+          return `<svg viewBox="0 0 100 100" width="68" height="68">
+            <defs>
+              <linearGradient id="denimG" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#6C8FB7"/>
+                <stop offset="50%" stop-color="#4B729E"/>
+                <stop offset="100%" stop-color="#345479"/>
+              </linearGradient>
+              <filter id="denimSh" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#1E293B" flood-opacity="0.2"/>
+              </filter>
+            </defs>
+            <g filter="url(#denimSh)">
+              <!-- Waistband -->
+              <rect x="26" y="20" width="48" height="8" rx="2" fill="#3D638D"/>
+              <!-- Button & Fly -->
+              <circle cx="50" cy="24" r="2" fill="#D97706"/>
+              <line x1="50" y1="28" x2="50" y2="42" stroke="#B45309" stroke-width="1.5"/>
+              <!-- Denim Legs / Jorts -->
+              <path d="M26 28 L24 76 L46 76 L50 44 L54 76 L76 76 L74 28 Z" fill="url(#denimG)"/>
+              <!-- Pockets -->
+              <path d="M28 32 C34 32, 38 36, 40 40" fill="none" stroke="#D97706" stroke-width="1.5"/>
+              <path d="M72 32 C66 32, 62 36, 60 40" fill="none" stroke="#D97706" stroke-width="1.5"/>
+              <!-- Folded Cuffs -->
+              <rect x="23" y="72" width="24" height="6" rx="1.5" fill="#8FAECF"/>
+              <rect x="53" y="72" width="24" height="6" rx="1.5" fill="#8FAECF"/>
+            </g>
+          </svg>`;
+
+        case 'sneaker':
+          return `<svg viewBox="0 0 100 100" width="68" height="68">
+            <defs>
+              <linearGradient id="sneakerBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4E84D4"/>
+                <stop offset="100%" stop-color="#2B5CA5"/>
+              </linearGradient>
+              <filter id="sneakerSh" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="6" stdDeviation="4" flood-color="#1E3A8A" flood-opacity="0.22"/>
+              </filter>
+            </defs>
+            <g filter="url(#sneakerSh)" transform="rotate(-6 50 50)">
+              <!-- Rubber Sole -->
+              <rect x="18" y="66" width="64" height="8" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+              <path d="M18 71 L82 71" stroke="#2563EB" stroke-width="2"/>
+              <!-- Shoe Body -->
+              <path d="M22 66 C22 56, 32 46, 42 46 L58 46 L70 34 L80 34 L80 66 Z" fill="#FFFFFF"/>
+              <!-- Blue Overlays -->
+              <path d="M22 66 C22 56, 30 54, 38 54 L38 66 Z" fill="url(#sneakerBlue)"/>
+              <path d="M60 46 L70 34 L80 34 L80 50 L68 56 Z" fill="url(#sneakerBlue)"/>
+              <!-- Swoosh -->
+              <path d="M32 58 Q 50 54, 68 44 Q 54 62, 36 62 Z" fill="#FFFFFF" stroke="url(#sneakerBlue)" stroke-width="1.5"/>
+              <!-- Ankle Collar -->
+              <path d="M66 34 L78 34" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+              <!-- Laces -->
+              <line x1="48" y1="48" x2="54" y2="46" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+              <line x1="52" y1="52" x2="58" y2="50" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+            </g>
+          </svg>`;
+
+        case 'cap':
+          return `<svg viewBox="0 0 100 100" width="68" height="68">
+            <defs>
+              <linearGradient id="capG" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#243754"/>
+                <stop offset="70%" stop-color="#141E30"/>
+                <stop offset="100%" stop-color="#0A101C"/>
+              </linearGradient>
+              <filter id="capSh" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.25"/>
+              </filter>
+            </defs>
+            <g filter="url(#capSh)">
+              <!-- Cap Crown Dome -->
+              <path d="M24 52 C24 28, 76 28, 76 52 Z" fill="url(#capG)"/>
+              <!-- Top Button -->
+              <circle cx="50" cy="27" r="3" fill="#3B82F6"/>
+              <!-- Curved Visor/Brim -->
+              <path d="M20 52 C24 64, 76 64, 84 52 C70 57, 34 57, 20 52 Z" fill="#0D1522"/>
+              <!-- Embroidered NY Monogram -->
+              <text x="50" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14" fill="#FFFFFF" text-anchor="middle" letter-spacing="-0.06em">NY</text>
+              <!-- Authenticity Sticker -->
+              <circle cx="68" cy="54" r="4" fill="#FBBF24" opacity="0.9"/>
+            </g>
+          </svg>`;
+
+        case 'controller':
+          return `<svg viewBox="0 0 100 100" width="68" height="68">
+            <defs>
+              <linearGradient id="ctrlG" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF"/>
+                <stop offset="60%" stop-color="#E2E8F0"/>
+                <stop offset="100%" stop-color="#CBD5E1"/>
+              </linearGradient>
+              <filter id="ctrlSh" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#000000" flood-opacity="0.18"/>
+              </filter>
+            </defs>
+            <g filter="url(#ctrlSh)">
+              <!-- Controller Outer Grip Body -->
+              <path d="M26 34 C34 32, 66 32, 74 34 C82 36, 86 54, 82 72 C79 84, 68 80, 64 68 L60 56 L40 56 L36 68 C32 80, 21 84, 18 72 C14 54, 18 36, 26 34 Z" fill="url(#ctrlG)"/>
+              <!-- Center Touchpad -->
+              <rect x="38" y="36" width="24" height="14" rx="3" fill="#1E293B"/>
+              <!-- D-Pad Left -->
+              <rect x="27" y="45" width="4" height="12" rx="1.5" fill="#334155"/>
+              <rect x="23" y="49" width="12" height="4" rx="1.5" fill="#334155"/>
+              <!-- Dual Thumbsticks -->
+              <circle cx="39" cy="62" r="7" fill="#475569"/>
+              <circle cx="39" cy="62" r="4.5" fill="#1E293B"/>
+              <circle cx="61" cy="62" r="7" fill="#475569"/>
+              <circle cx="61" cy="62" r="4.5" fill="#1E293B"/>
+              <!-- Action Buttons Right -->
+              <circle cx="73" cy="45" r="2.2" fill="#3B82F6"/>
+              <circle cx="68" cy="49" r="2.2" fill="#EF4444"/>
+              <circle cx="78" cy="49" r="2.2" fill="#10B981"/>
+              <circle cx="73" cy="53" r="2.2" fill="#F59E0B"/>
+            </g>
+          </svg>`;
+
+        case 'sports':
+          return `<svg viewBox="0 0 100 100" width="68" height="68">
+            <defs>
+              <radialGradient id="bballG" cx="35%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#FF8A48"/>
+                <stop offset="60%" stop-color="#D9531E"/>
+                <stop offset="100%" stop-color="#8C2C0A"/>
+              </radialGradient>
+              <filter id="bballSh" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="6" stdDeviation="4.5" flood-color="#8C2C0A" flood-opacity="0.3"/>
+              </filter>
+            </defs>
+            <g filter="url(#bballSh)">
+              <!-- Basketball Sphere -->
+              <circle cx="50" cy="50" r="26" fill="url(#bballG)"/>
+              <!-- Seam Lines -->
+              <path d="M24 50 L76 50" stroke="#1E1E1E" stroke-width="2.2"/>
+              <path d="M50 24 L50 76" stroke="#1E1E1E" stroke-width="2.2"/>
+              <path d="M30 30 C44 42, 44 58, 30 70" fill="none" stroke="#1E1E1E" stroke-width="2.2"/>
+              <path d="M70 30 C56 42, 56 58, 70 70" fill="none" stroke="#1E1E1E" stroke-width="2.2"/>
+              <!-- Light Specular Sheen -->
+              <ellipse cx="40" cy="38" rx="8" ry="4" fill="#FFFFFF" opacity="0.3" transform="rotate(-30 40 38)"/>
+            </g>
+          </svg>`;
+
+        case 'trendy':
+          return `<svg viewBox="0 0 100 100" width="68" height="68">
+            <defs>
+              <linearGradient id="lensG" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#374151"/>
+                <stop offset="50%" stop-color="#111827"/>
+                <stop offset="100%" stop-color="#030712"/>
+              </linearGradient>
+              <filter id="glassSh" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#000000" flood-opacity="0.25"/>
+              </filter>
+            </defs>
+            <g filter="url(#glassSh)" transform="rotate(-4 50 50)">
+              <!-- Frame Bridge -->
+              <path d="M44 44 C47 42, 53 42, 56 44" stroke="#111827" stroke-width="4.5" stroke-linecap="round"/>
+              <!-- Left Rim & Lens -->
+              <path d="M18 42 L44 42 C44 58, 38 64, 24 64 C18 64, 16 56, 18 42 Z" fill="url(#lensG)" stroke="#111827" stroke-width="4.5"/>
+              <!-- Right Rim & Lens -->
+              <path d="M56 42 L82 42 C84 56, 82 64, 76 64 C62 64, 56 58, 56 42 Z" fill="url(#lensG)" stroke="#111827" stroke-width="4.5"/>
+              <!-- Lens Reflection Streaks -->
+              <line x1="24" y1="46" x2="32" y2="58" stroke="#FFFFFF" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+              <line x1="62" y1="46" x2="70" y2="58" stroke="#FFFFFF" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+              <!-- Metal Rivets -->
+              <circle cx="19" cy="43" r="1.2" fill="#E5E7EB"/>
+              <circle cx="81" cy="43" r="1.2" fill="#E5E7EB"/>
+            </g>
+          </svg>`;
+
+        // --- GIRLS REFERENCE ARTWORK (Matches image_7bb33513.png) ---
         case 'bow':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><defs><radialGradient id="bowG1" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#FFEBF0"/><stop offset="30%" stop-color="#FFB3C7"/><stop offset="75%" stop-color="#F2779B"/><stop offset="100%" stop-color="#D64D73"/></radialGradient><radialGradient id="bowKnot" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#FFF0F4"/><stop offset="60%" stop-color="#F483A3"/><stop offset="100%" stop-color="#C23B61"/></radialGradient><filter id="bowSh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="4" stdDeviation="3.5" flood-color="#D64D73" flood-opacity="0.25"/></filter></defs><g filter="url(#bowSh)"><path d="M40 38 C30 18, 12 22, 16 42 C18 52, 34 45, 40 40 Z" fill="url(#bowG1)"/><path d="M40 38 C50 18, 68 22, 64 42 C62 52, 46 45, 40 40 Z" fill="url(#bowG1)"/><path d="M38 41 C32 52, 22 66, 17 71 C23 68, 33 55, 38 44 Z" fill="url(#bowG1)"/><path d="M42 41 C48 52, 58 66, 63 71 C57 68, 47 55, 42 44 Z" fill="url(#bowG1)"/><ellipse cx="40" cy="39" rx="6.5" ry="7.5" fill="url(#bowKnot)"/><ellipse cx="38" cy="36" rx="3.5" ry="2" fill="#FFFFFF" opacity="0.65" transform="rotate(-15 38 36)"/></g></svg>`;
+        case 'pink-typo':
+          return `<svg viewBox="0 0 100 100" width="68" height="68">
+            <defs>
+              <radialGradient id="bowG1" cx="35%" cy="30%" r="65%">
+                <stop offset="0%" stop-color="#FFF0F5"/>
+                <stop offset="30%" stop-color="#FFB5CA"/>
+                <stop offset="75%" stop-color="#F4729B"/>
+                <stop offset="100%" stop-color="#D6456E"/>
+              </radialGradient>
+              <filter id="bowSh" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#D6456E" flood-opacity="0.25"/>
+              </filter>
+            </defs>
+            <g filter="url(#bowSh)">
+              <path d="M50 48 C38 24, 14 30, 20 54 C24 66, 42 58, 50 50 Z" fill="url(#bowG1)"/>
+              <path d="M50 48 C62 24, 86 30, 80 54 C76 66, 58 58, 50 50 Z" fill="url(#bowG1)"/>
+              <path d="M47 52 C40 66, 26 82, 20 88 C28 84, 40 70, 47 56 Z" fill="url(#bowG1)"/>
+              <path d="M53 52 C60 66, 74 82, 80 88 C72 84, 60 70, 53 56 Z" fill="url(#bowG1)"/>
+              <ellipse cx="50" cy="49" rx="8" ry="9" fill="#F4729B"/>
+              <ellipse cx="48" cy="46" rx="4" ry="2.5" fill="#FFFFFF" opacity="0.75" transform="rotate(-15 48 46)"/>
+            </g>
+          </svg>`;
+
         case 'butterfly':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><defs><linearGradient id="bfG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFF2F6"/><stop offset="40%" stop-color="#FFAFC4"/><stop offset="100%" stop-color="#E06486"/></linearGradient><radialGradient id="bfWingG" cx="40%" cy="30%" r="70%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="40%" stop-color="#FFA8BF"/><stop offset="100%" stop-color="#D85478"/></radialGradient></defs><g filter="drop-shadow(0px 4px 6px rgba(216,84,120,0.22))"><path d="M40 37 C32 18, 12 24, 16 42 C18 48, 35 44, 40 40 Z" fill="url(#bfWingG)"/><path d="M40 37 C48 18, 68 24, 64 42 C62 48, 45 44, 40 40 Z" fill="url(#bfWingG)"/><path d="M40 40 C28 46, 20 58, 25 64 C32 66, 38 54, 40 43 Z" fill="url(#bfWingG)"/><path d="M40 40 C52 46, 60 58, 55 64 C48 66, 42 54, 40 43 Z" fill="url(#bfWingG)"/><ellipse cx="40" cy="40" rx="2.5" ry="12" fill="#B03859"/><circle cx="36" cy="24" r="1.5" fill="#B03859"/><circle cx="44" cy="24" r="1.5" fill="#B03859"/></g></svg>`;
+          return `<svg viewBox="0 0 100 100" width="68" height="68">
+            <defs>
+              <radialGradient id="bfWingG" cx="40%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#FFFFFF"/>
+                <stop offset="40%" stop-color="#FFA8BF"/>
+                <stop offset="100%" stop-color="#D85478"/>
+              </radialGradient>
+              <filter id="bfSh" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#D85478" flood-opacity="0.25"/>
+              </filter>
+            </defs>
+            <g filter="url(#bfSh)">
+              <path d="M50 48 C40 24, 14 32, 20 54 C23 62, 44 56, 50 51 Z" fill="url(#bfWingG)"/>
+              <path d="M50 48 C60 24, 86 32, 80 54 C77 62, 56 56, 50 51 Z" fill="url(#bfWingG)"/>
+              <path d="M50 52 C34 60, 24 74, 30 82 C40 84, 48 70, 50 56 Z" fill="url(#bfWingG)"/>
+              <path d="M50 52 C66 60, 76 74, 70 82 C60 84, 52 70, 50 56 Z" fill="url(#bfWingG)"/>
+              <ellipse cx="50" cy="52" rx="3" ry="14" fill="#B03859"/>
+              <circle cx="45" cy="32" r="2" fill="#B03859"/>
+              <circle cx="55" cy="32" r="2" fill="#B03859"/>
+            </g>
+          </svg>`;
+
         case 'flower':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><defs><radialGradient id="roseG" cx="38%" cy="35%" r="65%"><stop offset="0%" stop-color="#FFF5F8"/><stop offset="35%" stop-color="#FFAEC3"/><stop offset="80%" stop-color="#E86185"/><stop offset="100%" stop-color="#BD3A5E"/></radialGradient></defs><g filter="drop-shadow(0px 4px 6px rgba(189,58,94,0.22))"><path d="M26 50 C20 56 26 64 34 58 Z" fill="#9CB88C"/><path d="M54 50 C60 56 54 64 46 58 Z" fill="#9CB88C"/><circle cx="40" cy="38" r="20" fill="url(#roseG)"/><path d="M30 34 C34 26 46 26 50 34 C44 42 36 42 30 34 Z" fill="#E86185" opacity="0.85"/><circle cx="40" cy="38" r="9" fill="#A83050"/><ellipse cx="37" cy="34" rx="4" ry="2" fill="#FFFFFF" opacity="0.6"/></g></svg>`;
+          return `<svg viewBox="0 0 100 100" width="68" height="68">
+            <defs>
+              <radialGradient id="roseG" cx="38%" cy="35%" r="65%">
+                <stop offset="0%" stop-color="#FFF5F8"/>
+                <stop offset="35%" stop-color="#FFAEC3"/>
+                <stop offset="80%" stop-color="#E86185"/>
+                <stop offset="100%" stop-color="#BD3A5E"/>
+              </radialGradient>
+              <filter id="roseSh" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#BD3A5E" flood-opacity="0.24"/>
+              </filter>
+            </defs>
+            <g filter="url(#roseSh)">
+              <path d="M32 64 C24 72, 32 82, 42 74 Z" fill="#9CB88C"/>
+              <path d="M68 64 C76 72, 68 82, 58 74 Z" fill="#9CB88C"/>
+              <circle cx="50" cy="48" r="25" fill="url(#roseG)"/>
+              <path d="M38 42 C42 32, 58 32, 62 42 C56 52, 44 52, 38 42 Z" fill="#E86185" opacity="0.85"/>
+              <circle cx="50" cy="48" r="11" fill="#A83050"/>
+              <ellipse cx="46" cy="43" rx="5" ry="2.5" fill="#FFFFFF" opacity="0.6"/>
+            </g>
+          </svg>`;
+
         case 'heart':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><defs><radialGradient id="heartG" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="25%" stop-color="#FFBDCF"/><stop offset="70%" stop-color="#F46D91"/><stop offset="100%" stop-color="#C2315A"/></radialGradient></defs><g filter="drop-shadow(0px 5px 8px rgba(194,49,90,0.25))"><path d="M40 60 C23 47, 14 34, 21 23 C27 13, 38 19, 40 26 C42 19, 53 13, 59 23 C66 34, 57 47, 40 60 Z" fill="url(#heartG)"/><ellipse cx="30" cy="23" rx="4.5" ry="2.8" fill="#FFFFFF" opacity="0.75" transform="rotate(-32 30 23)"/></g></svg>`;
+          return `<svg viewBox="0 0 100 100" width="68" height="68">
+            <defs>
+              <radialGradient id="heartG" cx="35%" cy="30%" r="65%">
+                <stop offset="0%" stop-color="#FFFFFF"/>
+                <stop offset="25%" stop-color="#FFBDCF"/>
+                <stop offset="70%" stop-color="#F46D91"/>
+                <stop offset="100%" stop-color="#C2315A"/>
+              </radialGradient>
+              <filter id="heartSh" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#C2315A" flood-opacity="0.28"/>
+              </filter>
+            </defs>
+            <g filter="url(#heartSh)">
+              <path d="M50 76 C28 60, 16 44, 25 30 C33 17, 47 24, 50 33 C53 24, 67 17, 75 30 C84 44, 72 60, 50 76 Z" fill="url(#heartG)"/>
+              <ellipse cx="37" cy="30" rx="5.5" ry="3.5" fill="#FFFFFF" opacity="0.8" transform="rotate(-32 37 30)"/>
+            </g>
+          </svg>`;
+
         case 'quote':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><g filter="drop-shadow(0px 4px 7px rgba(0,0,0,0.1))"><rect x="18" y="16" width="44" height="46" rx="5" fill="#FFFDF8" stroke="#EFE4D4" stroke-width="1.5" transform="rotate(-4 40 40)"/><circle cx="40" cy="18" r="3.5" fill="#E86A8D"/><circle cx="39" cy="17" r="1.2" fill="#FFFFFF" opacity="0.8"/><text x="40" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="700" fill="#58484B" text-anchor="middle" transform="rotate(-4 40 40)">You</text><text x="40" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="6.5" font-weight="600" fill="#58484B" text-anchor="middle" transform="rotate(-4 40 40)">are enough</text><text x="40" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#E86A8D" text-anchor="middle" transform="rotate(-4 40 40)">♡</text></g></svg>`;
+          return `<svg viewBox="0 0 100 100" width="68" height="68">
+            <defs>
+              <filter id="quoteSh" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="4" stdDeviation="3.5" flood-color="#000000" flood-opacity="0.12"/>
+              </filter>
+            </defs>
+            <g filter="url(#quoteSh)">
+              <rect x="22" y="20" width="56" height="58" rx="6" fill="#FFFDF8" stroke="#EFE4D4" stroke-width="1.8" transform="rotate(-4 50 50)"/>
+              <circle cx="50" cy="23" r="4.5" fill="#E86A8D"/>
+              <circle cx="49" cy="22" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+              <text x="50" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="700" fill="#58484B" text-anchor="middle" transform="rotate(-4 50 50)">You</text>
+              <text x="50" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="600" fill="#58484B" text-anchor="middle" transform="rotate(-4 50 50)">are enough</text>
+              <text x="50" y="69" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#E86A8D" text-anchor="middle" transform="rotate(-4 50 50)">♡</text>
+            </g>
+          </svg>`;
+
         case 'makeup':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><defs><linearGradient id="goldCase" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#E5C07B"/><stop offset="50%" stop-color="#FFF2D6"/><stop offset="100%" stop-color="#CFA15A"/></linearGradient><linearGradient id="lipBullet" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FA607E"/><stop offset="60%" stop-color="#E83056"/><stop offset="100%" stop-color="#BA1B3C"/></linearGradient></defs><g filter="drop-shadow(0px 4px 7px rgba(186,27,60,0.22))"><rect x="31" y="38" width="18" height="26" rx="4" fill="#F8A7BD" stroke="#FFFFFF" stroke-width="1.5"/><rect x="33" y="27" width="14" height="12" fill="url(#goldCase)"/><path d="M33 27 L33 19 C33 15 47 11 47 19 L47 27 Z" fill="url(#lipBullet)"/><ellipse cx="44" cy="19" rx="2" ry="4" fill="#FFFFFF" opacity="0.45"/></g></svg>`;
-        case 'aesthetic':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><defs><radialGradient id="bowG2" cx="38%" cy="30%" r="65%"><stop offset="0%" stop-color="#FFF0F5"/><stop offset="45%" stop-color="#F8A3BD"/><stop offset="100%" stop-color="#CF4B70"/></radialGradient></defs><g filter="drop-shadow(0px 4px 6px rgba(207,75,112,0.22))"><path d="M40 38 C30 22, 12 26, 16 42 C18 50, 34 43, 40 39 Z" fill="url(#bowG2)"/><path d="M40 38 C50 22, 68 26, 64 42 C62 50, 46 43, 40 39 Z" fill="url(#bowG2)"/><path d="M38 40 C32 52, 22 66, 18 70 C24 67, 34 54, 38 42 Z" fill="url(#bowG2)"/><path d="M42 40 C48 52, 58 66, 62 70 C56 67, 46 54, 42 42 Z" fill="url(#bowG2)"/><circle cx="40" cy="38" r="6.5" fill="#EF8AA7"/><ellipse cx="38" cy="36" rx="3" ry="1.5" fill="#FFFFFF" opacity="0.6"/></g></svg>`;
+          return `<svg viewBox="0 0 100 100" width="68" height="68">
+            <defs>
+              <linearGradient id="goldCase" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#E5C07B"/>
+                <stop offset="50%" stop-color="#FFF2D6"/>
+                <stop offset="100%" stop-color="#CFA15A"/>
+              </linearGradient>
+              <linearGradient id="lipBullet" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#FA607E"/>
+                <stop offset="60%" stop-color="#E83056"/>
+                <stop offset="100%" stop-color="#BA1B3C"/>
+              </linearGradient>
+              <filter id="lipSh" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#BA1B3C" flood-opacity="0.22"/>
+              </filter>
+            </defs>
+            <g filter="url(#lipSh)">
+              <rect x="38" y="48" width="24" height="34" rx="5" fill="#F8A7BD" stroke="#FFFFFF" stroke-width="1.8"/>
+              <rect x="41" y="34" width="18" height="15" fill="url(#goldCase)"/>
+              <path d="M41 34 L41 24 C41 19, 59 14, 59 24 L59 34 Z" fill="url(#lipBullet)"/>
+              <ellipse cx="55" cy="24" rx="2.5" ry="5" fill="#FFFFFF" opacity="0.5"/>
+            </g>
+          </svg>`;
+
         case 'fashion':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><defs><linearGradient id="bagG" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#FFDCE6"/><stop offset="100%" stop-color="#F293AC"/></linearGradient></defs><g filter="drop-shadow(0px 4px 7px rgba(216,75,110,0.22))"><path d="M31 29 C31 18 49 18 49 29" fill="none" stroke="#B84260" stroke-width="2.5" stroke-linecap="round"/><rect x="21" y="29" width="38" height="35" rx="5" fill="url(#bagG)" stroke="#FFFFFF" stroke-width="1.5"/><path d="M40 50 C36 46 32 42 34 38 C36 34 40 36 40 38 C40 36 44 34 46 38 C48 42 44 46 40 50 Z" fill="#FFFFFF" opacity="0.85"/></g></svg>`;
+          return `<svg viewBox="0 0 100 100" width="68" height="68">
+            <defs>
+              <linearGradient id="bagG" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFDCE6"/>
+                <stop offset="100%" stop-color="#F293AC"/>
+              </linearGradient>
+              <filter id="bagSh" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#D85478" flood-opacity="0.24"/>
+              </filter>
+            </defs>
+            <g filter="url(#bagSh)">
+              <path d="M38 36 C38 22, 62 22, 62 36" fill="none" stroke="#B84260" stroke-width="3" stroke-linecap="round"/>
+              <rect x="25" y="36" width="50" height="46" rx="6" fill="url(#bagG)" stroke="#FFFFFF" stroke-width="1.8"/>
+              <path d="M50 64 C45 58, 40 54, 42 49 C45 44, 50 46, 50 49 C50 46, 55 44, 58 49 C60 54, 55 58, 50 64 Z" fill="#FFFFFF" opacity="0.9"/>
+            </g>
+          </svg>`;
+
+        // Other Collections Fallbacks
         case 'bike':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><g filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.15))"><circle cx="24" cy="50" r="12" fill="none" stroke="#334155" stroke-width="4"/><circle cx="56" cy="50" r="12" fill="none" stroke="#334155" stroke-width="4"/><path d="M24 50 L38 50 L48 36 L30 36 Z" fill="#0284C7"/><path d="M48 36 L56 50" stroke="#334155" stroke-width="3"/><path d="M44 30 L50 36" stroke="#0F172A" stroke-width="3"/></g></svg>`;
+          return `<svg viewBox="0 0 80 80" width="62" height="62"><circle cx="24" cy="50" r="12" fill="none" stroke="#334155" stroke-width="4"/><circle cx="56" cy="50" r="12" fill="none" stroke="#334155" stroke-width="4"/><path d="M24 50 L38 50 L48 36 L30 36 Z" fill="#EF4444"/><path d="M48 36 L56 50" stroke="#334155" stroke-width="3"/></svg>`;
         case 'car':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><g filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.15))"><path d="M16 46 L26 36 L54 36 L64 46 Z" fill="#0284C7"/><rect x="14" y="46" width="52" height="12" rx="4" fill="#0F172A"/><circle cx="26" cy="56" r="6" fill="#E2E8F0"/><circle cx="54" cy="56" r="6" fill="#E2E8F0"/></g></svg>`;
-        case 'ktm':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><g filter="drop-shadow(0px 4px 6px rgba(255,107,0,0.25))"><polygon points="40 16 66 26 58 60 40 68 22 60 14 26" fill="#FF6B00"/><text x="40" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="12" fill="#FFFFFF" text-anchor="middle">KTM</text></g></svg>`;
-        case 'bullet':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><g filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.2))"><circle cx="40" cy="40" r="22" fill="#1C1917" stroke="#D97706" stroke-width="2.5"/><text x="40" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="10" fill="#D97706" text-anchor="middle">RE</text></g></svg>`;
-        case 'helmet':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><g filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.2))"><path d="M40 18 C26 18 18 30 18 44 C18 56 28 62 44 62 C58 62 62 50 62 42 C62 30 54 18 40 18 Z" fill="#1E293B"/><path d="M30 36 C34 32 50 32 54 36 C54 44 38 48 30 44 Z" fill="#F97316"/></g></svg>`;
-        case 'game':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><g filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.2))"><rect x="18" y="28" width="44" height="28" rx="12" fill="#0F172A"/><circle cx="28" cy="40" r="4" fill="#38BDF8"/><circle cx="52" cy="38" r="2.5" fill="#EF4444"/><circle cx="56" cy="44" r="2.5" fill="#22C55E"/></g></svg>`;
-        case 'anime':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><g filter="drop-shadow(0px 4px 6px rgba(244,63,94,0.2))"><path d="M40 16 C30 26 24 38 28 50 C32 60 48 64 54 52 C58 42 50 34 48 24 Z" fill="#F43F5E"/><path d="M40 32 C36 38 34 44 38 48 C42 52 48 50 48 44 Z" fill="#FBBF24"/></g></svg>`;
-        case 'gym':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><g filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.2))"><rect x="22" y="38" width="36" height="4" rx="2" fill="#94A3B8"/><rect x="18" y="30" width="6" height="20" rx="2" fill="#334155"/><rect x="14" y="34" width="4" height="12" rx="1" fill="#475569"/><rect x="56" y="30" width="6" height="20" rx="2" fill="#334155"/><rect x="62" y="34" width="4" height="12" rx="1" fill="#475569"/></g></svg>`;
+          return `<svg viewBox="0 0 80 80" width="62" height="62"><path d="M16 46 L26 36 L54 36 L64 46 Z" fill="#EF4444"/><rect x="14" y="46" width="52" height="12" rx="4" fill="#0F172A"/><circle cx="26" cy="56" r="6" fill="#E2E8F0"/><circle cx="54" cy="56" r="6" fill="#E2E8F0"/></svg>`;
         case 'shiva':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><g filter="drop-shadow(0px 4px 6px rgba(217,119,6,0.25))"><path d="M40 16 L40 64" stroke="#D97706" stroke-width="3"/><path d="M28 22 C32 36 48 36 52 22" fill="none" stroke="#D97706" stroke-width="3"/><circle cx="40" cy="18" r="4" fill="#D97706"/><circle cx="28" cy="22" r="3" fill="#D97706"/><circle cx="52" cy="22" r="3" fill="#D97706"/></g></svg>`;
+          return `<svg viewBox="0 0 80 80" width="62" height="62"><path d="M40 16 L40 64" stroke="#D97706" stroke-width="3"/><path d="M28 22 C32 36 48 36 52 22" fill="none" stroke="#D97706" stroke-width="3"/><circle cx="40" cy="18" r="4" fill="#D97706"/></svg>`;
         case 'krishna':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><g filter="drop-shadow(0px 4px 6px rgba(2,132,199,0.25))"><line x1="20" y1="52" x2="60" y2="28" stroke="#D97706" stroke-width="4" stroke-linecap="round"/><ellipse cx="56" cy="24" rx="8" ry="12" fill="#0284C7" transform="rotate(30 56 24)"/><circle cx="56" cy="24" r="3" fill="#FBBF24"/></g></svg>`;
+          return `<svg viewBox="0 0 80 80" width="62" height="62"><line x1="20" y1="52" x2="60" y2="28" stroke="#D97706" stroke-width="4" stroke-linecap="round"/><ellipse cx="56" cy="24" rx="8" ry="12" fill="#0284C7" transform="rotate(30 56 24)"/></svg>`;
         case 'om':
-          return `<svg viewBox="0 0 80 80" width="62" height="62"><g filter="drop-shadow(0px 4px 8px rgba(217,119,6,0.3))"><text x="40" y="52" font-family="'Plus Jakarta Sans', serif" font-weight="bold" font-size="34" fill="#D97706" text-anchor="middle">ॐ</text></g></svg>`;
+          return `<svg viewBox="0 0 80 80" width="62" height="62"><text x="40" y="52" font-family="'Plus Jakarta Sans', serif" font-weight="bold" font-size="34" fill="#D97706" text-anchor="middle">ॐ</text></svg>`;
         default:
           return `<svg viewBox="0 0 80 80" width="62" height="62"><circle cx="40" cy="40" r="22" fill="#FCE7ED"/><circle cx="40" cy="40" r="14" fill="#F472B6"/><circle cx="40" cy="40" r="6" fill="#FFFFFF"/></svg>`;
       }
     }
 
-    /* Render Lovable 4-Column Numbered Category Cards */
+    /* Render 4-Column Numbered Category Cards (Matching Reference Layout) */
     function renderLovableCategoryCards(collectionKey) {
       const grid = document.getElementById('lovableCategoryGrid');
       if (!grid) return;
@@ -5348,19 +7224,13 @@
       const data = CATEGORY_DATA[collectionKey] || CATEGORY_DATA.girls;
       const cats = data.numberedCategories || [];
 
-      if (cats.length === 0) {
-        grid.innerHTML = '';
-        return;
-      }
-
       grid.innerHTML = cats.map(cat => {
-        const isActive = (currentSubcategory === cat.name);
         return `
-          <div class="lovable-cat-card ${isActive ? 'active' : ''}" onclick="selectLovableCategory('${cat.name}')">
+          <div class="lovable-cat-card" onclick="openCategoryPage('${collectionKey}', '${cat.name}')">
             <div class="card-info">
               <div class="card-num">${cat.num}</div>
               <div class="card-title">${cat.name}</div>
-              <div class="card-subtext">${cat.count || 'Products available'}</div>
+              <div class="card-subtext">Products coming soon</div>
             </div>
             <div class="card-art-wrap">
               <div class="card-art-svg">${getLovableCategorySvg(cat.artType)}</div>
@@ -5373,21 +7243,366 @@
       }).join('');
     }
 
-    function selectLovableCategory(catName) {
-      if (catName === 'all' || catName.startsWith('All')) {
-        currentSubcategory = 'all';
+    /* Open Separate Dedicated Category Page (Requirement 5) */
+    function openCategoryPage(collectionKey, catName) {
+      currentFilter = collectionKey;
+      currentSubcategory = catName;
+      
+      const catData = CATEGORY_DATA[collectionKey] || CATEGORY_DATA.boys;
+      const catObj = (catData.numberedCategories || []).find(c => c.name === catName) || {
+        num: "01",
+        name: catName,
+        artType: "bow"
+      };
+
+      document.getElementById('catPageCollectionBreadcrumb').innerText = catData.title + ' Collection';
+      document.getElementById('catBackCollectionName').innerText = catData.title;
+      document.getElementById('catPageTitleBreadcrumb').innerText = catName;
+      document.getElementById('catPageNum').innerText = `CATEGORY ${catObj.num}`;
+      document.getElementById('catPageTitle').innerText = catName;
+      document.getElementById('catPageDesc').innerText = `Explore our curated ${catName} sticker decals crafted on weatherproof vinyl with Japanese UV ink.`;
+      
+      const badgeEl = document.getElementById('catPageArtBadge');
+      if (badgeEl) {
+        badgeEl.innerHTML = getLovableCategorySvg(catObj.artType);
+        badgeEl.style.background = collectionKey === 'girls' ? '#FFF0F4' : '#EFF6FA';
+      }
+
+      if (document.getElementById('catSearchInput')) document.getElementById('catSearchInput').value = '';
+      if (document.getElementById('catFinishFilter')) document.getElementById('catFinishFilter').value = 'all';
+      if (document.getElementById('catPriceFilter')) document.getElementById('catPriceFilter').value = 'all';
+      if (document.getElementById('catSortSelect')) document.getElementById('catSortSelect').value = 'featured';
+
+      renderCategoryPageProducts();
+      navigateTo('category', catName);
+    }
+
+    function renderCategoryPageProducts() {
+      const grid = document.getElementById('categoryProductsGrid');
+      if (!grid) return;
+
+      const searchVal = (document.getElementById('catSearchInput')?.value || '').toLowerCase().trim();
+      const finishVal = document.getElementById('catFinishFilter')?.value || 'all';
+      const priceVal = document.getElementById('catPriceFilter')?.value || 'all';
+      const sortVal = document.getElementById('catSortSelect')?.value || 'featured';
+
+      let list = products.filter(p => {
+        // match category or collection
+        const matchesCol = (p.category === currentFilter);
+        const matchesSub = !currentSubcategory || currentSubcategory === 'all' || 
+          (p.subcategory && (p.subcategory.toLowerCase().includes(currentSubcategory.toLowerCase()) || currentSubcategory.toLowerCase().includes(p.subcategory.toLowerCase()))) ||
+          (p.title && p.title.toLowerCase().includes(currentSubcategory.toLowerCase()));
+        return matchesCol || matchesSub;
+      });
+
+      // If category list has fewer items, fallback to collection products so it's never empty
+      if (list.length === 0) {
+        list = products.filter(p => p.category === currentFilter);
+      }
+
+      // Filter by search
+      if (searchVal) {
+        list = list.filter(p => p.title.toLowerCase().includes(searchVal) || p.description.toLowerCase().includes(searchVal));
+      }
+
+      // Filter by finish
+      if (finishVal !== 'all') {
+        list = list.filter(p => p.finish === finishVal);
+      }
+
+      // Filter by price
+      if (priceVal === 'under200') list = list.filter(p => p.price < 200);
+      else if (priceVal === '200to300') list = list.filter(p => p.price >= 200 && p.price <= 300);
+      else if (priceVal === 'above300') list = list.filter(p => p.price > 300);
+
+      // Sorting
+      if (sortVal === 'price-low') list.sort((a, b) => a.price - b.price);
+      else if (sortVal === 'price-high') list.sort((a, b) => b.price - a.price);
+      else if (sortVal === 'rating') list.sort((a, b) => b.rating - a.rating);
+
+      if (list.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 48px 20px; background: #FFFFFF; border-radius: 20px;">
+            <div style="font-size: 28px; margin-bottom: 8px;">🔍</div>
+            <h3 style="font-size: 16px; font-weight: 700;">No stickers match your filters</h3>
+            <p style="color: #6B7280; font-size: 13.5px; margin-top: 4px;">Try clearing search keywords or resetting price & finish filters.</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = list.map(p => renderProductCardHtml(p)).join('');
+    }
+
+    function renderProductCardHtml(p) {
+      const isWish = wishlist.includes(p.id);
+      return `
+        <div class="product-card" data-id="${p.id}">
+          <div class="card-media-wrap" onclick="openProductDetailPage('${p.id}')" style="cursor: pointer;">
+            ${p.isBestseller ? `<span class="card-badge-top badge-bestseller">Bestseller</span>` : ''}
+            <button class="wishlist-heart-btn ${isWish ? 'active' : ''}" onclick="event.stopPropagation(); toggleWishlist('${p.id}')" title="Save to Wishlist">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="${isWish ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+            <div class="card-image-sticker">
+              ${p.imageSvg}
+            </div>
+            <div class="quick-view-overlay" onclick="event.stopPropagation(); openProductDetailPage('${p.id}')">
+              View Sticker Details
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta-line">
+              <span>${p.categoryLabel}</span>
+              <span>·</span>
+              <span>${p.finish}</span>
+            </div>
+            <h3 class="card-title" onclick="openProductDetailPage('${p.id}')">${p.title}</h3>
+            <div class="card-price-row">
+              <span class="current-price">₹${p.price}</span>
+              <span class="mrp-price">₹${p.mrp}</span>
+              <span class="discount-label">Save ₹${p.mrp - p.price}</span>
+            </div>
+            <div class="card-actions-row">
+              <button class="btn-add-cart-card" onclick="addToCartDirect('${p.id}')">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span>Add to Bag</span>
+              </button>
+              <button class="btn-secondary" style="padding: 7px 12px; font-size: 12px;" onclick="openProductDetailPage('${p.id}')">Details</button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    /* Open Dedicated Full Product Detail Page (Requirement 4) */
+    let selectedPdpSizeObj = { name: "Medium (3\")", price: 199 };
+
+    function openProductDetailPage(productId) {
+      const product = products.find(p => p.id === productId);
+      if (!product) return;
+
+      activePdpProduct = product;
+      selectedPdpFinish = product.finish || 'Matte';
+      selectedPdpQty = 1;
+      selectedPdpSizeObj = { name: 'Medium (3")', price: product.price };
+
+      document.getElementById('pdpBreadcrumbCollection').innerText = product.categoryLabel;
+      document.getElementById('pdpBreadcrumbTitle').innerText = product.title;
+      document.getElementById('pdpPageBadge').innerText = product.tag || (product.isBestseller ? 'BESTSELLER' : 'NEW ARRIVAL');
+      document.getElementById('pdpPageTitle').innerText = product.title;
+      document.getElementById('pdpPagePrice').innerText = `₹${product.price}`;
+      document.getElementById('pdpPageMrp').innerText = `₹${product.mrp}`;
+      document.getElementById('pdpPageDiscount').innerText = `Save ₹${product.mrp - product.price}`;
+      document.getElementById('pdpPageRatingScore').innerText = product.rating || '4.9';
+      document.getElementById('pdpPageReviewsCount').innerText = `(${product.reviewsCount || 128} verified reviews)`;
+      document.getElementById('pdpPageDescription').innerText = product.description;
+      document.getElementById('pdpSpecFinish').innerText = product.finish || 'Luxe Matte';
+      document.getElementById('pdpPageQtyInput').value = "1";
+
+      document.getElementById('pdpPageImageContainer').innerHTML = `
+        <div style="width: 320px; height: 320px; display: flex; align-items: center; justify-content: center;">
+          ${product.imageSvg}
+        </div>
+      `;
+
+      // Render Related Products
+      const related = products.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
+      const relGrid = document.getElementById('pdpRelatedGrid');
+      if (relGrid) {
+        relGrid.innerHTML = related.map(p => renderProductCardHtml(p)).join('');
+      }
+
+      navigateTo('product', product.id);
+    }
+
+    function selectPdpSize(sizeKey, price) {
+      document.querySelectorAll('.pdp-size-card').forEach(c => c.classList.remove('active'));
+      const activeCard = document.getElementById(`sizeCard-${sizeKey}`);
+      if (activeCard) activeCard.classList.add('active');
+
+      const sizeNames = {
+        small: 'Small (2")',
+        medium: 'Medium (3")',
+        large: 'Large (4")',
+        sheet: 'A5 Sheet Pack'
+      };
+
+      selectedPdpSizeObj = { name: sizeNames[sizeKey], price: price };
+      document.getElementById('pdpSelectedSizeLabel').innerText = `${sizeNames[sizeKey]} (₹${price})`;
+      document.getElementById('pdpPagePrice').innerText = `₹${price}`;
+    }
+
+    function checkPdpPincode() {
+      const pin = (document.getElementById('pdpPincodeInput').value || '').trim();
+      const resEl = document.getElementById('pdpPincodeResult');
+      if (!pin || pin.length !== 6 || !/^\d+$/.test(pin)) {
+        resEl.innerHTML = '<span style="color: #DC2626;">Please enter a valid 6-digit Indian postal pincode.</span>';
+        return;
+      }
+
+      resEl.innerHTML = `
+        <div style="color: #059669; font-weight: 600;">
+          ✓ Delivery available to <strong>${pin}</strong> via BlueDart Express!
+        </div>
+        <div style="color: #4B5563; font-size: 12px; margin-top: 2px;">
+          Estimated delivery in <strong>2-3 business days</strong> · Free express shipping on orders over ₹499
+        </div>
+      `;
+    }
+
+    function addActiveProductToCart() {
+      if (!activePdpProduct) return;
+      const extra = selectedPdpFinish === 'Holographic' && !activePdpProduct.isHolo ? 50 : 0;
+      const finalPrice = selectedPdpSizeObj.price + extra;
+
+      addToCart({
+        id: `${activePdpProduct.id}-${selectedPdpFinish}-${selectedPdpSizeObj.name}`,
+        productId: activePdpProduct.id,
+        title: `${activePdpProduct.title} [${selectedPdpSizeObj.name}]`,
+        price: finalPrice,
+        qty: selectedPdpQty,
+        finish: selectedPdpFinish,
+        size: selectedPdpSizeObj.name,
+        imageSvg: activePdpProduct.imageSvg,
+        isCustom: false
+      });
+
+      toggleCartDrawer(true);
+    }
+
+    function buyNowActiveProduct() {
+      addActiveProductToCart();
+      setTimeout(() => {
+        openCheckoutModal();
+      }, 300);
+    }
+
+    function scrollCarousel(trackId, offset) {
+      const el = document.getElementById(trackId);
+      if (el) {
+        el.scrollBy({ left: offset, behavior: 'smooth' });
+      }
+    }
+
+    function saveSupabaseSettings() {
+      const url = document.getElementById('supabaseUrlInput')?.value?.trim();
+      const anon = document.getElementById('supabaseAnonKeyInput')?.value?.trim();
+      if (url && anon) {
+        localStorage.setItem('stickzy_supabase_url', url);
+        localStorage.setItem('stickzy_supabase_anon', anon);
+        if (typeof showToast === 'function') {
+          showToast('Supabase configuration saved successfully!');
+        } else {
+          alert('Supabase configuration saved successfully!');
+        }
       } else {
-        currentSubcategory = catName;
+        if (typeof showToast === 'function') {
+          showToast('Please enter both Supabase URL and Anon Key');
+        }
       }
+    }
 
-      renderLovableCategoryCards(currentFilter);
-      renderProducts();
-
-      // Smooth scroll to catalog product list
-      const catalogEl = document.getElementById('colCatalogSection');
-      if (catalogEl) {
-        catalogEl.scrollIntoView({ behavior: 'smooth' });
+    /* Modal Open & Close Functions */
+    function openTrackingModal(orderId) {
+      if (orderId) {
+        document.getElementById('trackOrderInput').value = orderId;
+        document.getElementById('trackDisplayId').innerText = orderId;
       }
+      document.getElementById('trackingModalBackdrop').style.display = 'flex';
+    }
+    function closeTrackingModal() {
+      document.getElementById('trackingModalBackdrop').style.display = 'none';
+    }
+    function lookupOrderTracking() {
+      const val = (document.getElementById('trackOrderInput').value || '').trim();
+      if (!val) return;
+      document.getElementById('trackDisplayId').innerText = val;
+      document.getElementById('trackingDetailsBox').style.display = 'block';
+    }
+
+    function openProfileModal() {
+      renderProfileOrders();
+      document.getElementById('profileModalBackdrop').style.display = 'flex';
+    }
+    function closeProfileModal() {
+      document.getElementById('profileModalBackdrop').style.display = 'none';
+    }
+    function switchProfileTab(tab) {
+      document.getElementById('profileOrdersTab').style.display = tab === 'orders' ? 'block' : 'none';
+      document.getElementById('profileDetailsTab').style.display = tab === 'profile' ? 'block' : 'none';
+      document.getElementById('tabBtnOrders').classList.toggle('active', tab === 'orders');
+      document.getElementById('tabBtnProfile').classList.toggle('active', tab === 'profile');
+    }
+    function renderProfileOrders() {
+      const listEl = document.getElementById('profileOrdersList');
+      if (!listEl) return;
+      listEl.innerHTML = orders.map(o => `
+        <div style="background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; padding: 14px; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <div style="font-weight: 700; font-size: 14px; color: #111827;">${o.id}</div>
+            <div style="font-size: 12px; color: #6B7280;">${o.date} · ${o.items.length} item(s) · ₹${o.total}</div>
+          </div>
+          <button class="btn-secondary" style="padding: 6px 12px; font-size: 12px;" onclick="closeProfileModal(); openTrackingModal('${o.id}')">Track</button>
+        </div>
+      `).join('');
+    }
+
+    function openSearchModal() {
+      document.getElementById('searchModalBackdrop').style.display = 'flex';
+      setTimeout(() => document.getElementById('globalSearchInput').focus(), 100);
+      handleGlobalSearch('');
+    }
+    function closeSearchModal() {
+      document.getElementById('searchModalBackdrop').style.display = 'none';
+    }
+    function handleGlobalSearch(query) {
+      const q = query.toLowerCase().trim();
+      const resEl = document.getElementById('globalSearchResults');
+      if (!resEl) return;
+
+      const matches = products.filter(p => !q || p.title.toLowerCase().includes(q) || p.categoryLabel.toLowerCase().includes(q) || p.description.toLowerCase().includes(q)).slice(0, 6);
+
+      resEl.innerHTML = matches.map(p => `
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 10px; cursor: pointer;" onclick="closeSearchModal(); openProductDetailPage('${p.id}')">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 40px; height: 40px;">${p.imageSvg}</div>
+            <div>
+              <div style="font-weight: 700; font-size: 13.5px; color: #111827;">${p.title}</div>
+              <div style="font-size: 11.5px; color: #6B7280;">${p.categoryLabel} · ₹${p.price}</div>
+            </div>
+          </div>
+          <span style="font-size: 12px; color: #2563EB; font-weight: 600;">View →</span>
+        </div>
+      `).join('');
+    }
+
+    function openInfoModal(type) {
+      const titles = {
+        about: "About STICKZY® Studio",
+        contact: "Contact STICKZY Atelier",
+        faq: "Frequently Asked Questions",
+        shipping: "Shipping & Delivery Policy",
+        refund: "Returns & 100% Replacement Guarantee",
+        privacy: "Privacy Policy",
+        terms: "Terms & Conditions"
+      };
+
+      const bodies = {
+        about: "<p>STICKZY was founded on a simple principle: your gear should reflect who you are. We craft boutique Japanese UV-printed vinyl stickers with zero-residue clean peel acrylic adhesive. Engineered to resist rain, mountain mud, dishwashers, and relentless sunlight.</p><p style='margin-top: 10px;'>Every sticker is precision die-cut at our studio and shipped in rigid stay-flat cardboard mailers.</p>",
+        contact: "<p>Have a question about a custom order or need bulk sticker sheets? Reach out to our design team directly:</p><div style='background: #F9FAFB; padding: 14px; border-radius: 12px; margin: 12px 0;'><strong>WhatsApp:</strong> +91 93191 0410<br><strong>Email:</strong> atelier@stickzy.store<br><strong>Studio Hours:</strong> Monday - Saturday, 10am - 8pm IST</div>",
+        faq: "<p><strong>Are STICKZY stickers really waterproof?</strong><br>Yes! We print on 120μm automotive grade vinyl with UV-cured ink. Safe for motorcycle fuel tanks, car windshields, helmets, laptops, and water bottles.</p><p style='margin-top: 10px;'><strong>Will it leave sticky residue?</strong><br>Never. We use high-tack clean peel adhesive that peels away 100% clean even after years.</p>",
+        shipping: "<p>We offer Express Doorstep Delivery across India via BlueDart and Delhivery Air Priority. Orders placed before 2 PM are printed, packed, and dispatched within 24 hours. Free express shipping applies on all orders above ₹499.</p>",
+        refund: "<p>We stand behind every single peel with our <strong>100% Happiness Guarantee</strong>. If your stickers arrive bent, damaged in transit, or defective, contact us within 7 days on WhatsApp (+91 93191 0410) with a photo for an immediate free reprint or refund.</p>",
+        privacy: "<p>STICKZY respects your privacy. We never sell, rent, or trade your contact or delivery address. Order information is solely utilized to process dispatch and shipping tracking updates.</p>",
+        terms: "<p>All sticker illustrations and sheet typography are proprietary to STICKZY®. Orders are processed in Indian Rupees (INR) with real-time tracking.</p>"
+      };
+
+      document.getElementById('infoModalTitle').innerText = titles[type] || 'STICKZY Information';
+      document.getElementById('infoModalBody').innerHTML = bodies[type] || '<p>Content available upon request.</p>';
+      document.getElementById('infoModalBackdrop').style.display = 'flex';
+    }
+    function closeInfoModal() {
+      document.getElementById('infoModalBackdrop').style.display = 'none';
     }
 
     /* ==========================================================================
@@ -5395,57 +7610,85 @@
        ========================================================================== */
     let currentAppView = 'home';
 
-    function navigateTo(viewName, subcat) {
+    function navigateTo(viewName, subcat, id) {
       currentAppView = viewName;
+      
       const homeView = document.getElementById('view-home');
       const collectionView = document.getElementById('view-collection');
+      const categoryView = document.getElementById('view-category');
+      const productView = document.getElementById('view-product');
+      const wishlistView = document.getElementById('view-wishlist');
 
-      // Update Nav Link Active States
-      document.querySelectorAll('.nav-links .nav-link').forEach(link => {
-        link.className = 'nav-link';
+      // Hide all main page views
+      if (homeView) { homeView.style.display = 'none'; homeView.classList.remove('active'); }
+      if (collectionView) { collectionView.style.display = 'none'; collectionView.classList.remove('active'); }
+      if (categoryView) { categoryView.style.display = 'none'; categoryView.classList.remove('active'); }
+      if (productView) { productView.style.display = 'none'; productView.classList.remove('active'); }
+      if (wishlistView) { wishlistView.style.display = 'none'; wishlistView.classList.remove('active'); }
+
+      // Remove body active theme classes
+      document.body.className = '';
+
+      // Update Nav Link Pills Active States
+      document.querySelectorAll('.nav-link-pill').forEach(link => {
+        link.className = 'nav-link-pill';
       });
       const activeNav = document.getElementById(`nav-${viewName}`);
       if (activeNav) {
-        activeNav.classList.add('active');
-        if (viewName === 'girls') activeNav.classList.add('active-pill-girls');
-        else if (viewName === 'boys') activeNav.classList.add('active-pill-boys');
-        else if (viewName === 'vehicle') activeNav.classList.add('active-pill-vehicle');
-        else if (viewName === 'decor') activeNav.classList.add('active-pill-home');
-        else if (viewName === 'divine') activeNav.classList.add('active-pill-divine');
+        activeNav.classList.add(`active-${viewName}`);
       }
 
-      // Update Mobile Quick Nav Pills Active States
-      document.querySelectorAll('.mobile-quick-nav .mobile-quick-pill').forEach(pill => pill.classList.remove('active'));
-      const activeMobilePill = document.getElementById(`mqp-${viewName}`);
-      if (activeMobilePill) {
-        activeMobilePill.classList.add('active');
-        activeMobilePill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      // Update Header Logo Dot color to match active collection
+      const logoDot = document.getElementById('headerLogoDot');
+      if (logoDot) {
+        if (viewName === 'girls') logoDot.style.background = '#F472B6';
+        else if (viewName === 'boys') logoDot.style.background = '#3B82F6';
+        else if (viewName === 'vehicle') logoDot.style.background = '#EF4444';
+        else if (viewName === 'decor') logoDot.style.background = '#5E6E59';
+        else if (viewName === 'divine') logoDot.style.background = '#D97706';
+        else logoDot.style.background = '#F472B6';
       }
 
       if (viewName === 'home') {
-        if (homeView) homeView.style.display = 'block';
-        if (collectionView) collectionView.style.display = 'none';
+        if (homeView) { homeView.style.display = 'block'; homeView.classList.add('active'); homeView.style.opacity = '1'; }
         renderHomeBestsellers();
         window.scrollTo({ top: 0, behavior: 'smooth' });
+        try { history.replaceState(null, '', '#home'); } catch(e){}
         return;
       }
 
-      // It's a Collection Page (Boys, Girls, Divine, Decor, Vehicles, Wishlist)
-      if (homeView) homeView.style.display = 'none';
-      if (collectionView) collectionView.style.display = 'block';
+      if (viewName === 'category') {
+        if (categoryView) { categoryView.style.display = 'block'; categoryView.classList.add('active'); categoryView.style.opacity = '1'; }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        try { history.replaceState(null, '', `#category/${currentFilter}/${currentSubcategory}`); } catch(e){}
+        return;
+      }
 
+      if (viewName === 'product') {
+        if (productView) { productView.style.display = 'block'; productView.classList.add('active'); productView.style.opacity = '1'; }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        try { history.replaceState(null, '', `#product/${id || activePdpProduct?.id}`); } catch(e){}
+        return;
+      }
+
+      if (viewName === 'wishlist') {
+        if (wishlistView) { wishlistView.style.display = 'block'; wishlistView.classList.add('active'); wishlistView.style.opacity = '1'; }
+        renderWishlistPage();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        try { history.replaceState(null, '', '#wishlist'); } catch(e){}
+        return;
+      }
+
+      // It's a Collection Page (Boys, Girls, Vehicle, Home Decor, Divine)
+      if (collectionView) { collectionView.style.display = 'block'; collectionView.classList.add('active'); collectionView.style.opacity = '1'; }
       currentFilter = viewName;
       currentSubcategory = subcat || 'all';
 
-      // Update Breadcrumb & Banner Info
-      const data = CATEGORY_DATA[viewName] || {
-        kicker: "Collection",
-        title: viewName.toUpperCase(),
-        desc: "Curated vinyl decals crafted with premium materials.",
-        theme: "girls",
-        heroImg: "/assets/aistudio/image_c5aedb19.png",
-        numberedCategories: []
-      };
+      // Set Body Theme Class for fluid background
+      document.body.classList.add(`theme-${viewName}-active`);
+
+      // Update Collection Hero Information & Styling
+      const data = CATEGORY_DATA[viewName] || CATEGORY_DATA.girls;
 
       const heroEl = document.getElementById('colHero');
       if (heroEl) {
@@ -5465,50 +7708,54 @@
       if (imgEl && data.heroImg) imgEl.src = data.heroImg;
 
       const breadcrumbEl = document.getElementById('colBreadcrumb');
-      if (breadcrumbEl) breadcrumbEl.innerText = `${data.title} Collection`;
+      if (breadcrumbEl) breadcrumbEl.innerText = data.title;
+
+      // Adjust Canvas Background Blobs per theme
+      const blobRight = document.getElementById('canvasBlobRight');
+      const blobLeft = document.getElementById('canvasBlobLeft');
+      const doodleSvg = document.getElementById('colDoodleSvg');
+
+      if (viewName === 'girls') {
+        if (blobRight) blobRight.style.background = 'rgba(255, 216, 227, 0.65)';
+        if (blobLeft) blobLeft.style.background = 'rgba(255, 240, 245, 0.8)';
+        if (doodleSvg) doodleSvg.setAttribute('stroke', '#F5A3B8');
+      } else if (viewName === 'boys') {
+        if (blobRight) blobRight.style.background = 'rgba(195, 225, 255, 0.6)';
+        if (blobLeft) blobLeft.style.background = 'rgba(224, 242, 254, 0.75)';
+        if (doodleSvg) doodleSvg.setAttribute('stroke', '#60A5FA');
+      } else if (viewName === 'vehicle') {
+        if (blobRight) blobRight.style.background = 'rgba(226, 232, 240, 0.7)';
+        if (blobLeft) blobLeft.style.background = 'rgba(241, 245, 249, 0.8)';
+        if (doodleSvg) doodleSvg.setAttribute('stroke', '#EF4444');
+      } else if (viewName === 'decor') {
+        if (blobRight) blobRight.style.background = 'rgba(238, 234, 226, 0.7)';
+        if (blobLeft) blobLeft.style.background = 'rgba(245, 243, 238, 0.8)';
+        if (doodleSvg) doodleSvg.setAttribute('stroke', '#5E6E59');
+      } else if (viewName === 'divine') {
+        if (blobRight) blobRight.style.background = 'rgba(254, 243, 199, 0.7)';
+        if (blobLeft) blobLeft.style.background = 'rgba(255, 251, 235, 0.8)';
+        if (doodleSvg) doodleSvg.setAttribute('stroke', '#D97706');
+      }
 
       // Render Numbered Category Cards
       renderLovableCategoryCards(viewName);
 
-      // Render Products
+      // Render Products Below Categories
       renderProducts();
 
-      // Render Related Products
+      // Render Related Carousel
       renderRelatedProducts(viewName);
 
-      // Update URL hash without jump
-      try {
-        if (history.replaceState) {
-          history.replaceState(null, '', `#${viewName}`);
-        } else {
-          window.location.hash = viewName;
-        }
-      } catch (e) {}
+      // URL Hash
+      try { history.replaceState(null, '', `#${viewName}`); } catch(e){}
 
-      // Trigger GSAP Scroll / entrance animation
+      // GSAP Entrance
       if (window.gsap) {
         gsap.killTweensOf("#colHeroTitle, #colHeroSubtitle, .lovable-explore-btn, #colHeroCard, .lovable-cat-card");
-        
-        gsap.fromTo(".lovable-collection-badge, #colHeroDoodle",
-          { opacity: 0, y: -10 },
-          { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }
-        );
-        gsap.fromTo("#colHeroTitle", 
-          { opacity: 0, y: 20, scale: 0.96 }, 
-          { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "power3.out", delay: 0.05 }
-        );
-        gsap.fromTo("#colHeroSubtitle, .lovable-explore-btn", 
-          { opacity: 0, y: 16 }, 
-          { opacity: 1, y: 0, duration: 0.45, stagger: 0.08, ease: "power2.out", delay: 0.1 }
-        );
-        gsap.fromTo("#colHeroCard", 
-          { opacity: 0, scale: 0.92, rotate: 2.2 }, 
-          { opacity: 1, scale: 1, rotate: 0.8, duration: 0.6, ease: "power2.out", delay: 0.12 }
-        );
-        gsap.fromTo(".lovable-cat-card", 
-          { opacity: 0, y: 24, scale: 0.97 }, 
-          { opacity: 1, y: 0, scale: 1, duration: 0.42, stagger: 0.035, ease: "power2.out", delay: 0.18 }
-        );
+        gsap.fromTo("#colHeroTitle", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" });
+        gsap.fromTo("#colHeroSubtitle, .lovable-explore-btn", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, stagger: 0.08, ease: "power2.out", delay: 0.05 });
+        gsap.fromTo("#colHeroCard", { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 0.5, ease: "power2.out", delay: 0.1 });
+        gsap.fromTo(".lovable-cat-card", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.38, stagger: 0.03, ease: "power2.out", delay: 0.15 });
       }
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -6013,8 +8260,8 @@
     /* ==========================================================================
        THE HERO FEATURE: INTERACTIVE CUSTOMIZER CANVAS STUDIO
        ========================================================================== */
-    const canvas = document.getElementById('customizerCanvas');
-    const ctx = canvas.getContext('2d');
+    let canvas = document.getElementById('customizerCanvas');
+    let ctx = canvas && canvas.getContext ? canvas.getContext('2d') : null;
     
     let canvasStickers = [];
     let activeStickerIndex = -1;
@@ -6051,6 +8298,9 @@
     }
 
     function drawCanvas() {
+      if (!canvas) canvas = document.getElementById('customizerCanvas');
+      if (!ctx && canvas && canvas.getContext) ctx = canvas.getContext('2d');
+      if (!ctx || !canvas) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Draw A5 Sheet Background
@@ -7052,6 +9302,27 @@
        GSAP ANIMATIONS & SCROLLTRIGGERS
        ========================================================================== */
     window.addEventListener('DOMContentLoaded', () => {
+      
+    function renderWishlistPage() {
+      const grid = document.getElementById('wishlistProductsGrid');
+      if (!grid) return;
+
+      const saved = products.filter(p => wishlist.includes(p.id));
+      if (saved.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #FFFFFF; border-radius: 20px;">
+            <div style="font-size: 32px; margin-bottom: 12px;">♡</div>
+            <h3 style="font-size: 18px; font-weight: 700;">Your wishlist is currently empty</h3>
+            <p style="color: #6B7280; font-size: 14px; margin-top: 6px;">Tap the heart icon on any sticker to save it for later.</p>
+            <button class="btn-primary" style="margin-top: 18px;" onclick="navigateTo('boys')">Explore Boys Collection</button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = saved.map(p => renderProductCardHtml(p)).join('');
+    }
+
       // Register ScrollTrigger if available
       if (window.gsap && window.ScrollTrigger) {
         gsap.registerPlugin(ScrollTrigger);
@@ -7130,5 +9401,79 @@
       }
     });
   </script>
+
+  <!-- ==========================================================================
+       GLOBAL SEARCH MODAL
+       ========================================================================== -->
+  <div id="searchModalBackdrop" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); backdrop-filter: blur(8px); z-index: 10000; align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: #FFFFFF; border-radius: 20px; max-width: 580px; width: 100%; padding: 24px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); max-height: 85vh; display: flex; flex-direction: column;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h3 style="font-size: 18px; font-weight: 800; color: #111827; margin: 0;">Search STICKZY® Stickers</h3>
+        <button onclick="closeSearchModal()" style="background: none; border: none; font-size: 20px; cursor: pointer; color: #6B7280;">✕</button>
+      </div>
+      <div style="position: relative; margin-bottom: 16px;">
+        <input type="text" id="globalSearchInput" placeholder="Search bows, sneakers, bikes, anime, quotes..." oninput="handleGlobalSearch(this.value)" style="width: 100%; padding: 12px 16px; border-radius: 12px; border: 1.5px solid #E5E7EB; font-size: 14px; outline: none; box-sizing: border-box;" />
+      </div>
+      <div id="globalSearchResults" style="overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 8px;">
+        <!-- Search matches dynamically injected -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       USER PROFILE & ORDER HISTORY MODAL
+       ========================================================================== -->
+  <div id="profileModalBackdrop" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); backdrop-filter: blur(8px); z-index: 10000; align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: #FFFFFF; border-radius: 20px; max-width: 520px; width: 100%; padding: 24px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); max-height: 85vh; display: flex; flex-direction: column;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h3 style="font-size: 18px; font-weight: 800; color: #111827; margin: 0;">My Account</h3>
+        <button onclick="closeProfileModal()" style="background: none; border: none; font-size: 20px; cursor: pointer; color: #6B7280;">✕</button>
+      </div>
+      <div style="display: flex; border-bottom: 1px solid #E5E7EB; margin-bottom: 16px;">
+        <button id="tabBtnOrders" onclick="switchProfileTab('orders')" style="padding: 10px 18px; border: none; background: none; font-weight: 700; font-size: 13.5px; cursor: pointer; border-bottom: 2px solid #2563EB; color: #2563EB;">My Orders</button>
+        <button id="tabBtnProfile" onclick="switchProfileTab('profile')" style="padding: 10px 18px; border: none; background: none; font-weight: 600; font-size: 13.5px; cursor: pointer; color: #6B7280;">Saved Profile</button>
+      </div>
+      <div id="profileOrdersTab" style="overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 10px;">
+        <div id="profileOrdersList" style="display: flex; flex-direction: column; gap: 10px;"></div>
+      </div>
+      <div id="profileDetailsTab" style="display: none; padding: 12px 0;">
+        <div style="margin-bottom: 12px;">
+          <label style="font-size: 12px; font-weight: 600; color: #4B5563;">Registered Name</label>
+          <input type="text" value="Aarav Mehta" style="width: 100%; padding: 10px; border: 1px solid #D1D5DB; border-radius: 8px; margin-top: 4px;" readonly />
+        </div>
+        <div style="margin-bottom: 12px;">
+          <label style="font-size: 12px; font-weight: 600; color: #4B5563;">Mobile (for WhatsApp updates)</label>
+          <input type="text" value="+91 98765 43210" style="width: 100%; padding: 10px; border: 1px solid #D1D5DB; border-radius: 8px; margin-top: 4px;" readonly />
+        </div>
+        <div>
+          <label style="font-size: 12px; font-weight: 600; color: #4B5563;">City / State</label>
+          <input type="text" value="Mumbai, Maharashtra" style="width: 100%; padding: 10px; border: 1px solid #D1D5DB; border-radius: 8px; margin-top: 4px;" readonly />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       INFORMATION MODAL (About, FAQ, Shipping, Returns, Privacy, Terms)
+       ========================================================================== -->
+  <div id="infoModalBackdrop" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); backdrop-filter: blur(8px); z-index: 10000; align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: #FFFFFF; border-radius: 20px; max-width: 580px; width: 100%; padding: 28px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); max-height: 85vh; display: flex; flex-direction: column;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h3 id="infoModalTitle" style="font-size: 19px; font-weight: 800; color: #111827; margin: 0;">STICKZY Information</h3>
+        <button onclick="closeInfoModal()" style="background: none; border: none; font-size: 20px; cursor: pointer; color: #6B7280;">✕</button>
+      </div>
+      <div id="infoModalBody" style="overflow-y: auto; flex: 1; font-size: 14px; line-height: 1.6; color: #374151;">
+        <!-- Dynamic content injected -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Ensure tracking input IDs match JS helper -->
+  <div style="display: none;">
+    <input type="text" id="trackOrderInput" value="STK-84920" />
+    <span id="trackDisplayId">STK-84920</span>
+    <div id="trackingDetailsBox"></div>
+  </div>
+
 </body>
 </html>
