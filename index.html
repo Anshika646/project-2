@@ -3600,7 +3600,8 @@
     }
 
     @media (max-width: 768px) {
-      .nav-links { display: none; }
+      .nav-links, .nav-links-center { display: none; }
+      .brand-tagline-header { display: none; }
       .mobile-menu-btn { display: flex; }
       .mobile-quick-nav { display: flex; }
       .products-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
@@ -4899,6 +4900,420 @@
       color: #8C6218;
     }
 
+    /* ==========================================================================
+       HOME PAGE COMPLETE DESIGN TOKENS & MISSING SECTION STYLES
+       ========================================================================== */
+    :root {
+      --color-rich-blue: #183B56;
+      --color-muted-teal: #397A78;
+      --color-soft-mint: #DCE9DF;
+      --color-warm-ivory: #FAF8F1;
+      --color-dark-charcoal: #1E293B;
+      --accent-gold: #C59A4E;
+      --font-serif: Georgia, 'Times New Roman', serif;
+    }
+
+    .nav-link-pill.active-home {
+      background: #171717 !important;
+      color: #FFFFFF !important;
+      font-weight: 600;
+    }
+
+    .nav-link-pill.active-wishlist {
+      background: #FCE7F3 !important;
+      color: #9D174D !important;
+      font-weight: 600;
+    }
+
+    #view-home {
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    #view-home > section {
+      position: relative;
+      z-index: 1;
+    }
+
+    .floating-stickers-bg-wrap {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .floating-sticker-item {
+      position: absolute;
+      opacity: 0.4;
+      pointer-events: none;
+      filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.08));
+    }
+
+    .hero-kicker-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: rgba(24, 59, 86, 0.08);
+      color: var(--color-rich-blue);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10B981;
+      display: inline-block;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
+      animation: stickzyPulseDot 2.2s infinite;
+    }
+
+    @keyframes stickzyPulseDot {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.45); }
+      70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    .hero-main-heading {
+      font-family: var(--font-display);
+      font-size: clamp(42px, 5.4vw, 68px);
+      font-weight: 800;
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+      color: var(--text-main);
+      margin-bottom: 20px;
+    }
+
+    .hero-main-heading .hero-line {
+      display: block;
+    }
+
+    .hero-main-heading .accent-word {
+      background: linear-gradient(135deg, var(--color-rich-blue) 0%, var(--color-muted-teal) 55%, #C59A4E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle-text {
+      font-size: 16.5px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 510px;
+      margin-bottom: 32px;
+    }
+
+    .hero-cta-btn-primary {
+      background: #141414;
+      color: #FFFFFF;
+      padding: 15px 30px;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px -6px rgba(20, 20, 20, 0.28);
+      cursor: pointer;
+    }
+
+    .hero-cta-btn-primary:hover {
+      transform: translateY(-2px);
+      background: #27272A;
+      box-shadow: 0 14px 30px -6px rgba(20, 20, 20, 0.36);
+    }
+
+    .hero-cta-btn-secondary {
+      background: #FFFFFF;
+      color: var(--text-main);
+      border: 1.5px solid #141414;
+      padding: 14px 28px;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .hero-cta-btn-secondary:hover {
+      background: #141414;
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    .stage-sheet-wrapper .sheet-stickers-grid {
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    .hero-sheet-diecut {
+      width: 88px;
+      height: 88px;
+      cursor: pointer;
+    }
+
+    .sheet-footer-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1.5px dashed var(--border-light);
+      padding-top: 12px;
+      margin-top: 14px;
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+    .floating-card-badge {
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .floating-card-badge:hover {
+      transform: translateY(-3px);
+    }
+
+    .carousel-card-item {
+      flex: 0 0 260px;
+      width: 260px;
+      scroll-snap-align: start;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .review-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: var(--shadow-subtle);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .review-stars {
+      color: #F59E0B;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    .reviewer-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .reviewer-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #EEF2FF;
+      color: var(--color-rich-blue);
+      font-size: 12px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .reviewer-name {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .reviewer-sub {
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      gap: 18px;
+    }
+
+    .gallery-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 12px;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .gallery-card-inner {
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      background: var(--surface-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .gallery-card-caption {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    /* ==========================================================================
+       SOUND MUTE / UNMUTE HEADER CONTROL & INTERACTIVE AMBIENT DECOR (GIRLS/BOYS)
+       ========================================================================== */
+    .header-sound-btn {
+      position: relative;
+      transition: all 0.22s ease;
+    }
+
+    .header-sound-btn.sound-on {
+      color: #111827;
+      border-color: rgba(17, 24, 39, 0.16);
+    }
+
+    .theme-girls-active .header-sound-btn.sound-on {
+      border-color: rgba(244, 114, 182, 0.45);
+      color: #BE185D;
+      background: #FFF5F8;
+    }
+
+    .theme-boys-active .header-sound-btn.sound-on {
+      border-color: rgba(59, 130, 246, 0.4);
+      color: #1D4ED8;
+      background: #EFF6FF;
+    }
+
+    .header-sound-btn.sound-muted {
+      color: #9CA3AF;
+      background: #F9FAFB;
+    }
+
+    .ambient-decor-layer {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      max-width: 100vw;
+      height: 520px;
+      pointer-events: none;
+      z-index: 3;
+      overflow: hidden;
+    }
+
+    .ambient-heart-item,
+    .ambient-guitar-item {
+      position: absolute;
+      pointer-events: auto;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      will-change: transform, opacity;
+      padding: 6px;
+      border-radius: 50%;
+      transition: filter 0.25s ease, opacity 0.25s ease;
+    }
+
+    .ambient-heart-item {
+      opacity: 0.62;
+      filter: drop-shadow(0 4px 10px rgba(244, 114, 182, 0.2));
+    }
+
+    .ambient-heart-item:hover {
+      opacity: 1;
+      filter: drop-shadow(0 6px 16px rgba(244, 114, 182, 0.45));
+    }
+
+    .ambient-guitar-item {
+      opacity: 0.56;
+      filter: drop-shadow(0 4px 10px rgba(59, 130, 246, 0.18));
+    }
+
+    .ambient-guitar-item:hover {
+      opacity: 0.96;
+      filter: drop-shadow(0 6px 16px rgba(59, 130, 246, 0.38));
+    }
+
+    .ambient-sparkle-burst {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: visible;
+    }
+
+    .ambient-sparkle-dot {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+    }
+
+    .ambient-ripple-ring {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(59, 130, 246, 0.55);
+      transform: translate(-50%, -50%) scale(0.5);
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .ambient-decor-layer .ambient-hide-tablet {
+        display: none;
+      }
+      .hero-visual-stage {
+        height: auto;
+        padding: 20px 0;
+      }
+      .floating-card-badge.badge-boys {
+        left: 0;
+        top: 10px;
+      }
+      .floating-card-badge.badge-divine {
+        right: 0 !important;
+        bottom: 0 !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .ambient-decor-layer .ambient-hide-mobile {
+        display: none;
+      }
+      .stage-sheet-wrapper {
+        width: 310px;
+        height: 410px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -4949,8 +5364,13 @@
         <a href="javascript:void(0)" class="nav-link-pill custom-pill" onclick="openCustomizerStudio()" style="background: #171717; color: #FFF; font-weight: 700; border: 1px solid #171717;">Custom Sheet ✨</a>
       </nav>
 
-      <!-- Right Action Controls (Bag Icon as in Screenshot + Search + Wishlist) -->
+      <!-- Right Action Controls (Bag Icon as in Screenshot + Search + Wishlist + Sound) -->
       <div class="header-right-actions">
+        <button class="header-icon-btn header-sound-btn sound-on" id="soundToggleBtn" onclick="toggleSoundMute()" title="Sound On — Click to Mute" aria-label="Toggle interactive sound effects">
+          <svg id="soundIconOn" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          <svg id="soundIconMuted" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+        </button>
+
         <button class="header-icon-btn" onclick="openSearchModal()" title="Search stickers">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         </button>
@@ -5069,7 +5489,7 @@
     <!-- ========================================================================
          VIEW 1: SPACIOUS MINIMAL HOMEPAGE
          ======================================================================== -->
-        <div id="view-home" class="page-view" style="display: none;">
+        <div id="view-home" class="page-view active" style="display: block;">
       
       <!-- Subtle Floating Decorative Background Stickers Layer -->
       <div class="floating-stickers-bg-wrap" id="floatingStickersWrap">
@@ -5640,7 +6060,7 @@
     <!-- ========================================================================
          VIEW 2: DEDICATED COLLECTION PAGE (Boys, Girls, Divine, Decor, Vehicles)
          ======================================================================== -->
-    <div id="view-collection" class="page-view active">
+    <div id="view-collection" class="page-view" style="display: none;">
       <div class="container collection-page-wrap">
         
         <!-- Fluid Canvas Background Blobs (Matches Screenshot Atmosphere) -->
@@ -5648,6 +6068,9 @@
           <div class="canvas-blob" id="canvasBlobRight" style="width: 520px; height: 520px; right: 5%; top: -50px; background: rgba(255, 216, 227, 0.65);"></div>
           <div class="canvas-blob" id="canvasBlobLeft" style="width: 440px; height: 440px; left: -100px; top: 120px; background: rgba(255, 240, 245, 0.8);"></div>
         </div>
+
+        <!-- Subtle Interactive Ambient Decor Layer (Hearts for Girls, Guitars for Boys) -->
+        <div class="ambient-decor-layer" id="colAmbientDecor" aria-hidden="true"></div>
 
         <!-- Breadcrumb Navigation Strip -->
         <div class="breadcrumb-strip" style="position: relative; z-index: 2; margin-bottom: 8px;">
@@ -8815,6 +9238,459 @@
     }
 
     /* ==========================================================================
+       WEB AUDIO INTERACTIVE SOUND ENGINE (Zero Autoplay, User-Gesture Gated)
+       ========================================================================== */
+    let stickzyAudioCtx = null;
+    let stickzyAudioUnlocked = false;
+    let isSoundMuted = localStorage.getItem('stickzy_sound_muted') === 'true';
+
+    function ensureAudioContext() {
+      if (isSoundMuted || !stickzyAudioUnlocked) return null;
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return null;
+      if (!stickzyAudioCtx) {
+        stickzyAudioCtx = new AudioCtx();
+      }
+      if (stickzyAudioCtx.state === 'suspended') {
+        stickzyAudioCtx.resume().catch(() => {});
+      }
+      return stickzyAudioCtx;
+    }
+
+    function unlockStickzyAudio() {
+      if (!stickzyAudioUnlocked) {
+        stickzyAudioUnlocked = true;
+      }
+      if (!isSoundMuted) {
+        ensureAudioContext();
+      }
+    }
+
+    ['pointerdown', 'click', 'keydown', 'touchstart'].forEach(evt => {
+      document.addEventListener(evt, unlockStickzyAudio, { capture: true, passive: true });
+    });
+
+    function syncSoundToggleUI() {
+      const btn = document.getElementById('soundToggleBtn');
+      const iconOn = document.getElementById('soundIconOn');
+      const iconMuted = document.getElementById('soundIconMuted');
+      if (!btn) return;
+      if (isSoundMuted) {
+        btn.classList.remove('sound-on');
+        btn.classList.add('sound-muted');
+        btn.title = 'Sound Muted — Click to Unmute';
+        if (iconOn) iconOn.style.display = 'none';
+        if (iconMuted) iconMuted.style.display = 'block';
+      } else {
+        btn.classList.remove('sound-muted');
+        btn.classList.add('sound-on');
+        btn.title = 'Sound On — Click to Mute';
+        if (iconOn) iconOn.style.display = 'block';
+        if (iconMuted) iconMuted.style.display = 'none';
+      }
+    }
+
+    function toggleSoundMute() {
+      stickzyAudioUnlocked = true;
+      isSoundMuted = !isSoundMuted;
+      localStorage.setItem('stickzy_sound_muted', String(isSoundMuted));
+      syncSoundToggleUI();
+      if (!isSoundMuted) {
+        ensureAudioContext();
+        playSoftToggleChime();
+        if (typeof showToast === 'function') showToast('Interactive sound effects enabled');
+      } else {
+        if (typeof showToast === 'function') showToast('Interactive sound effects muted');
+      }
+    }
+
+    function playSoftToggleChime() {
+      const ctx = ensureAudioContext();
+      if (!ctx || ctx.state !== 'running') return;
+      const now = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(880, now);
+      osc.frequency.exponentialRampToValueAtTime(1174.66, now + 0.08);
+      gain.gain.setValueAtTime(0.0001, now);
+      gain.gain.linearRampToValueAtTime(0.045, now + 0.015);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.22);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.24);
+    }
+
+    // Girls Collection: Soft, sweet bell-like chime
+    function playHeartBellChime(noteIndex = 0) {
+      if (isSoundMuted || !stickzyAudioUnlocked) return;
+      const ctx = ensureAudioContext();
+      if (!ctx || ctx.state !== 'running') return;
+
+      const bellNotes = [1046.50, 1174.66, 1318.51, 1567.98, 1760.00, 1396.91];
+      const baseFreq = bellNotes[noteIndex % bellNotes.length];
+      const now = ctx.currentTime;
+
+      const masterGain = ctx.createGain();
+      masterGain.gain.setValueAtTime(0.0001, now);
+      masterGain.gain.linearRampToValueAtTime(0.07, now + 0.014);
+      masterGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.68);
+      masterGain.connect(ctx.destination);
+
+      // Fundamental warm crystal bell tone
+      const osc1 = ctx.createOscillator();
+      osc1.type = 'sine';
+      osc1.frequency.setValueAtTime(baseFreq, now);
+      osc1.connect(masterGain);
+      osc1.start(now);
+      osc1.stop(now + 0.7);
+
+      // Sweet harmonic overtone (2x octave shimmer)
+      const osc2 = ctx.createOscillator();
+      const gain2 = ctx.createGain();
+      osc2.type = 'triangle';
+      osc2.frequency.setValueAtTime(baseFreq * 2, now);
+      gain2.gain.setValueAtTime(0.0001, now);
+      gain2.gain.linearRampToValueAtTime(0.022, now + 0.01);
+      gain2.gain.exponentialRampToValueAtTime(0.0001, now + 0.35);
+      osc2.connect(gain2);
+      gain2.connect(ctx.destination);
+      osc2.start(now);
+      osc2.stop(now + 0.38);
+
+      // Delicate bell shimmer partial (3x)
+      const osc3 = ctx.createOscillator();
+      const gain3 = ctx.createGain();
+      osc3.type = 'sine';
+      osc3.frequency.setValueAtTime(baseFreq * 3, now);
+      gain3.gain.setValueAtTime(0.0001, now);
+      gain3.gain.linearRampToValueAtTime(0.009, now + 0.008);
+      gain3.gain.exponentialRampToValueAtTime(0.0001, now + 0.18);
+      osc3.connect(gain3);
+      gain3.connect(ctx.destination);
+      osc3.start(now);
+      osc3.stop(now + 0.2);
+    }
+
+    // Boys Collection: Short, pleasant guitar-string pluck sound
+    function playGuitarPluck(noteIndex = 0) {
+      if (isSoundMuted || !stickzyAudioUnlocked) return;
+      const ctx = ensureAudioContext();
+      if (!ctx || ctx.state !== 'running') return;
+
+      // Clean acoustic/electric guitar tuning notes
+      const guitarNotes = [196.00, 246.94, 293.66, 329.63, 392.00, 440.00, 493.88];
+      const freq = guitarNotes[noteIndex % guitarNotes.length];
+      const now = ctx.currentTime;
+
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(2400, now);
+      filter.frequency.exponentialRampToValueAtTime(380, now + 0.28);
+      filter.Q.setValueAtTime(1.8, now);
+
+      const amp = ctx.createGain();
+      amp.gain.setValueAtTime(0.0001, now);
+      amp.gain.linearRampToValueAtTime(0.11, now + 0.007);
+      amp.gain.exponentialRampToValueAtTime(0.0001, now + 0.52);
+
+      filter.connect(amp);
+      amp.connect(ctx.destination);
+
+      // Primary plucked string body (warm triangle + slight detuned harmonic saw)
+      const strOsc = ctx.createOscillator();
+      strOsc.type = 'triangle';
+      strOsc.frequency.setValueAtTime(freq, now);
+      strOsc.connect(filter);
+
+      const overOsc = ctx.createOscillator();
+      const overGain = ctx.createGain();
+      overOsc.type = 'sawtooth';
+      overOsc.frequency.setValueAtTime(freq * 1.002, now);
+      overGain.gain.setValueAtTime(0.35, now);
+      overOsc.connect(overGain);
+      overGain.connect(filter);
+
+      // Subtle finger-pick attack transient
+      const transientOsc = ctx.createOscillator();
+      const transientGain = ctx.createGain();
+      transientOsc.type = 'sine';
+      transientOsc.frequency.setValueAtTime(freq * 2.5, now);
+      transientGain.gain.setValueAtTime(0.03, now);
+      transientGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.035);
+      transientOsc.connect(transientGain);
+      transientGain.connect(ctx.destination);
+
+      strOsc.start(now);
+      overOsc.start(now);
+      transientOsc.start(now);
+      strOsc.stop(now + 0.54);
+      overOsc.stop(now + 0.54);
+      transientOsc.stop(now + 0.04);
+    }
+
+    /* ==========================================================================
+       GIRLS FLOATING HEARTS & BOYS FLOATING GUITARS (GSAP + INTERACTIVE HOVER)
+       ========================================================================== */
+    function triggerHeartSparkleBurst(heartEl) {
+      if (!heartEl || !window.gsap) return;
+      const burst = document.createElement('div');
+      burst.className = 'ambient-sparkle-burst';
+      const sparkleColors = ['#F472B6', '#FB7185', '#FBBF24', '#FBCFE8', '#EC4899'];
+      const count = 5;
+
+      for (let i = 0; i < count; i++) {
+        const dot = document.createElement('span');
+        dot.className = 'ambient-sparkle-dot';
+        const angle = (Math.PI * 2 * i) / count + (Math.random() * 0.4 - 0.2);
+        const dist = 16 + Math.random() * 14;
+        const size = 7 + Math.random() * 4;
+        const color = sparkleColors[i % sparkleColors.length];
+        dot.innerHTML = `<svg width="${size}" height="${size}" viewBox="0 0 16 16"><path d="M8 0 L9.8 6.2 L16 8 L9.8 9.8 L8 16 L6.2 9.8 L0 8 L6.2 6.2 Z" fill="${color}"/></svg>`;
+        burst.appendChild(dot);
+
+        gsap.fromTo(dot,
+          { x: 0, y: 0, scale: 0.3, opacity: 0.95, rotation: 0 },
+          {
+            x: Math.cos(angle) * dist,
+            y: Math.sin(angle) * dist,
+            scale: 1.05,
+            opacity: 0,
+            rotation: 45 + Math.random() * 60,
+            duration: 0.58,
+            ease: 'power2.out'
+          }
+        );
+      }
+
+      heartEl.appendChild(burst);
+      gsap.fromTo(heartEl,
+        { scale: 1 },
+        { scale: 1.28, duration: 0.16, yoyo: true, repeat: 1, ease: 'sine.out', overwrite: 'auto' }
+      );
+      setTimeout(() => burst.remove(), 650);
+    }
+
+    function triggerGuitarPluckVisual(guitarEl) {
+      if (!guitarEl || !window.gsap) return;
+      const ring = document.createElement('span');
+      ring.className = 'ambient-ripple-ring';
+      guitarEl.appendChild(ring);
+
+      gsap.fromTo(ring,
+        { scale: 0.5, opacity: 0.7 },
+        { scale: 2.1, opacity: 0, duration: 0.52, ease: 'power2.out', onComplete: () => ring.remove() }
+      );
+
+      gsap.fromTo(guitarEl,
+        { x: -2.5, scale: 1.1 },
+        { x: 2.5, scale: 1.05, duration: 0.055, repeat: 3, yoyo: true, ease: 'sine.inOut', overwrite: 'auto',
+          onComplete: () => gsap.to(guitarEl, { x: 0, scale: 1, duration: 0.18 })
+        }
+      );
+    }
+
+    function renderCollectionAmbientDecor(viewName) {
+      const container = document.getElementById('colAmbientDecor');
+      if (!container) return;
+
+      if (window.gsap) {
+        gsap.killTweensOf(container.querySelectorAll('.ambient-heart-item, .ambient-guitar-item'));
+      }
+      container.innerHTML = '';
+
+      if (viewName === 'girls') {
+        const heartsSpec = [
+          { top: '14px', left: '2.5%', size: 18, color: '#F472B6', fill: '#FDE7F0', rot: -10, cls: '' },
+          { top: '20px', left: '24%', size: 14, color: '#FB7185', fill: '#FFE4E8', rot: 12, cls: 'ambient-hide-mobile' },
+          { top: '34px', left: '48.5%', size: 16, color: '#F9A8D4', fill: '#FFF1F5', rot: -6, cls: 'ambient-hide-tablet' },
+          { top: '14px', right: '18%', size: 15, color: '#F472B6', fill: '#FCE7F3', rot: 14, cls: 'ambient-hide-mobile' },
+          { top: '24px', right: '3%', size: 20, color: '#EC4899', fill: '#FDE7F0', rot: 8, cls: '' },
+          { top: '132px', left: '1.8%', size: 17, color: '#F9A8D4', fill: '#FFF5F8', rot: -14, cls: '' },
+          { top: '248px', left: '2.6%', size: 15, color: '#FB7185', fill: '#FFE4EC', rot: 10, cls: 'ambient-hide-mobile' },
+          { top: '190px', left: '48%', size: 14, color: '#F472B6', fill: '#FDF2F8', rot: -8, cls: 'ambient-hide-tablet' },
+          { top: '138px', right: '2%', size: 18, color: '#F472B6', fill: '#FCE7F3', rot: 11, cls: '' },
+          { top: '270px', right: '3%', size: 15, color: '#FDA4AF', fill: '#FFF1F2', rot: -12, cls: 'ambient-hide-mobile' },
+          { top: '390px', left: '14%', size: 14, color: '#F9A8D4', fill: '#FFF5F8', rot: 9, cls: 'ambient-hide-tablet' },
+          { top: '382px', right: '15%', size: 16, color: '#F472B6', fill: '#FCE7F3', rot: -9, cls: 'ambient-hide-tablet' }
+        ];
+
+        heartsSpec.forEach((h, idx) => {
+          const el = document.createElement('div');
+          el.className = `ambient-heart-item ${h.cls}`.trim();
+          el.style.top = h.top;
+          if (h.left) el.style.left = h.left;
+          if (h.right) el.style.right = h.right;
+          el.innerHTML = `
+            <svg width="${h.size}" height="${h.size}" viewBox="0 0 24 24" fill="${h.fill}" stroke="${h.color}" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          `;
+
+          let lastTrigger = 0;
+          const handleHeartInteract = (fromClick = false) => {
+            if (fromClick) stickzyAudioUnlocked = true;
+            const now = Date.now();
+            if (now - lastTrigger < 260) return;
+            lastTrigger = now;
+            playHeartBellChime(idx);
+            triggerHeartSparkleBurst(el);
+          };
+
+          el.addEventListener('mouseenter', () => handleHeartInteract(false));
+          el.addEventListener('click', () => handleHeartInteract(true));
+          container.appendChild(el);
+
+          if (window.gsap) {
+            gsap.set(el, { rotation: h.rot });
+            gsap.to(el, {
+              y: (idx % 2 === 0 ? -12 : 12),
+              x: (idx % 3 === 0 ? 6 : -6),
+              rotation: h.rot + (idx % 2 === 0 ? 14 : -14),
+              duration: 3.4 + (idx % 4) * 0.65,
+              repeat: -1,
+              yoyo: true,
+              ease: 'sine.inOut',
+              delay: idx * 0.18
+            });
+          }
+        });
+      } else if (viewName === 'boys') {
+        const guitarSvgs = [
+          // Sleek Electric Guitar Silhouette
+          (c1, c2) => `<svg width="30" height="30" viewBox="0 0 36 36" fill="none"><path d="M26 4L29 7L19.5 16.5C21.2 18.8 21.5 22 19.6 24.4L16.2 28.6C14 31.2 10 31.4 7.5 29C5 26.5 5.2 22.5 7.8 20.3L12 16.9C14.4 15 17.6 15.3 19.9 17L26 4Z" fill="${c2}" stroke="${c1}" stroke-width="1.6" stroke-linejoin="round"/><line x1="12" y1="24" x2="27" y2="7" stroke="${c1}" stroke-width="1.4" stroke-linecap="round"/><circle cx="13" cy="23" r="1.6" fill="${c1}"/></svg>`,
+          // Classic Acoustic Guitar Illustration
+          (c1, c2) => `<svg width="32" height="32" viewBox="0 0 36 36" fill="none"><path d="M26.5 5.5L30.5 9.5M28.5 7.5L19 17M19 17C17 15.6 14.3 15.9 12.6 17.6C11.4 18.8 11.1 20.4 11.4 21.8C9.6 21.8 7.8 22.6 6.7 24.1C4.9 26.5 5.3 29.9 7.5 31.5C9.8 33.1 13.1 32.6 14.8 30.3C15.9 28.8 16.1 26.9 15.6 25.3C17 25.6 18.6 25.2 19.8 24C21.5 22.3 21.8 19.6 20.4 17.6" fill="${c2}" stroke="${c1}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="13.5" cy="24.5" r="2.2" stroke="${c1}" stroke-width="1.4"/></svg>`,
+          // Minimalist Guitar Pick + Strings Emblem
+          (c1, c2) => `<svg width="26" height="26" viewBox="0 0 32 32" fill="none"><path d="M16 4C22.5 4 27 8.4 27 14.2C27 21.4 19.4 27.2 16 28.6C12.6 27.2 5 21.4 5 14.2C5 8.4 9.5 4 16 4Z" fill="${c2}" stroke="${c1}" stroke-width="1.6"/><line x1="12" y1="10" x2="12" y2="21" stroke="${c1}" stroke-width="1.2" stroke-linecap="round"/><line x1="16" y1="9" x2="16" y2="23" stroke="${c1}" stroke-width="1.2" stroke-linecap="round"/><line x1="20" y1="10" x2="20" y2="21" stroke="${c1}" stroke-width="1.2" stroke-linecap="round"/></svg>`
+        ];
+
+        const guitarsSpec = [
+          { top: '16px', left: '2.5%', type: 0, c1: '#3B82F6', c2: '#DBEAFE', rot: -12, cls: '' },
+          { top: '18px', left: '24%', type: 2, c1: '#536842', c2: '#EBF0E5', rot: 10, cls: 'ambient-hide-mobile' },
+          { top: '34px', left: '48.5%', type: 1, c1: '#60A5FA', c2: '#EFF6FF', rot: -8, cls: 'ambient-hide-tablet' },
+          { top: '16px', right: '18%', type: 2, c1: '#3B82F6', c2: '#DBEAFE', rot: 14, cls: 'ambient-hide-mobile' },
+          { top: '22px', right: '3%', type: 1, c1: '#1D4ED8', c2: '#E0ECFF', rot: 9, cls: '' },
+          { top: '142px', left: '1.8%', type: 1, c1: '#536842', c2: '#EEF2E8', rot: -10, cls: '' },
+          { top: '264px', left: '2.6%', type: 0, c1: '#3B82F6', c2: '#DBEAFE', rot: 12, cls: 'ambient-hide-mobile' },
+          { top: '146px', right: '2%', type: 0, c1: '#2563EB', c2: '#E0ECFF', rot: -11, cls: '' },
+          { top: '282px', right: '3%', type: 2, c1: '#64748B', c2: '#F1F5F9', rot: 8, cls: 'ambient-hide-mobile' }
+        ];
+
+        guitarsSpec.forEach((g, idx) => {
+          const el = document.createElement('div');
+          el.className = `ambient-guitar-item ${g.cls}`.trim();
+          el.style.top = g.top;
+          if (g.left) el.style.left = g.left;
+          if (g.right) el.style.right = g.right;
+          el.innerHTML = guitarSvgs[g.type](g.c1, g.c2);
+
+          let lastTrigger = 0;
+          const handleGuitarInteract = (fromClick = false) => {
+            if (fromClick) stickzyAudioUnlocked = true;
+            const now = Date.now();
+            if (now - lastTrigger < 260) return;
+            lastTrigger = now;
+            playGuitarPluck(idx);
+            triggerGuitarPluckVisual(el);
+          };
+
+          el.addEventListener('mouseenter', () => handleGuitarInteract(false));
+          el.addEventListener('click', () => handleGuitarInteract(true));
+          container.appendChild(el);
+
+          if (window.gsap) {
+            gsap.set(el, { rotation: g.rot });
+            gsap.to(el, {
+              y: (idx % 2 === 0 ? -11 : 11),
+              x: (idx % 2 === 0 ? 5 : -5),
+              rotation: g.rot + (idx % 2 === 0 ? 8 : -8),
+              duration: 4.0 + (idx % 3) * 0.7,
+              repeat: -1,
+              yoyo: true,
+              ease: 'sine.inOut',
+              delay: idx * 0.22
+            });
+          }
+        });
+      }
+    }
+
+    /* ==========================================================================
+       HOME PAGE SECTION CAROUSELS, SCROLLING & WISHLIST HELPERS
+       ========================================================================== */
+    function scrollToSection(sectionId) {
+      const target = document.getElementById(sectionId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function renderHomeTrackProducts(trackId, list, badgeText) {
+      const track = document.getElementById(trackId);
+      if (!track) return;
+      track.innerHTML = list.map(p => `
+        <div class="carousel-card-item">
+          <div class="product-card" style="height: 100%;">
+            <div class="card-media-wrap" onclick="openPdpModal('${p.id}')" style="cursor: pointer;">
+              ${badgeText ? `<span class="card-badge-top badge-bestseller">${badgeText}</span>` : (p.isBestseller ? `<span class="card-badge-top badge-bestseller">Bestseller</span>` : '')}
+              <div class="card-image-sticker">
+                ${p.imageSvg}
+              </div>
+              <div class="quick-view-overlay" onclick="event.stopPropagation(); openPdpModal('${p.id}')">
+                Quick View
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta-line">
+                <span>${p.categoryLabel}</span>
+                <span>·</span>
+                <span>${p.finish || 'Matte'}</span>
+              </div>
+              <h3 class="card-title" onclick="openPdpModal('${p.id}')">${p.title}</h3>
+              <div class="card-price-row">
+                <span class="current-price">₹${p.price}</span>
+                <span class="mrp-price">₹${p.mrp}</span>
+              </div>
+              <button class="btn-add-cart-card" style="width: 100%; justify-content: center;" onclick="addToCartDirect('${p.id}')">
+                Add to Bag
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderHomeSectionCarousels() {
+      renderHomeTrackProducts('boysPinnedTrack', products.filter(p => p.category === 'boys').slice(0, 8));
+      renderHomeTrackProducts('girlsHorizontalTrack', products.filter(p => p.category === 'girls').slice(0, 8));
+      renderHomeTrackProducts('divineHorizontalTrack', products.filter(p => p.category === 'divine').slice(0, 8));
+      renderHomeTrackProducts('decorHorizontalTrack', products.filter(p => p.category === 'decor').slice(0, 8));
+      renderHomeBestsellers();
+    }
+
+    function renderWishlistPage() {
+      const grid = document.getElementById('wishlistProductsGrid');
+      if (!grid) return;
+
+      const saved = products.filter(p => wishlist.includes(p.id));
+      if (saved.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #FFFFFF; border-radius: 20px;">
+            <div style="font-size: 32px; margin-bottom: 12px;">♡</div>
+            <h3 style="font-size: 18px; font-weight: 700;">Your wishlist is currently empty</h3>
+            <p style="color: #6B7280; font-size: 14px; margin-top: 6px;">Tap the heart icon on any sticker to save it for later.</p>
+            <button class="btn-primary" style="margin-top: 18px;" onclick="navigateTo('boys')">Explore Boys Collection</button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = saved.map(p => renderProductCardHtml(p)).join('');
+    }
+
+    /* ==========================================================================
        SPA PAGE NAVIGATION & VIEW CONTROLLER
        ========================================================================== */
     let currentAppView = 'home';
@@ -8847,6 +9723,15 @@
         activeNav.classList.add(`active-${viewName}`);
       }
 
+      // Update Mobile Quick Nav Pills
+      document.querySelectorAll('.mobile-quick-pill').forEach(pill => {
+        pill.classList.remove('active');
+      });
+      const activeMobilePill = document.getElementById(`mqp-${viewName}`);
+      if (activeMobilePill) {
+        activeMobilePill.classList.add('active');
+      }
+
       // Update Header Logo Dot color to match active collection
       const logoDot = document.getElementById('headerLogoDot');
       if (logoDot) {
@@ -8859,14 +9744,19 @@
       }
 
       if (viewName === 'home') {
+        renderCollectionAmbientDecor('home');
         if (homeView) { homeView.style.display = 'block'; homeView.classList.add('active'); homeView.style.opacity = '1'; }
-        renderHomeBestsellers();
+        renderHomeSectionCarousels();
+        if (window.ScrollTrigger) {
+          setTimeout(() => ScrollTrigger.refresh(), 80);
+        }
         window.scrollTo({ top: 0, behavior: 'smooth' });
         try { history.replaceState(null, '', '#home'); } catch(e){}
         return;
       }
 
       if (viewName === 'category') {
+        renderCollectionAmbientDecor('category');
         if (categoryView) { categoryView.style.display = 'block'; categoryView.classList.add('active'); categoryView.style.opacity = '1'; }
         window.scrollTo({ top: 0, behavior: 'smooth' });
         try { history.replaceState(null, '', `#category/${currentFilter}/${currentSubcategory}`); } catch(e){}
@@ -8874,6 +9764,7 @@
       }
 
       if (viewName === 'product') {
+        renderCollectionAmbientDecor('product');
         if (productView) { productView.style.display = 'block'; productView.classList.add('active'); productView.style.opacity = '1'; }
         window.scrollTo({ top: 0, behavior: 'smooth' });
         try { history.replaceState(null, '', `#product/${id || activePdpProduct?.id}`); } catch(e){}
@@ -8881,6 +9772,7 @@
       }
 
       if (viewName === 'wishlist') {
+        renderCollectionAmbientDecor('wishlist');
         if (wishlistView) { wishlistView.style.display = 'block'; wishlistView.classList.add('active'); wishlistView.style.opacity = '1'; }
         renderWishlistPage();
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -8895,6 +9787,9 @@
 
       // Set Body Theme Class for fluid background
       document.body.classList.add(`theme-${viewName}-active`);
+
+      // Render interactive background decor (Hearts for Girls, Guitars for Boys)
+      renderCollectionAmbientDecor(viewName);
 
       // Update Collection Hero Information & Styling
       const data = CATEGORY_DATA[viewName] || CATEGORY_DATA.girls;
@@ -10738,26 +11633,7 @@
        GSAP ANIMATIONS & SCROLLTRIGGERS
        ========================================================================== */
     window.addEventListener('DOMContentLoaded', () => {
-      
-    function renderWishlistPage() {
-      const grid = document.getElementById('wishlistProductsGrid');
-      if (!grid) return;
-
-      const saved = products.filter(p => wishlist.includes(p.id));
-      if (saved.length === 0) {
-        grid.innerHTML = `
-          <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #FFFFFF; border-radius: 20px;">
-            <div style="font-size: 32px; margin-bottom: 12px;">♡</div>
-            <h3 style="font-size: 18px; font-weight: 700;">Your wishlist is currently empty</h3>
-            <p style="color: #6B7280; font-size: 14px; margin-top: 6px;">Tap the heart icon on any sticker to save it for later.</p>
-            <button class="btn-primary" style="margin-top: 18px;" onclick="navigateTo('boys')">Explore Boys Collection</button>
-          </div>
-        `;
-        return;
-      }
-
-      grid.innerHTML = saved.map(p => renderProductCardHtml(p)).join('');
-    }
+      syncSoundToggleUI();
 
       // Register ScrollTrigger if available
       if (window.gsap && window.ScrollTrigger) {
@@ -10789,39 +11665,27 @@
           });
         }
 
-        // ScrollTrigger reveal for Spotlight box
-        gsap.from(".spotlight-box", {
-          scrollTrigger: {
-            trigger: ".spotlight-box",
-            start: "top 80%",
-          },
-          y: 40,
-          opacity: 0,
-          duration: 1,
-          ease: "power3.out"
-        });
-
-        // ScrollTrigger reveal for Collection Banners
-        gsap.from(".collection-banner", {
-          scrollTrigger: {
-            trigger: ".dual-banners-grid",
-            start: "top 80%",
-          },
-          y: 30,
-          opacity: 0,
-          stagger: 0.2,
-          duration: 0.8,
-          ease: "power2.out"
+        // Gentle float for Home background decorative stickers
+        document.querySelectorAll('#floatingStickersWrap .floating-sticker-item').forEach((item, idx) => {
+          gsap.to(item, {
+            y: (idx % 2 === 0 ? -14 : 14),
+            rotation: (idx % 2 === 0 ? 8 : -8),
+            duration: 3.6 + (idx % 3) * 0.8,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            delay: idx * 0.2
+          });
         });
       }
 
-      // Initial Render: Support direct hash or default to requested Lovable Girls collection
+      // Initial Render: Support direct hash or default to Home page
       const rawHash = (window.location.hash || '').replace('#', '').toLowerCase();
       const validViews = ['home', 'girls', 'boys', 'vehicle', 'divine', 'decor', 'wishlist'];
       if (rawHash && validViews.includes(rawHash)) {
         navigateTo(rawHash);
       } else {
-        navigateTo('divine');
+        navigateTo('home');
       }
 
       window.addEventListener('hashchange', () => {
